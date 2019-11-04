@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>upload query</title>
 	<link rel="stylesheet" type="text/css" href="../common/styles/newquery.css" />
-	<link rel="stylesheet" href="../common/styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../common/styles/bootstrap.min.css">
 </head>
 <body>
 	<header role="banner">
