@@ -1,0 +1,81 @@
+h1 {
+  text-align : center;
+  text-shadow : 3px -1px gray;
+  height : 260px;
+  padding-top : 100px;
+  background : #f2f2f2;
+  margin : 0px;
+}
+h3 {
+  font-size : 30px;
+  text-shadow : 1px -1px gray;
+}
+.wrap-subcontent {
+  padding-left : 10px;
+  padding-right : 10px;
+}
+nav {
+  vertical-align : center;
+}
+#menu li {
+  margin-left : 20px;
+}
+#main {
+  background : #f2f2f2;
+  color : #0d0d0d;
+  width : 800px;
+  margin : auto;
+}
+#logo img {
+  width : 40px;
+  height : 40px;
+}
+
+#slides {
+  width : 800px;
+  margin : auto;
+  background-color : black;
+}
+
+#lecture {
+  float : left;
+  overflow : hidden;
+  vertical-align : top;
+}
+#lecture th {
+  text-align : center;
+  font-size : 30px;
+  text-shadow : 1px -1px gray;
+}
+#lecture td {
+  text-align : center;
+  font-size : 15px;
+  padding-top : 5px;
+  padding-bottom : 5px;
+}
+
+#lab {
+  float : right;
+  overflow : hidden;
+  vertical-align : top;
+  padding-right : 25px;
+}
+#lab th {
+  text-align : center;
+  font-size : 30px;
+  text-shadow : 1px -1px gray;
+}
+#lab td {
+  text-align : center;
+  font-size : 15px;
+  padding-top : 5px;
+  padding-bottom : 5px;
+}
+
+p {
+  width : 800px;
+  margin : auto;
+  text-align : center;
+  text-shadow : 0.5px -1px gray;
+  background : #f2f2f2;
+}
