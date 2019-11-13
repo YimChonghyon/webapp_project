@@ -1,0 +1,17 @@
+.contents{
+	display:table; margin-right:auto; margin-left: auto;
+}
+.BUT{
+	margin: 10px;
+	margin-top: 0;
+}
+.overlap-width{
+	width: 0px;
+}
+.overlap-height{
+	height: 0px;
+}
+#tag{
+	margin: 10px;
+	margin-left: 0;
+}
