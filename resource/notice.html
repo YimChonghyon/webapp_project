@@ -9,7 +9,9 @@
 	<![endif]-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
 
-	<link rel="stylesheet" href="week1.css" type="text/css" />
+  <link rel="stylesheet" href="layout.css" type="text/css" />
+  <link rel="stylesheet" href="notice.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="common.css" type="text/css" /> -->
 
 </head>
 
@@ -37,14 +39,38 @@
 	<main role="main">
 		<div class="container">
 			<div class="contents">
-				<h1>Web Application Development</h1>
-<div id="tab">
-  <div class="first-tab" data-tab="main">Home</div>
+          <h1>NOTICE</h1>
+
+        <ul id="board">
+          <li class="header">
+            <ul>
+              <li class="title pull-left">Title</li>
+              <li class="name pull-left">Name</li>
+              <li class="time pull-left">Date</li>
+            </ul>
+          </li>
+           
+          <li class="entry">
+            <div class="information">
+              <ul >
+                <li class="title pull-left">연구원 모집</li>
+                <li class="name pull-left">Scott Uk-Jin Lee</li>
+                <li class="time pull-left">29 Aug 2014</li>
+                        </ul>
+            </div>
+            </li>
+            </ul>
+
+        
+      
+<!-- <div id="tab">
+  <div class="first-tab" data-tab="main">전체</div>
   <div class="deactive last-tab" data-tab="slides">Slides</div>
-</div>
+</div> -->
+
 <div id="hl"></div>
 <div id="main">
-  <div class="wrap-subcontent">
+  <!-- <div class="wrap-subcontent">
     <h3>Course Objectives</h3>
     <p>
       In this course, the followings will be covered to adequately enable web programming and web application development:
@@ -55,18 +81,18 @@
   		<li>Obtain ability to design and implement an interactive web site where usability, accessibility and internationalization issues are considered</li>
   		<li>Learn how to use/manage database associated with web applications (mainly storage and retrieval)</li>
     </ol>
-  </div>
+  </div> -->
 
-  <div class="wrap-subcontent">
+  <!-- <div class="wrap-subcontent">
     <h3>Lecturer: Scott Lee</h3>
     <ul>
       <li>Office: 학연산클러스터 617호</li>
       <li>Tel: 031-400-5238</li>
       <li>Email: scottlee@hanyang.ac.kr</li>
     </ul>
-  </div>
+  </div> -->
 
-  <div class="wrap-subcontent">
+  <!-- <div class="wrap-subcontent">
     <h3>Teaching Assistants</h3>
 	<ul>
     <li> Gichan Lee
@@ -84,9 +110,9 @@
       </ul>
     </li>
   </ul>
-  </div>
+  </div> -->
 
-  <div class="wrap-subcontent">
+  <!-- <div class="wrap-subcontent">
     <h3>Places &amp; Dates</h3>
     <p>Class 1 (23497)</p>
 			<ul>
@@ -98,23 +124,23 @@
 	    	<li>Lecture : Thu (10:30 - 12:00)  &amp; Fri (14:30 - 16:00) @ Engineering Building #1 Room 407</li>
 	    	<li>lab : Fri (16:00 - 18:00) @ Engineering Building #4 PC Room 1 & 2 </li>
     	</ul>
-  </div>
+  </div> -->
 
-  <div class="wrap-subcontent">
+  <!-- <div class="wrap-subcontent">
     <h3>Course Forum</h3>
     <ul>
       <li><a href="https://learn.hanyang.ac.kr">Blackboard</a></li>
     </ul>
-  </div>
+  </div> -->
 
-  <div class="wrap-subcontent">
+  <!-- <div class="wrap-subcontent">
     <h3>Textbooks</h3>
     <ul>
       <li>Marty Stepp, Jessica Miller, Victoria Kirst, <strong>Web Programming Step by Step: Second Edition</strong>, Step by Step Publishing, 2012 </li>
     </ul>
-  </div>
+  </div> -->
 
-  <div class="wrap-subcontent">
+  <!-- <div class="wrap-subcontent">
     <h3>Course Schedule</h3>
 	<ul>
 	<li>Week 01 : 05/09/2019 - Introduction &amp; The Internet and World Wide Web</li>
@@ -151,16 +177,17 @@
     <li>Week 16 : 19/12/2019 - Final Exam</li>
     <li>Week 16 : 20/12/2019 - Team Project Presentation</li>
 	</ul>
-  </div>
-  <div class="wrap-subcontent">
+  </div> -->
+
+  <!-- <div class="wrap-subcontent">
     <h3>Team Project</h3>
     <ul>
       <li><a target="_blank" href="project/project.html">Team Project</a></li>
     </ul>
-  </div>
+  </div> -->
 
 
-  <div class="wrap-subcontent">
+  <!-- <div class="wrap-subcontent">
     <h3>Team Project Group</h3>
     <ul>
       <li>
@@ -193,7 +220,7 @@
         </ul>
       </li>
     </ul>
-  </div>
+  </div> -->
 
 <!--
   <div class="wrap-subcontent last">
@@ -224,7 +251,7 @@
   </div>
 -->
 
-  <div class="wrap-subcontent last">
+  <!-- <div class="wrap-subcontent last">
     <h3>Assessments</h3>
     <ul>
       <li>Attendance (10%)</li>
@@ -232,12 +259,12 @@
       <li>Final Exam (30%)</li>
       <li>Team Project (30%)</li>
     </ul>
-  </div>
+  </div> -->
 </div>
 
 
 <div id="slides" class="display_none">
-  <div id="lecture">
+  <!-- <div id="lecture">
     <table>
       <tr>
         <th class="number">No.</th>
@@ -311,18 +338,18 @@
         <td class="title"><a target="_blank" href="#"></a></td>
       </tr>
     </table>
-  </div>
+  </div> -->
 
-  <div id="lab">
+  <!-- <div id="lab">
     <table>
-   	  <!-- <tr>
+   	   <tr>
         <th class="number">No.</th>
         <th class="title">Project</th>
       </tr>
       <tr>
         <td class="number">*</td>
         <td class="title"><a target="_blank" href="#"></a></td>
-      </tr> -->
+      </tr> 
       <tr>
         <th class="number">No.</th>
         <th class="title">Labs</th>
@@ -362,7 +389,8 @@
       <tr>
         <td class="number">8</td>
         <td class="title"><a target="_blank" href="./labs/lab8-pimpMyText.html">JavaScript - Week 12</a></td>
-      </tr><!--
+      </tr>
+
       <tr>
         <td class="number">9</td>
         <td class="title"><a target="_blank" href="./labs/lab9-maze.html">Assignment: Maze - Week 13</a></td>
@@ -391,9 +419,9 @@
         <td class="number">15</td>
         <td class="title"><a target="_blank" href="#"></a></td>
       </tr>
-		-->
+		
     </table>
-  </div>
+  </div> -->
 </div>
 
 			</div>
