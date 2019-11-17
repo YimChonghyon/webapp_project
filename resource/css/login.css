@@ -119,38 +119,22 @@ input[type="password"]{
 
 #usericon{
     top: 30px;
-<<<<<<< HEAD
-    background: url("../images/user.png") center no-repeat #f2f2f2;
-=======
     background: url("../images/login_user.png") center no-repeat #f2f2f2;
->>>>>>> d15eeb2c2f16ab40290dc6766ae9f80b0cb0d7be
 }
 
 #passwdicon{
     bottom: 0px;
-<<<<<<< HEAD
-    background: url("../images/password.png") center no-repeat #f2f2f2;
-=======
     background: url("../images/login_password.png") center no-repeat #f2f2f2;
->>>>>>> d15eeb2c2f16ab40290dc6766ae9f80b0cb0d7be
 }
 
 .textfield:focus + #usericon{
     left: 10px;
-<<<<<<< HEAD
-    background: url("../images/user.png") center no-repeat #acacac;
-=======
     background: url("../images/login_user.png") center no-repeat #acacac;
->>>>>>> d15eeb2c2f16ab40290dc6766ae9f80b0cb0d7be
 }
 
 .textfield:focus + #passwdicon{
     left: 10px;
-<<<<<<< HEAD
-    background: url("../images/password.png") center no-repeat #acacac;
-=======
     background: url("../images/login_password.png") center no-repeat #acacac;
->>>>>>> d15eeb2c2f16ab40290dc6766ae9f80b0cb0d7be
 }
 
 
@@ -160,22 +144,14 @@ input[type="password"]{
     width: 60px; height: 60px;
     padding: 0; margin: 0;
     border: 0;
-<<<<<<< HEAD
-    background: url("../images/submit.png") center no-repeat #ebebeb;
-=======
     background: url("../images/login_submit.png") center no-repeat #ebebeb;
->>>>>>> d15eeb2c2f16ab40290dc6766ae9f80b0cb0d7be
     border-radius: 0 50px 50px 0;
     text-indent: -99999px;
     /* border: 1px solid rgb(180, 180, 180); */
 }
 
 #submit_button:hover{
-<<<<<<< HEAD
-    background: url("../images/submit.png") center no-repeat #acacac;
-=======
     background: url("../images/login_submit.png") center no-repeat #acacac;
->>>>>>> d15eeb2c2f16ab40290dc6766ae9f80b0cb0d7be
 }
 
 /* animation  */
