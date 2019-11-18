@@ -64,7 +64,7 @@
                 <div id= "logo" class= "pull-left"><a href= ""><img src= "common/image" /></a></div>
 
                 <ul id= "menu" class= "inline-list" class= "pull-left">
-                    <li class="pull-left"><a href="resource/notice.html" >NOTICE</a></li> <!-- 해당 페이지로 이동 -->
+                    <li class="pull-left"><a href="resource/notice.php" >NOTICE</a></li> <!-- 해당 페이지로 이동 -->
                     <li class="pull-left"><a href="resource/members" >MEMBERS</a></li>
                     <li class="pull-left"><a href="resource/research" >RESEARCH</a></li>
                     <li class="pull-left"><a href="resource/publications" >PUBLICATIONS</a></li>
