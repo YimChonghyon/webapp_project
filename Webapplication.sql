@@ -56,7 +56,7 @@ CREATE TABLE `Publications` (
 
 
 CREATE TABLE `Course` (
-	`Course_number`	INT	NOT NULL,
+	`Course_number`	CHAR(10)	NOT NULL,
 	`Course_name`	VARCHAR(30)	NOT NULL,
 	`Graduate`	VARCHAR(30)	NOT NULL,
 	`Url`	VARCHAR(60)	NULL,
@@ -67,7 +67,7 @@ CREATE TABLE `Course` (
 
 CREATE TABLE `Course_history` (
 	`Date`	DATE	NOT NULL,
-	`Course_number`	INT	NOT NULL,
+	`Course_number`	CHAR(10)	NOT NULL,
     CONSTRAINT PK_Course_history PRIMARY KEY(Date,`Course_number`)
 );
 
@@ -89,7 +89,7 @@ CREATE TABLE `Client` (
 
 CREATE TABLE `Debate` (
 	`Debate_number`	INT	NOT NULL	auto_increment,
-	`Course_number`	INT	NOT NULL,
+	`Course_number`	CHAR(10)	NOT NULL,
 	`Title`	VARCHAR(60)	NOT NULL,
 	`Name`	VARCHAR(30)	NULL	DEFAULT 'Anonymous',
 	`Date`	TIMESTAMP	NULL	DEFAULT current_timestamp,
@@ -107,14 +107,14 @@ CREATE TABLE `Tag` (
 CREATE TABLE `Debate_Tag` (
 	`Debate_number`	INT	NOT NULL,
 	`Type`	VARCHAR(30)	NOT NULL,
-	`Course_number`	INT	NOT NULL,
+	`Course_number`	CHAR(10)	NOT NULL,
     CONSTRAINT PK_Debate_Tag PRIMARY KEY(Debate_number,Type)
 );
 
 
 CREATE TABLE `Slide_Lecture` (
 	`Lecture_number`	INT	NOT NULL	auto_increment,
-	`Course_number`	INT	NOT NULL,
+	`Course_number`	CHAR(10)	NOT NULL,
 	`Title`	VARCHAR(60)	NULL,
 	`Url`	VARCHAR(60)	NULL,
     CONSTRAINT PK_Slide_Lecture PRIMARY KEY(Lecture_number,Course_number)
@@ -123,7 +123,7 @@ CREATE TABLE `Slide_Lecture` (
 
 CREATE TABLE `Slide_Lab` (
 	`Lab_number`	INT	NOT NULL	auto_increment,
-	`Course_number`	INT	NOT NULL,
+	`Course_number`	CHAR(10)	NOT NULL,
 	`Title`	VARCHAR(60)	NULL,
 	`Url`	VARCHAR(60)	NULL,
     CONSTRAINT PK_Slide_Lab PRIMARY KEY(Lab_number,Course_number)
@@ -132,7 +132,7 @@ CREATE TABLE `Slide_Lab` (
 
 CREATE TABLE `Course_notice` (
 	`Course_notice_number`	INT	NOT NULL	auto_increment,
-	`Course_number`	INT	NOT NULL,
+	`Course_number`	CHAR(10)	NOT NULL,
 	`Title`	VARCHAR(60)	NOT NULL,
 	`Name`	VARCHAR(30)	NULL	DEFAULT ' Anonymous',
 	`Date`	TIMESTAMP	NULL	DEFAULT current_timestamp,
@@ -144,7 +144,7 @@ CREATE TABLE `Course_notice` (
 
 CREATE TABLE `Course_schedule` (
 	`Week`	INT	NOT NULL,
-	`Course_number`	INT	NOT NULL,
+	`Course_number`	CHAR(10)	NOT NULL,
 	`Content`	VARCHAR(100)	NOT NULL,
 	`Date`	DATETIME	NOT NULL,
 	`Title`	VARCHAR(100)	NULL,
@@ -167,7 +167,7 @@ CREATE TABLE `Publications_type` (
 CREATE TABLE `reply` (
 	`reply_numbr`	INT	NOT NULL	auto_increment,
 	`Debate_number`	INT	NOT NULL,
-	`Course_number`	INT	NOT NULL,
+	`Course_number`	CHAR(10)NOT NULL,
 	`Name`	VARCHAR(30)	NULL	DEFAULT ' Anonymous',
 	`Date`	TIMESTAMP	NULL	DEFAULT current_timestamp,
 	`Content`	TEXT(500)	NULL,

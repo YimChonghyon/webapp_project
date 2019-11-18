@@ -94,21 +94,25 @@
             </article>
             <article>
                 <h3><a href="resource/notice.html">NOTICE</a></h3> <!-- 기본적인 notice 링크 -->
-                <p>Content Start</p> <!-- dumb -->
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content End</p>
-                <p>hello</p>
+                <ul>
+                    <?php
+                    $stmt = $conn->prepare("SELECT title FROM notice limit 3");
+                    $stmt->execute();
+                    foreach($stmt->fetchAll() as $k=>$v) {
+                        echo "<li>" . $v[title] . "</li>";
+                    }
+                    ?>
+                </ul>
             </article>
             <article>
-                <h3>COURSES</h3>
-                <li><a href="/courses">COURSES</a></li> <!-- 이번 학기에 열린 강의 목록 / 링크 -->
-                <p>Content Start</p> <!-- dumb -->
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content End</p>
+                <h3><a href="/courses">COURSES</a></h3> <!-- 이번 학기에 열린 강의 목록 / 링크 -->
+                <?php
+                $stmt = $conn->prepare("SELECT Course_number,Course_name FROM course");
+                $stmt->execute();
+                foreach($stmt->fetchAll() as $k=>$v) {
+                    echo "<li><a>" . $v[Course_number] ." ". $v[Course_name] . "</a></li>";
+                }
+                ?>
             </article>
         </section>
     </main>
