@@ -4,7 +4,7 @@
     학번 : 2015035732
     이름 : 이수종
 -->
-
+<?php session_start(); ?>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -71,8 +71,12 @@
                     <li class="pull-left"><a href="resource/courses" >COURSES</a></li>
                     <li class="pull-left"><a href="resource/gallery" >GALLERY</a></li>
                 </ul>
-
-                <div role= "login" class= "pull-right"><a href= "/">LOGIN</a></div> <!-- LOGIN php 파일 -->
+                <?php
+                if(!isset($_SESSION['id']))
+                    echo '<div role= "login" class= "pull-right"><a href= "resource/login.php">LOGIN</a></div>';
+                else
+                    echo '<div role= "login" class= "pull-right"><a href= "resource/logout.php">LOGOUT</a></div>';
+                ?>
                 <a id= "contact" href= "/contact" class= 'pull-right'>CONTACT</a>
 
             </nav>

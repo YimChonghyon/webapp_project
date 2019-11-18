@@ -81,7 +81,7 @@ CREATE TABLE `Gallery` (
 
 
 CREATE TABLE `Client` (
-	`Id`	INT	NOT NULL,
+	`Id`	CHAR(20)	NOT NULL,
 	`Password`	VARCHAR(30)	NOT NULL,
     CONSTRAINT PK_Client PRIMARY KEY(Id)
 );

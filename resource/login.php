@@ -1,6 +1,5 @@
-
-
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/login.css"/>
@@ -9,13 +8,13 @@
 	<title>Software Engineering Lab - Login</title>
 </head>
 <body>
-		<div id="wrap">
+	<div id="wrap">
 		<header>
 			<h1>LOGIN</h1>
 		</header>
 		<content>
-			<form method="post" action="login.php">
-
+			<?php if(!isset($_SESSION['id'])) {?>
+			<form method="post" action="login_check.php">
 				<input id="idform" class="textfield" type="text" name="id" placeholder= "Username"/>
 				<div class="login_icon" id="usericon"></div>
 
@@ -25,7 +24,13 @@
 				<input id="submit_button" type="submit" value="login"/>
 				<input type="hidden" name="source" value="/courses/cse326/2019/index.php"> 
 			</form>
-		</content>
-	</div>
+		<?php } else {
+			$user_id = $_SESSION['id'];
+			echo "<p><strong>$user_name</strong>($user_id)님은 이미 로그인하고 있습니다. ";
+			echo "<a href=\"index.php\">[돌아가기]</a> ";
+			echo "<a href=\"logout.php\">[로그아웃]</a></p>";
+		} ?>
+	</content>
+</div>
 </body>
 </html>

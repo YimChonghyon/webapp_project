@@ -1,3 +1,4 @@
+//sample notice
 insert into notice(Title,Name,Content) values
 ("연구원 모집","Scott Uk-Jin Lee","SELab에서는 소프트웨어공학 전 분야, 멀티쓰레드 소프트웨어 및 웹 기술을 함께 연구할 석사, 박사, 석박통합 및 박사후 과정의 연구원을 모집하고 있습니다.
 
@@ -11,6 +12,11 @@ scottlee@hanyang.ac.kr
 ("2014 PL-SE First Joint Workshop","Scott Uk-Jin Lee","내용 몰라유"),
 ("Welcome to SELab Homepage!","Scott Uk-Jin Lee","비공개라 몰라유");
 
+//sample courese
 insert into course values
-("CSE326","Web Application Development","Undergraduate Courses","google.com","hello world!"),
-("CSE6050","Advanced Software Engineering","Postgraduate Courses","naver.com","hell world!");
+(1,"CSE326","Web Application Development","Undergraduate Courses","google.com","hello world!"),
+(2,"CSE6050","Advanced Software Engineering","Postgraduate Courses","naver.com","hell world!");
+
+//sample client
+insert into client values
+('ISO','ISO');
