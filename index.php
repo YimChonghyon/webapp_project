@@ -149,4 +149,5 @@ catch(PDOException $e)
 }
 ?>
 </body>
+<?php $conn = null; // disconnect db ?>
 </html>
