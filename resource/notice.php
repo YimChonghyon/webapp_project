@@ -75,14 +75,12 @@
                 $stmt = $conn->prepare("SELECT * FROM notice");
                 $stmt->execute();
                 foreach($stmt->fetchAll() as $k=>$v) { ?>
-                <a href="#" onclick="SirenFunction('SirenDiv<?php echo $k; ?>'); return false;" class="blind_view"> <?php
-                    echo "<ul>";
+                <a href="#" onclick="SirenFunction('SirenDiv<?php echo $k; ?>'); return false;" class="blind_view"><ul> <?php
                     echo "<li  class='title pull-left'>" . $v[Title] . "</li>";
                     echo "<li  class='name pull-left'>" . $v[Name] . "</li>";
                     echo "<li  class='time pull-left'>" . $v[Date] . "</li>";
-                    echo "</ul>";
                     ?> </a>
-                    <div class="singo_view" style="display:none;" id="SirenDiv<?php echo $k;?>" ><?php echo $v['Content']; ?></div> <?php
+                    <div class="singo_view pull-left" style="display:none; background-color: pink; width: 100%;" id="SirenDiv<?php echo $k;?>" ><?php echo $v['Content']; ?></div></ul> <?php
                 }
               }
               catch(PDOException $e)
