@@ -9,7 +9,8 @@
 	<![endif]-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
 
-	<link rel="stylesheet" href="course2.css" type="text/css" />
+	<link rel="stylesheet" href="css/sub_course.css" type="text/css" />
+	<script type="text/javascript" src="js/course_page.js"></script>
 
 </head>
 
@@ -17,19 +18,18 @@
 	<header role="banner">
 		<div class="container">
 			<nav role="navigation">
-				<div id="logo" class="pull-left"><a href="/"><img src="light.png" /></a></div>
+				<div id="logo" class="pull-left"><a href="/"><img src="images/selab_logo_S.png" /></a></div>
 				<ul id="menu" class="inline-list pull-left">
-					<li class="pull-left"><a href="/notice" >NOTICE</a></li>
-					<li class="pull-left"><a href="/members" >MEMBERS</a></li>
-					<li class="pull-left"><a href="/research" >RESEARCH</a></li>
-					<li class="pull-left"><a href="/publications" >PUBLICATIONS</a></li>
-					<li class="pull-left"><a href="/courses" class='selected'>COURSES</a></li>
-					<li class="pull-left"><a href="/gallery" >GALLERY</a></li>
+					<li class="pull-left"><a href="notice.html" >NOTICE</a></li>
+					<li class="pull-left"><a href="members.html" >MEMBERS</a></li>
+					<li class="pull-left"><a href="research.html" >RESEARCH</a></li>
+					<li class="pull-left"><a href="publication.html" >PUBLICATIONS</a></li>
+					<li class="pull-left"><a href="main_course.html" class='selected'>COURSES</a></li>
+					<li class="pull-left"><a href="gallery.html" >GALLERY</a></li>
 									</ul>
 							<div role="login" class="pull-right">
-											<a href="/login/index.php?source=/courses/cse326/2019/index.php">LOGIN</a>
+											<a href="login.html">LOGIN</a>
 										</div>
-				<a id="contact" href="/contact" class='pull-right'>CONTACT</a>
 			</nav>
 		</div>
 	</header>
@@ -39,14 +39,13 @@
 			<div class="contents">
 				<h1>Web Application Development</h1>
 <div id="tab">
-  <div class="first-tab" data-tab="main">Home</div>
-  <div class="deactive last-tab" data-tab="slides">Slides</div>
-	<div class="schedule-tab" data-tab="schedules">Schedule</div>
-	<div class="third-tab" data-tab="notice">Notice</div>
-	<div class="curiosity" data-tab="curiosity">Curiosity</div>
-
+  <div class="first-tab" data-tab="main"><input type="text" name="home" value = "Home" /></div>
+  <div class="deactive last-tab" data-tab="slides"><input type="text" name="slides" value = "Slides" /></div>
+	<div class="schedule-tab" data-tab="schedules"><input type="text" name="present" value = "Present" /></div>
+	<div class="third-tab" data-tab="notice"><input type="text" name="notice" value = "Notice" /></div>
+	<div class="curiosity" data-tab="curiosity"><input type="text" name="debate" value = "Debate" /></div>
 </div>
-<div id="hl"></div>
+
 <div id="main">
   <div class="wrap-subcontent">
     <h3>Course Objectives</h3>
@@ -92,12 +91,12 @@
 
   <div class="wrap-subcontent">
     <h3>Places &amp; Dates</h3>
-    <p>Class 1 (23497)</p>
+    <p1>Class 1 (23497)</11>
 			<ul>
 				<li>Lecture : Thu (09:00 - 10:30) &amp; Fri (13:00 - 14:30) @ Engineering Building #1 Room 402</li>
 		    <li>Lab : Fri (09:00 - 11:00) @ Engineering Building #4 PC Room 1 & 2</li>
 		  </ul>
-    <p>Class 2 (24465)</p>
+    <p1>Class 2 (24465)</p1>
 	 		<ul>
 	    	<li>Lecture : Thu (10:30 - 12:00)  &amp; Fri (14:30 - 16:00) @ Engineering Building #1 Room 407</li>
 	    	<li>lab : Fri (16:00 - 18:00) @ Engineering Building #4 PC Room 1 & 2 </li>

@@ -17,6 +17,8 @@ insert into course values
 ("CSE326","Web Application Development","Undergraduate Courses","google.com","hello world!"),
 ("CSE6050","Advanced Software Engineering","Postgraduate Courses","naver.com","hell world!");
 
-#sample client
-insert into client values
-('ISO','ISO');
+#sample user
+insert into user values
+('ISO','ISO','masteraccount',3),
+('vector','vector','superaccount',2),
+('scalar','scalar','Gil Dong Hong',1);

@@ -9,7 +9,7 @@ $id=$_POST['id'];
 $password=$_POST['password'];
 $conn = new PDO("mysql:host=localhost;dbname=selab", "root", "root");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$stmt = $conn->prepare("SELECT password FROM client where id = :id");
+$stmt = $conn->prepare("SELECT password,name,privilege FROM user where id = :id");
 $stmt -> bindValue(":id",$id);
 $stmt->execute();
 $result = $stmt->fetchAll();	
@@ -21,6 +21,8 @@ if($result[0]['password'] != $password){
 }
 session_start();
 $_SESSION['id']=$id;
+$_SESSION['name']=$result[0]['name'];
+$_SESSION['privilege']=$result[0]['privilege'];
 $conn = null;  // disconnect db
 ?>
 <meta http-equiv="refresh" content="0;url=../index.php" />

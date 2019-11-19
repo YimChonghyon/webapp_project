@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<!-- javascript -->
+  <!-- javascript -->
   <script>
     function SirenFunction(idMyDiv){
       var objDiv = document.getElementById(idMyDiv);
@@ -27,7 +27,7 @@
 
   <header role= "banner">
     <nav role= "navigation">
-      <div class="pull-left"><a href="../index.html"><img src="images/selab_logo_S.png" /></a></div>
+      <div class="pull-left"><a href="../index.php"><img src="images/selab_logo_S.png" /></a></div>
       <ul id= "menu" class="menu pull-left">
         <li class="pull-left nav_link"><a href="notice.html" >NOTICE</a></li>
         <li class="pull-left nav_link"><a href="members.html" >MEMBERS</a></li>
@@ -75,12 +75,17 @@
                 $stmt = $conn->prepare("SELECT * FROM notice");
                 $stmt->execute();
                 foreach($stmt->fetchAll() as $k=>$v) { ?>
-                <a href="#" onclick="SirenFunction('SirenDiv<?php echo $k; ?>'); return false;" class="blind_view"><ul> <?php
-                    echo "<li  class='title pull-left'>" . $v[Title] . "</li>";
-                    echo "<li  class='name pull-left'>" . $v[Name] . "</li>";
-                    echo "<li  class='time pull-left'>" . $v[Date] . "</li>";
-                    ?> </a>
-                    <div class="singo_view pull-left" style="display:none; background-color: pink; width: 100%;" id="SirenDiv<?php echo $k;?>" ><?php echo $v['Content']; ?></div></ul> <?php
+                  <a href="#" onclick="SirenFunction('SirenDiv<?php echo $k; ?>'); return false;" class="blind_view"><ul> <?php
+                  if($v['open'] == 0)
+                    continue;
+                  echo "<li  class='title pull-left'>" . $v[Title] . "</li>";
+                  echo "<li  class='name pull-left'>" . $v[Name] . "</li>";
+                  echo "<li  class='time pull-left'>" . $v[Date] . "</li>";
+                  ?> </a>
+                  <div class="singo_view pull-left" style="display:none; background-color: pink; width: 100%;" id="SirenDiv<?php echo $k;?>" ><?php echo $v['Content']; ?></div></ul> <?php
+                }
+                if(isset($_SESSION['id'])){
+                  echo "<button onclick=\"location.href='newnotice.php'\" >" . "글쓰기" . "</button>";
                 }
               }
               catch(PDOException $e)
@@ -90,17 +95,11 @@
                 echo "</ul>";
               }
               ?>
-<!--               <ul >
-                <li class="title pull-left">연구원 모집</li>
-                <li class="name pull-left">Scott Uk-Jin Lee</li>
-                <li class="time pull-left">29 Aug 2014</li>
-              </ul> -->
             </div>
           </li>
         </div>
       </ul>
     </main>
-
     <footer role="contentinfo">
       <div class="container">
        <p>COPYRIGHT 2014 SELAB, ALL RIGHTS RESERVED. COMPUTER SCIENECE AND ENGINEERING, HANYANG UNIV. LOCATION: ENGINEERING BUILDING #3, ROOM 421. T +82-31-400-4754</p>

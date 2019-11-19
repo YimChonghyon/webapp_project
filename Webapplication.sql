@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS `Publications`;
 DROP TABLE IF EXISTS `Course`;
 DROP TABLE IF EXISTS `Course_history`;
 DROP TABLE IF EXISTS `Gallery`;
-DROP TABLE IF EXISTS `Client`;
+DROP TABLE IF EXISTS `User`;
 DROP TABLE IF EXISTS `Debate`;
 DROP TABLE IF EXISTS `Tag`;
 DROP TABLE IF EXISTS `Debate_Tag`;
@@ -27,12 +27,20 @@ CREATE TABLE `Notice` (
 	`Name`	VARCHAR(30)	NULL	DEFAULT 'Anonymous',
 	`Date`	TIMESTAMP	NULL	DEFAULT current_timestamp,
 	`View`	INT	NULL	DEFAULT 0,
-	`Content`	TEXT(500)	NULL,
+	`Content`	TEXT(500)	NOT NULL,
 	`open`	TINYINT	NOT NULL	DEFAULT 1,
     CONSTRAINT PK_Notice PRIMARY KEY(Notice_number)
 
 );
 
+CREATE TABLE Notice_file (
+	Notice_file_number INT NOT NULL auto_increment,
+	Notice_number INT NOT NULL,
+	File_name CHAR(5) NOT NULL,
+	CONSTRAINT PK_Notice_file PRIMARY KEY(Notice_file_number,Notice_number),
+	CONSTRAINT FK_Notice_file foreign key(Notice_number)
+	REFERENCES Notice(Notice_number)
+);
 
 CREATE TABLE `Member` (
 	`Member_number`	INT	NOT NULL	auto_increment,
@@ -80,10 +88,12 @@ CREATE TABLE `Gallery` (
 );
 
 
-CREATE TABLE `Client` (
+CREATE TABLE `User` (
 	`Id`	CHAR(20)	NOT NULL,
 	`Password`	VARCHAR(30)	NOT NULL,
-    CONSTRAINT PK_Client PRIMARY KEY(Id)
+	Name	VARCHAR(30),
+	privilege TINYINT,
+    CONSTRAINT PK_User PRIMARY KEY(Id)
 );
 
 

@@ -49,34 +49,31 @@
 </style>
 </head>    
 <body>    
-    <?php //conn db
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-
-    try {
-        $conn = new PDO("mysql:host=$servername;dbname=selab", $username, $password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        ?>
+<?php try{$conn=new PDO("mysql:host=localhost;dbname=selab","root","root");$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);}catch(PDOException $e){
+    //echo "Connection failed: " . $e->getMessage();
+}?>
 
         <header role= "banner">
             <nav role= "navigation">
-                <div id= "logo" class= "pull-left"><a href= ""><img src= "common/image" /></a></div>
+                <div id= "logo" class= "pull-left"><a href= ""><img src= "resource/images/selab_logo_S.png" /></a></div>
 
                 <ul id= "menu" class= "inline-list" class= "pull-left">
                     <li class="pull-left"><a href="resource/notice.php" >NOTICE</a></li> <!-- 해당 페이지로 이동 -->
                     <li class="pull-left"><a href="resource/members" >MEMBERS</a></li>
                     <li class="pull-left"><a href="resource/research" >RESEARCH</a></li>
                     <li class="pull-left"><a href="resource/publications" >PUBLICATIONS</a></li>
-                    <li class="pull-left"><a href="resource/courses" >COURSES</a></li>
+                    <li class="pull-left"><a href="resource/main_course.php" >COURSES</a></li>
                     <li class="pull-left"><a href="resource/gallery" >GALLERY</a></li>
                 </ul>
                 <?php
                 if(!isset($_SESSION['id']))
                     echo '<div role= "login" class= "pull-right"><a href= "resource/login.php">LOGIN</a></div>';
-                else
-                    echo '<div role= "login" class= "pull-right"><a href= "resource/logout.php">LOGOUT</a></div>';
+                else{
+                    echo '<div role= "logout" class= "pull-right"><a href= "resource/logout.php">LOGOUT</a></div>';
+                    echo '<div role= "setting" class= "pull-right"><a href= "resource/setting.php">SETTING</a></div>';
+                }
                 ?>
+
                 <a id= "contact" href= "/contact" class= 'pull-right'>CONTACT</a>
 
             </nav>
@@ -140,14 +137,6 @@
             <p>COPYRIGHT 2014 SELAB, ALL RIGHTS RESERVED. COMPUTER SCIENECE AND ENGINEERING, HANYANG UNIV. LOCATION: ENGINEERING BUILDING #3, ROOM 421. T +82-31-400-4754</p>
         </div>
     </footer>
-
-    <?php
-}
-catch(PDOException $e)
-{
-    echo "Connection failed: " . $e->getMessage();
-}
-?>
 </body>
 <?php $conn = null; // disconnect db ?>
 </html>

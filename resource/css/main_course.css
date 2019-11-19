@@ -6,7 +6,78 @@ h1 {
   padding-top : 100px;
   margin : 0px;
 }
-#course_table {
+
+p {
+  width : 800px;
+  margin : auto;
+  text-align : center;
+  text-shadow : 0.5px -1px gray;
+  background : #f2f2f2;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+header {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: Arial;
+}
+
+nav {
+  position: fixed;
+  background-color: ghostwhite;
+  width : 1140px;
+  overflow: hidden;
+  height: 50px;
+  text-decoration: none; text-transform: uppercase;
+ }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  border-left: 1px solid #999;
+  padding: 0 10px;
+}
+
+nav ul li a:hover, ul li a:focus {
+  color: #FFF;
+  border: 1px solid #F40;
+  background-color: #F40;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+  padding: 0 10px;
+  border-left: 1px solid #999;
+  padding: 0 10px;
+  margin-right: 0.5em;
+  margin-top : 15px;
+}
+
+.mainbody {
   background : #f2f2f2;
   color : #0d0d0d;
   width : 800px;
@@ -16,11 +87,7 @@ h1 {
 #course_table td {
   color : #0d0d0d;
   text-shadow : 0.5px -1px gray;
-}
-
-#first_table{
-	float: left;
-	border-right: 1px solid #dfdfdf;
+  height : 80px;
 }
 
 table th{
@@ -43,19 +110,6 @@ table td{
 	text-align: center;
 }
 
-#second_table th{
-	min-width: 70px;
-}
-
-.course{
-	width: 310px;
-	border-right: 2px solid #dfdfdf;
-}
-
-.coursenum{
-	width: 70px;
-}
-
 table tr td{
 	border-bottom: 1px solid #dfdfdf;
 	border-right: 1px solid #dfdfdf;
@@ -63,6 +117,71 @@ table tr td{
 
 td:last-child{
 	border-right: none;
+}
+
+tr:nth-child(odd) td{
+	background-color: white;
+}
+
+#first_table{
+	float : left;
+	border-right: 1px solid #dfdfdf;
+  overflow : hidden;
+}
+
+#first_table th:first-of-type{
+	border-radius: 3px 0px 0px 0px;
+}
+
+#second_table{
+	table-layout:fixed;
+}
+
+#second_table th{
+	min-width: 70px;
+}
+
+#second_table th:last-of-type{
+	border-radius: 0px 3px 0px 0px;
+}
+
+#over{
+	overflow: auto;
+}
+
+#logo img {
+  width : 80px;
+  height : 50px;
+}
+
+#menu li {
+  padding-top : 15px;
+}
+
+#tab {
+  float : left;
+  overflow : hidden;
+  margin-left : 50px;
+}
+
+input[type = "text"] {
+  text-align : center;
+  width : 120px;
+  height : 30px;
+  background-color : white;
+  margin-top : 3px;
+  border : 1px thin #f2f2f2;
+  border-radius : 12px;
+  padding : 0.5em;
+}
+
+.coursenum{
+	width: 70px;
+}
+
+.course{
+	width: 310px;
+	border-right: 2px solid #dfdfdf;
 }
 
 .active{
@@ -74,10 +193,6 @@ td:last-child{
 	background-color: #83D9FF !important;
 }
 
-tr:nth-child(odd) td{
-	background-color: white;
-}
-
 .circle {
 	width: 15px;
 	height: 15px;
@@ -86,30 +201,4 @@ tr:nth-child(odd) td{
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
 	display: inline-block;
-}
-
-#over{
-	overflow: auto;
-}
-
-#second_table{
-	table-layout:fixed;
-}
-
-#first_table th:first-of-type{
-	border-radius: 3px 0px 0px 0px;
-}
-
-#second_table th:last-of-type{
-	border-radius: 0px 3px 0px 0px;
-}
-#menu li {
-  margin-left : 20px;
-}
-p {
-  width : 800px;
-  margin : auto;
-  text-align : center;
-  text-shadow : 0.5px -1px gray;
-  background : #f2f2f2;
 }
