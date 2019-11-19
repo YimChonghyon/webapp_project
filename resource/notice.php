@@ -16,6 +16,15 @@
 </head>
 
 <body>
+<!-- javascript -->
+  <script>
+    function SirenFunction(idMyDiv){
+      var objDiv = document.getElementById(idMyDiv);
+      if(objDiv.style.display=="block"){ objDiv.style.display = "none"; }
+      else{ objDiv.style.display = "block"; }
+    }
+  </script>
+
   <header role= "banner">
     <nav role= "navigation">
       <div class="pull-left"><a href="../index.html"><img src="images/selab_logo_S.png" /></a></div>
@@ -59,11 +68,35 @@
         <div>
           <li class="entry">
             <div class="information">
-              <ul >
+              <?php
+              try {
+                $conn = new PDO("mysql:host=$servername;dbname=selab", 'root', 'root');
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $stmt = $conn->prepare("SELECT * FROM notice");
+                $stmt->execute();
+                foreach($stmt->fetchAll() as $k=>$v) { ?>
+                <a href="#" onclick="SirenFunction('SirenDiv<?php echo $k; ?>'); return false;" class="blind_view"> <?php
+                    echo "<ul>";
+                    echo "<li  class='title pull-left'>" . $v[Title] . "</li>";
+                    echo "<li  class='name pull-left'>" . $v[Name] . "</li>";
+                    echo "<li  class='time pull-left'>" . $v[Date] . "</li>";
+                    echo "</ul>";
+                    ?> </a>
+                    <div class="singo_view" style="display:none;" id="SirenDiv<?php echo $k;?>" ><?php echo $v['Content']; ?></div> <?php
+                }
+              }
+              catch(PDOException $e)
+              {
+                echo "<ul>";
+                echo "<li>" . "Connection failed: " . $e->getMessage() . "</li>";
+                echo "</ul>";
+              }
+              ?>
+<!--               <ul >
                 <li class="title pull-left">연구원 모집</li>
                 <li class="name pull-left">Scott Uk-Jin Lee</li>
                 <li class="time pull-left">29 Aug 2014</li>
-              </ul>
+              </ul> -->
             </div>
           </li>
         </div>
