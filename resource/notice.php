@@ -107,4 +107,5 @@
      </div>
    </footer>
  </body>
+ <?php $conn = null; // disconnect db ?> 
  </html>

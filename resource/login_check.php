@@ -21,5 +21,6 @@ if($result[0]['password'] != $password){
 }
 session_start();
 $_SESSION['id']=$id;
+$conn = null;  // disconnect db
 ?>
 <meta http-equiv="refresh" content="0;url=../index.php" />
