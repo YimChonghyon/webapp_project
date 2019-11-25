@@ -1,16 +1,16 @@
-#sample notice
+ï»¿#sample notice
 insert into notice(Title,Name,Content) values
-("¿¬±¸¿ø ¸ðÁý","Scott Uk-Jin Lee","SELab¿¡¼­´Â ¼ÒÇÁÆ®¿þ¾î°øÇÐ Àü ºÐ¾ß, ¸ÖÆ¼¾²·¹µå ¼ÒÇÁÆ®¿þ¾î ¹× À¥ ±â¼úÀ» ÇÔ²² ¿¬±¸ÇÒ ¼®»ç, ¹Ú»ç, ¼®¹ÚÅëÇÕ ¹× ¹Ú»çÈÄ °úÁ¤ÀÇ ¿¬±¸¿øÀ» ¸ðÁýÇÏ°í ÀÖ½À´Ï´Ù.
+("ì—°êµ¬ì› ëª¨ì§‘","Scott Uk-Jin Lee","SELabì—ì„œëŠ” ì†Œí”„íŠ¸ì›¨ì–´ê³µí•™ ì „ ë¶„ì•¼, ë©€í‹°ì“°ë ˆë“œ ì†Œí”„íŠ¸ì›¨ì–´ ë° ì›¹ ê¸°ìˆ ì„ í•¨ê»˜ ì—°êµ¬í•  ì„ì‚¬, ë°•ì‚¬, ì„ë°•í†µí•© ë° ë°•ì‚¬í›„ ê³¼ì •ì˜ ì—°êµ¬ì›ì„ ëª¨ì§‘í•˜ê³  ìžˆìŠµë‹ˆë‹¤.
 
-ÇöÀç SELab¿¡¼­´Â ¹Ì·¡Ã¢Á¶°úÇÐºÎ ÁÖÃ¼ NIPAÁÖ°üÀÇ ´ë±Ô¸ð ÇÁ·ÎÁ§Æ®¿¡ È°¹ßÈ÷ Âü¿©ÇÏ°í ÀÖÀ¸¸ç ÀÌ¸¦ ÅëÇÏ¿© ¿¬±¸¿øµéÀÇ ¿¬±¸°¡ ¿øÈ°È÷ ÁøÇàµÉ ¼ö ÀÖµµ·Ï ÇÁ·ÎÁ§Æ® ÀÎ°Çºñ¸¦ Áö¿øÇÏ°í ÀÖ½À´Ï´Ù. ÀÌ ¹Û¿¡µµ ¿¬±¸Á¶±³, ±³À°Á¶±³ ÀåÇÐ±Ý ¿Ü ´Ù¾çÇÑ ÀåÇÐ±ÝÀ» Áö¿øÇÏ°í ÀÖÀ¸¸ç ÀÔÇÐ½Ã ÄèÀûÇÑ ¿¬±¸°ø°£°ú ¿¬±¸ Àåºñ (PC/iMac µî) Áö¿øµµ ÇÏ°í ÀÖ½À´Ï´Ù.
+í˜„ìž¬ SELabì—ì„œëŠ” ë¯¸ëž˜ì°½ì¡°ê³¼í•™ë¶€ ì£¼ì²´ NIPAì£¼ê´€ì˜ ëŒ€ê·œëª¨ í”„ë¡œì íŠ¸ì— í™œë°œížˆ ì°¸ì—¬í•˜ê³  ìžˆìœ¼ë©° ì´ë¥¼ í†µí•˜ì—¬ ì—°êµ¬ì›ë“¤ì˜ ì—°êµ¬ê°€ ì›í™œížˆ ì§„í–‰ë  ìˆ˜ ìžˆë„ë¡ í”„ë¡œì íŠ¸ ì¸ê±´ë¹„ë¥¼ ì§€ì›í•˜ê³  ìžˆìŠµë‹ˆë‹¤. ì´ ë°–ì—ë„ ì—°êµ¬ì¡°êµ, êµìœ¡ì¡°êµ ìž¥í•™ê¸ˆ ì™¸ ë‹¤ì–‘í•œ ìž¥í•™ê¸ˆì„ ì§€ì›í•˜ê³  ìžˆìœ¼ë©° ìž…í•™ì‹œ ì¾Œì í•œ ì—°êµ¬ê³µê°„ê³¼ ì—°êµ¬ ìž¥ë¹„ (PC/iMac ë“±) ì§€ì›ë„ í•˜ê³  ìžˆìŠµë‹ˆë‹¤.
 
-SELab ¿¬±¸ ºÐ¾ß¿¡ °ü½ÉÀÌ ÀÖÀ¸½Å ºÐÀº ¾Æ·¡·Î ¿¬¶ôÁÖ¼¼¿ä!
+SELab ì—°êµ¬ ë¶„ì•¼ì— ê´€ì‹¬ì´ ìžˆìœ¼ì‹  ë¶„ì€ ì•„ëž˜ë¡œ ì—°ë½ì£¼ì„¸ìš”!
 
-ÇÑ¾ç´ëÇÐ±³ ERICA Á¦ 3°øÇÐ°ü 403È£, 421È£
+í•œì–‘ëŒ€í•™êµ ERICA ì œ 3ê³µí•™ê´€ 403í˜¸, 421í˜¸
 scottlee@hanyang.ac.kr
 031-400-5238 / 031-400-4754"),
-("2014 PL-SE First Joint Workshop","Scott Uk-Jin Lee","³»¿ë ¸ô¶óÀ¯"),
-("Welcome to SELab Homepage!","Scott Uk-Jin Lee","ºñ°ø°³¶ó ¸ô¶óÀ¯");
+("2014 PL-SE First Joint Workshop","Scott Uk-Jin Lee","ë‚´ìš© ëª°ë¼ìœ "),
+("Welcome to SELab Homepage!","Scott Uk-Jin Lee","ë¹„ê³µê°œë¼ ëª°ë¼ìœ ");
 
 #sample courese
 insert into course values
@@ -19,6 +19,6 @@ insert into course values
 
 #sample user
 insert into user values
-('ISO','ISO','masteraccount',3),
-('vector','vector','superaccount',2),
-('scalar','scalar','Gil Dong Hong',1);
+('ISO','$2y$10$Jv0KYrfZWH0ILao4PLjWk.6z4Pn1xYdadJ/pxKfewNkBJ.2gz6JQ2','masteraccount',3),
+('vector','$2y$10$efi.igR3EozpWvL58WWwAOnbSfFo1xmF3Z.XTRkRn1kxIQ47yifXy','superaccount',2),
+('scalar','$2y$10$xKhViHgtT.ECbiwd1mizO.1r13txETV3e8g8pAITbG9tJJ3gI6Ok6','Gil Dong Hong',1);
