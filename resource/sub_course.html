@@ -10,13 +10,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
 
 	<link rel="stylesheet" href="css/sub_course.css" type="text/css" />
-	<script type="text/javascript" src="js/course_page.js"></script>
+	<script type="text/javascript" src="js/sub_course.js"></script>
 
 </head>
 
 <body>
 	<header role="banner">
-		<div class="container">
+		<div>
 			<nav role="navigation">
 				<div id="logo" class="pull-left"><a href="/"><img src="images/selab_logo_S.png" /></a></div>
 				<ul id="menu" class="inline-list pull-left">
@@ -35,23 +35,21 @@
 	</header>
 
 	<main role="main">
-		<div class="container">
+		<div>
 			<div class="contents">
 				<h1>Web Application Development</h1>
-<div id="tab">
-  <div class="first-tab" data-tab="main"><input type="text" name="home" value = "Home" /></div>
-  <div class="deactive last-tab" data-tab="slides"><input type="text" name="slides" value = "Slides" /></div>
-	<div class="schedule-tab" data-tab="schedules"><input type="text" name="present" value = "Present" /></div>
-	<div class="third-tab" data-tab="notice"><input type="text" name="notice" value = "Notice" /></div>
-	<div class="curiosity" data-tab="curiosity"><input type="text" name="debate" value = "Debate" /></div>
-</div>
-
+				<div id="tab">
+					<button id = "home" onclick = home()>Home</button><br />
+					<button id = "slide_button" onclick = slide_button()>Slides</button><br />
+					<button id = "debate" onclick = debate()>Debate</button>
+				</div>
 <div id="main">
   <div class="wrap-subcontent">
     <h3>Course Objectives</h3>
-    <p>
+    <p1>
       In this course, the followings will be covered to adequately enable web programming and web application development:
-    </p>
+		</p1>
+		<br />
     <ol>
   		<li>Understand the protocols, language  and systems used on the Web (HTML, CSS, HTTP, URLs, XML)</li>
   		<li>Understand the functions of clients and servers on the Web &amp; learn how to implement client-side scripts (JavaScript) and server-side scripts (PHP)</li>
@@ -91,7 +89,7 @@
 
   <div class="wrap-subcontent">
     <h3>Places &amp; Dates</h3>
-    <p1>Class 1 (23497)</11>
+    <p1>Class 1 (23497)</p1>
 			<ul>
 				<li>Lecture : Thu (09:00 - 10:30) &amp; Fri (13:00 - 14:30) @ Engineering Building #1 Room 402</li>
 		    <li>Lab : Fri (09:00 - 11:00) @ Engineering Building #4 PC Room 1 & 2</li>
