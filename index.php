@@ -20,24 +20,23 @@
     <style>
         body {overflow-x: hidden; margin-bottom: 1.5em; width: 100%; margin-left: 0; margin-top: 0;}
         
-        a:link { color: black; text-decoration: none;}
+        a:link { color: ghostwhite; text-decoration: none;}
         a:visited { color: black; text-decoration: none;}
-        a:hover { color: black; text-decoration: underline;}
+        a:hover { color: #F77532; text-decoration: underline;}
+        a:active { background-color: #F77532;}
+        
+        nav {position: fixed; background-color: ghostwhite; width: 100%; overflow: hidden; height: 70px; top: 0;
+             text-decoration: none; text-transform: uppercase; background-color: #92B5D9;
+             font-weight: bold; font-size: 18px;}
+        nav ul {margin: 0; padding: 0; background-color: #92B5D9;}
+        nav ul li {display: inline; border-left: 1px solid #92B5D9; padding: 0 10px;}
+        nav ul li a {display: block; color: ghostwhite; text-align: center; text-decoration: none;}
 
-        header {height: 70px; margin: 0; padding: 0; font-size: 1em; font-family: Arial;}
-
-        nav {position: fixed; background-color: ghostwhite; width: 100%; overflow: hidden; height: 70px;
-         text-decoration: none; text-transform: uppercase;
-     }
-     nav ul {margin: 0; padding: 0;}
-     nav ul li {display: inline; border-left: 1px solid #999; padding: 0 10px;}
-     nav ul li a:hover, ul li a:focus {color: #FFF; border: 1px solid #F40; background-color: #F40;}
-
-     .pull-left {float: left;}
-     .pull-right {float: right; padding: 0 10px; border-left: 1px solid #999; padding: 0 10px; margin-right: 0.5em;}
-
-     .pull-left:first-child {border-left: none;}
-     .pull-right:first-child {border-left: none;}
+        .pull-left {float: left; margin-top: 25px; border-left: 2px solid #EDEDEF;}
+        .pull-right {float: right; padding: 0 10px; border-left: 2px solid #EDEDEF; padding: 0 10px; margin-right: 0.5em;
+                     margin-top: 25px;}
+        .pull-left:first-child {border-left: none;}
+        .pull-right:first-child {border-right: none;}
 
      main {text-align: center;}
      main article {width: 33%; height: 20em; display: inline-block;}
@@ -59,11 +58,11 @@
 
                 <ul id= "menu" class= "inline-list" class= "pull-left">
                     <li class="pull-left"><a href="resource/notice.php" >NOTICE</a></li> <!-- 해당 페이지로 이동 -->
-                    <li class="pull-left"><a href="resource/members" >MEMBERS</a></li>
-                    <li class="pull-left"><a href="resource/research" >RESEARCH</a></li>
-                    <li class="pull-left"><a href="resource/publications" >PUBLICATIONS</a></li>
+                    <li class="pull-left"><a href="resource/members.php" >MEMBERS</a></li>
+                    <li class="pull-left"><a href="resource/research.html" >RESEARCH</a></li>
+                    <li class="pull-left"><a href="resource/publication.php" >PUBLICATIONS</a></li>
                     <li class="pull-left"><a href="resource/main_course.php" >COURSES</a></li>
-                    <li class="pull-left"><a href="resource/gallery" >GALLERY</a></li>
+                    <li class="pull-left"><a href="resource/gallery.php" >GALLERY</a></li>
                 </ul>
                 <?php
                 if(!isset($_SESSION['id']))
@@ -73,9 +72,6 @@
                     echo '<div role= "setting" class= "pull-right"><a href= "resource/setting.php">SETTING</a></div>';
                 }
                 ?>
-
-                <a id= "contact" href= "/contact" class= 'pull-right'>CONTACT</a>
-
             </nav>
         </header>
 
