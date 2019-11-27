@@ -12,8 +12,8 @@ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $stmt = $conn->prepare("SELECT password,name,privilege FROM user where id = :id");
 $stmt -> bindValue(":id",$id);
 $stmt->execute();
-$result = $stmt->fetchAll();	
-if($result[0]['password'] != $password){
+$result = $stmt->fetchAll();
+if(!password_verify($password, $result[0]['password'])){
 	header("Content-Type: text/html; charset=UTF-8");
 	echo "<script>alert('아이디 또는 비밀번호가 잘못되었습니다.');";
 	echo "window.location.replace('login.php');</script>";

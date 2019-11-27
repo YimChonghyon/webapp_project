@@ -90,7 +90,7 @@ CREATE TABLE `Gallery` (
 
 CREATE TABLE `User` (
 	`Id`	CHAR(20)	NOT NULL,
-	`Password`	VARCHAR(30)	NOT NULL,
+	`Password`	VARCHAR(255)	NOT NULL,
 	Name	VARCHAR(30),
 	privilege TINYINT,
     CONSTRAINT PK_User PRIMARY KEY(Id)
