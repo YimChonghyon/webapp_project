@@ -5,22 +5,20 @@ body {
   overflow-x : hidden;
 }
 
-h1 {
-  text-align : center;
-  text-shadow : 3px -1px gray;
-  background : #f2f2f2;
+.mainphoto {
   width : 100%;
-  height : 260px;
-  padding-top : 100px;
-  margin : 0px;
+  height : 400px;
+  background-image : url("../images/course_2.jpg");
+  opacity : 0.8;
 }
 
-p {
-  width : 800px;
-  margin : auto;
+h1 {
+  font-size : 50px;
+  padding-top : 160px;
   text-align : center;
-  text-shadow : 0.5px -1px gray;
-  background : #f2f2f2;
+  text-shadow : 3px -1px gray;
+  vertical-align : center;
+  opacity : 1;
 }
 
 a:link {
@@ -92,13 +90,17 @@ nav ul li a:hover, ul li a:focus {
   background-color : white;
 }
 
+.tab_class {
+  width : 1200px;
+}
+
 .mainbody {
   border : 1px solid black;
   border-radius : 12px;
   background-color : white;
+  margin-left : 20%;
   color : #0d0d0d;
-  width : 800px;
-  margin : auto;
+  width : 60%;
   margin-top : 30px;
   padding : 20px;
   padding-top : -5px;
@@ -126,6 +128,7 @@ table th{
 	vertical-align: middle;
   border : 1px solid black;
 	text-align: center;
+  margin : 0px;
 }
 
 table td{
@@ -135,6 +138,7 @@ table td{
 	vertical-align: middle;
 	padding: 0px;
 	text-align: center;
+  margin : 0px;
 }
 
 table tr td{
@@ -169,13 +173,10 @@ tr:nth-child(odd) td{
 	border-radius: 0px 3px 0px 0px;
 }
 
-@keyframes sheen {
-  0% {
-    transform : skewY(-45deg) translateX(0);
-  }
-  100% {
-    transform : skewY(-45deg) translateX(12.5em);
-  }
+#tab {
+  float : left;
+  margin-left : 10.3%;
+  overflow : hidden;
 }
 
 #tab button {
@@ -190,34 +191,26 @@ tr:nth-child(odd) td{
   float : right;
   text-align : center;
   text-shadow : 0.5px -1px gray;
-  margin-left : 115px;
-
 }
 
 #tab button:hover {
   height : 70px;
   color : black;
   background-color : gray;
-  border-right : gray;
+  border-right : white;
 }
 
 #present {
-
   margin-top : 50px;
   border-top-left-radius : 5px;
   border-bottom-left-radius : 5px;
   margin-bottom : 10px;
 }
 
-#present:checked + label {
-  font-size : 30px;
-}
-
 #undergraduate {
   border-top-left-radius : 5px;
   border-bottom-left-radius : 5px;
   margin-bottom : 10px;
-  margin-left : px;
 }
 
 #postgraduate {
@@ -236,11 +229,6 @@ tr:nth-child(odd) td{
 
 #menu li {
   padding-top : 15px;
-}
-
-#tab {
-  float : left;
-  overflow : hidden;
 }
 
 .coursenum{
