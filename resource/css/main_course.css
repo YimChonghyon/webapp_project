@@ -86,10 +86,6 @@ nav ul li a:hover, ul li a:focus {
   margin-top : 15px;
 }
 
-.contents {
-  background-color : white;
-}
-
 .tab_class {
   width : 1200px;
 }
@@ -97,8 +93,8 @@ nav ul li a:hover, ul li a:focus {
 .mainbody {
   border : 1px solid black;
   border-radius : 12px;
-  background-color : white;
-  margin-left : 20%;
+  background-color : #dcdcdc;
+  margin-left : 22%;
   color : #0d0d0d;
   width : 60%;
   margin-top : 30px;
@@ -175,15 +171,14 @@ tr:nth-child(odd) td{
 
 #tab {
   float : left;
-  margin-left : 10.3%;
-  overflow : hidden;
+  margin-left : 12.1%;
+
 }
 
 #tab button {
   width : 120px;
   height : 50px;
   border : 1px solid black;
-  border-right : gray;
   background-color : white;
   color : black;
   padding-left : 10px;
@@ -196,8 +191,9 @@ tr:nth-child(odd) td{
 #tab button:hover {
   height : 70px;
   color : black;
-  background-color : gray;
-  border-right : white;
+  background-color : #dcdcdc;
+  border-right : 3px solid #dcdcdc;
+
 }
 
 #present {
@@ -241,7 +237,7 @@ tr:nth-child(odd) td{
 }
 
 .active{
-	background-color: #00bfff !important;
+	background-color: #f4a460 !important;
 	cursor: pointer;
 }
 
@@ -252,7 +248,7 @@ tr:nth-child(odd) td{
 .circle {
 	width: 15px;
 	height: 15px;
-	background-color: #00bfff;
+	background-color: #f4a460;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
