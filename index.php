@@ -12,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="resource/css/index.css" />
     <link rel="stylesheet" type="text/css" href="resource/css/common.css" />
     <link href="./img/favicon.png" type="image/png" rel="shortcut icon" />
-    <link rel="stylesheet" type="text/css" href="resource/css/footer.css" />
 </head>    
 <body>    
     <?php //db 연결
@@ -27,7 +26,7 @@
                 <li class="pull-left nav-left"><a href="notice/notice.php" >NOTICE</a></li> <!-- 해당 페이지로 이동 -->
                 <li class="pull-left nav-left"><a href="members/members.php" >MEMBERS</a></li>
                 <li class="pull-left nav-left"><a href="research/research.php" >RESEARCH</a></li>
-                <li class="pull-left nav-left"><a href="publication/publication.php" >PUBLICATIONS</a></li>
+                <li class="pull-left nav-left"><a href="publications/publication.php" >PUBLICATIONS</a></li>
                 <li class="pull-left nav-left"><a href="courses/main_course.php" >COURSES</a></li>
                 <li class="pull-left nav-left"><a href="gallery/gallery.php" >GALLERY</a></li>
                 <?php  //로그인 옵션

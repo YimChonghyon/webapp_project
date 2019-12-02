@@ -1,8 +1,10 @@
-p{
-    text-align: center;
+.main_section{
+ 	background-image: url('../../resource/images/notice.jpg');
 }
-
 .research{
-    margin-top: 300px;
-    margin-bottom: 300px ;
+	margin: 5%;
+	text-align: center;
+}
+#research_img{
+	width: 90%;
 }

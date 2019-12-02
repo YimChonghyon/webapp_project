@@ -2,55 +2,49 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>Software Engineering Lab - Courses</title>
-	<!--[if IE]>
-	<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
-	<link rel="stylesheet" href="publication.css" type="text/css" />
+	<title>Software Engineering Lab - Gallery</title>
+	<link rel="stylesheet" type="text/css" href="css/gallery.css" />
+	<link rel="stylesheet" type="text/css" href="../resource/css/common.css" />
 </head>
 
 <body>
-	<header role="banner">
-		<div class="container">
-			<nav role="navigation">
-				<div id="logo" class="pull-left"><a href="/"><img src="/common/images/selab_logo_S.png" /></a></div>
-				<ul id="menu" class="inline-list pull-left">
-					<li class="pull-left"><a href="/notice" >NOTICE</a></li>
-					<li class="pull-left"><a href="/members" >MEMBERS</a></li>
-					<li class="pull-left"><a href="/research" >RESEARCH</a></li>
-					<li class="pull-left"><a href="/publications" >PUBLICATIONS</a></li>
-					<li class="pull-left"><a href="/courses" class='selected'>COURSES</a></li>
-					<li class="pull-left"><a href="/gallery" >GALLERY</a></li>
-									</ul>
-							<div role="login" class="pull-right">
-											<a href="/login/index.php?source=/courses/index.php">LOGIN</a>
-										</div>
-				<a id="contact" href="/contact" class='pull-right'>CONTACT</a>
-			</nav>
-		</div>
-	</header>
+	<header role= "banner">
+		<nav role= "navigation">
+			<div id= "logo" class= "pull-left"><a href= "../index.php"><img src= "../resource/images/selab_logo_S.png" /></a></div>
+			<ul class= "inline-list" class= "pull-left">
+				<li class="pull-left nav-left"><a href="../notice/notice.php" >NOTICE</a></li> <!-- 해당 페이지로 이동 -->
+				<li class="pull-left nav-left"><a href="../members/members.php" >MEMBERS</a></li>
+				<li class="pull-left nav-left"><a href="../research/research.php" >RESEARCH</a></li>
+				<li class="pull-left nav-left"><a href="../publications/publication.php" >PUBLICATIONS</a></li>
+				<li class="pull-left nav-left"><a href="../courses/main_course.php" >COURSES</a></li>
+				<li class="pull-left nav-left"><a href="../gallery/gallery.php" >GALLERY</a></li>
+        		<?php  //로그인 옵션
+        		include "../resource/LOGIN_template.php";
+        		?>
+        	</ul>
+        </nav>
+    </header>
 
-	<main role="main">
-		<div class="container">
-			<div class="contents">
-				<h1>GALLERY</h1>
-				<div class="tab">
-				  <div class="first-tab" data-type="all">All</div>
-				  <div class="deactive" data-type="social">Social Activity</div>
-					<div class="deactive" data-type="conference">Conference</div>
-					<div class="last-tab" data-type="etc">Etc</div>
-				</div>
-			</div>
-		</div>
+    <main role="main">
+    	<div class="contents">
+    		<div class="main_section">
+    			<h1>GALLERY</h1>
+    		</div>
 
-	</main>
+<!--     		<div class="tab">
+    			<div class="first-tab" data-type="all">All</div>
+    			<div class="deactive" data-type="social">Social Activity</div>
+    			<div class="deactive" data-type="conference">Conference</div>
+    			<div class="last-tab" data-type="etc">Etc</div>
+    		</div> -->
+    	</div>
+    </main>
 
-	<footer role="contentinfo">
-		<div class="container">
-			<p>COPYRIGHT 2014 SELAB, ALL RIGHTS RESERVED. COMPUTER SCIENECE AND ENGINEERING, HANYANG UNIV. LOCATION: ENGINEERING BUILDING #3, ROOM 421. T +82-31-400-4754</p>
-		</div>
-	</footer>
+    <footer role="contentinfo">
+    	<div class="container">
+    		<p>COPYRIGHT 2014 SELAB, ALL RIGHTS RESERVED. COMPUTER SCIENECE AND ENGINEERING, HANYANG UNIV. LOCATION: ENGINEERING BUILDING #3, ROOM 421. T +82-31-400-4754</p>
+    	</div>
+    </footer>
 
 </body>
 </html>
