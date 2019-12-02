@@ -4,135 +4,97 @@
     학번 : 2015035732
     이름 : 이수종
 -->
-<?php session_start(); ?>
 <html>
 <head>
     <meta charset="utf-8" />
     <title> Software Engineering Lab - Home </title>
-
-    <meta name="author" content="Scott Uk-Jin Lee" />
     <meta name="keywords" content="Hanyang University, CSE326, Web Application Development" />
-
-    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="resource/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="resource/css/common.css" />
     <link href="./img/favicon.png" type="image/png" rel="shortcut icon" />
-
-    <!-- CSS로 재생성 -->
-    <style>
-        body {overflow-x: hidden; margin-bottom: 1.5em; width: 100%; margin-left: 0; margin-top: 0;}
-        
-        a:link { color: ghostwhite; text-decoration: none;}
-        a:visited { color: black; text-decoration: none;}
-        a:hover { color: #F77532; text-decoration: underline;}
-        a:active { background-color: #F77532;}
-        
-        nav {position: fixed; background-color: ghostwhite; width: 100%; overflow: hidden; height: 70px; top: 0;
-             text-decoration: none; text-transform: uppercase; background-color: #92B5D9;
-             font-weight: bold; font-size: 18px;}
-        nav ul {margin: 0; padding: 0; background-color: #92B5D9;}
-        nav ul li {display: inline; border-left: 1px solid #92B5D9; padding: 0 10px;}
-        nav ul li a {display: block; color: ghostwhite; text-align: center; text-decoration: none;}
-
-        .pull-left {float: left; margin-top: 25px; border-left: 2px solid #EDEDEF;}
-        .pull-right {float: right; padding: 0 10px; border-left: 2px solid #EDEDEF; padding: 0 10px; margin-right: 0.5em;
-                     margin-top: 25px;}
-        .pull-left:first-child {border-left: none;}
-        .pull-right:first-child {border-right: none;}
-
-     main {text-align: center;}
-     main article {width: 33%; height: 20em; display: inline-block;}
-     main li {list-style: none;}
-
-     footer {position: fixed; margin-bottom: 0%; margin-left: 0%; margin-right: 0%;
-        bottom: 0; width: 100%; height: 1.5em; font-size: 1em; background-color: gray;
-    }
-</style>
+    <link rel="stylesheet" type="text/css" href="resource/css/footer.css" />
 </head>    
 <body>    
-<?php try{$conn=new PDO("mysql:host=localhost;dbname=selab","root","root");$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);}catch(PDOException $e){
-    //echo "Connection failed: " . $e->getMessage();
-}?>
+    <?php //db 연결
+    include "resource/DB_connect.php";
+    $conn = connect();
+    ?>
 
-        <header role= "banner">
-            <nav role= "navigation">
-                <div id= "logo" class= "pull-left"><a href= ""><img src= "resource/images/selab_logo_S.png" /></a></div>
+    <header role= "banner">
+        <nav role= "navigation">
+            <div id= "logo" class= "pull-left"><a href= ""><img src= "resource/images/selab_logo_S.png" /></a></div>
+            <ul id= "menu" class= "inline-list" class= "pull-left">
+                <li class="pull-left nav-left"><a href="notice/notice.php" >NOTICE</a></li> <!-- 해당 페이지로 이동 -->
+                <li class="pull-left nav-left"><a href="members/members.php" >MEMBERS</a></li>
+                <li class="pull-left nav-left"><a href="research/research.php" >RESEARCH</a></li>
+                <li class="pull-left nav-left"><a href="publication/publication.php" >PUBLICATIONS</a></li>
+                <li class="pull-left nav-left"><a href="courses/main_course.php" >COURSES</a></li>
+                <li class="pull-left nav-left"><a href="gallery/gallery.php" >GALLERY</a></li>
+                <?php  //로그인 옵션
+                include "resource/LOGIN_template.php";
+                ?>            
+            </ul>
+        </nav>
+    </header>
 
-                <ul id= "menu" class= "inline-list" class= "pull-left">
-                    <li class="pull-left"><a href="resource/notice.php" >NOTICE</a></li> <!-- 해당 페이지로 이동 -->
-                    <li class="pull-left"><a href="resource/members.php" >MEMBERS</a></li>
-                    <li class="pull-left"><a href="resource/research.html" >RESEARCH</a></li>
-                    <li class="pull-left"><a href="resource/publication.php" >PUBLICATIONS</a></li>
-                    <li class="pull-left"><a href="resource/main_course.php" >COURSES</a></li>
-                    <li class="pull-left"><a href="resource/gallery.php" >GALLERY</a></li>
-                </ul>
-                <?php
-                if(!isset($_SESSION['id']))
-                    echo '<div role= "login" class= "pull-right"><a href= "resource/login.php">LOGIN</a></div>';
-                else{
-                    echo '<div role= "logout" class= "pull-right"><a href= "resource/logout.php">LOGOUT</a></div>';
-                    echo '<div role= "setting" class= "pull-right"><a href= "resource/setting.php">SETTING</a></div>';
-                }
-                ?>
-            </nav>
-        </header>
-
-        <div id= "main_image">
-            <img src="http://appdata.hungryapp.co.kr/data_file/data_img_m/201502/10/1423580240_Nr4eu5HZAs.jpg" alt="main_image" width= 100% height= 500px;>
-        </div>
-
-        <main>
-            <article>
-                <h3><a href="/research">ABOUT US</a></h3>
-                <p>welcome to Software Engineering Laboratory within the CSE Dept @ HYU(ERICA) led by asst. prof. Scott LEE</p>
-                <p>Content Start</p> <!-- 사진 내용 3개 -->
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content End</p>
-            </article>
-            <article>
-                <h3><a href="resource/notice.html">NOTICE</a></h3> <!-- 기본적인 notice 링크 -->
-                <ul>
-                    <?php
-                    $stmt = $conn->prepare("SELECT title FROM notice limit 3");
-                    $stmt->execute();
-                    foreach($stmt->fetchAll() as $k=>$v) {
-                        echo "<li>" . $v[title] . "</li>";
-                    }
-                    ?>
-                </ul>
-            </article>
-            <article>
-                <h3><a href="/courses">COURSES</a></h3> <!-- 이번 학기에 열린 강의 목록 / 링크 -->
-                <?php
-                $stmt = $conn->prepare("SELECT Course_number,Course_name FROM course");
-                $stmt->execute();
-                foreach($stmt->fetchAll() as $k=>$v) {
-                    echo "<li><a>" . $v[Course_number] ." ". $v[Course_name] . "</a></li>";
-                }
-                ?>
-            </article>
-        </section>
-    </main>
-
-    <div id= "content">
-        <p>Content Start</p> <!-- dumb -->
-        <p>Content</p>
-        <p>Content</p>
-        <p>Content</p>
-        <p>Content</p>
-        <p>Content</p>
-        <p>Content</p>
-        <p>Content</p>
-        <p>Content</p>
-        <p>Content</p>
-        <p>Content End</p>
+    <div id= "main_image">
+        <img src="http://appdata.hungryapp.co.kr/data_file/data_img_m/201502/10/1423580240_Nr4eu5HZAs.jpg" alt="main_image" width= 100% height= 500px;>
     </div>
 
-    <footer role="contentinfo">
-        <div class="container">
-            <p>COPYRIGHT 2014 SELAB, ALL RIGHTS RESERVED. COMPUTER SCIENECE AND ENGINEERING, HANYANG UNIV. LOCATION: ENGINEERING BUILDING #3, ROOM 421. T +82-31-400-4754</p>
-        </div>
-    </footer>
+    <main>
+        <article>
+            <h3><a href="/research">ABOUT US</a></h3>
+            <p>welcome to Software Engineering Laboratory within the CSE Dept @ HYU(ERICA) led by asst. prof. Scott LEE</p>
+            <p>Content Start</p> <!-- 사진 내용 3개 -->
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content</p>
+            <p>Content End</p>
+        </article>
+        <article>
+            <h3><a href="resource/notice.html">NOTICE</a></h3> <!-- 기본적인 notice 링크 -->
+            <ul>
+                <?php
+                $stmt = $conn->prepare("SELECT title FROM notice limit 3");
+                $stmt->execute();
+                foreach($stmt->fetchAll() as $k=>$v) {
+                    echo "<li>" . $v['title'] . "</li>";
+                }
+                ?>
+            </ul>
+        </article>
+        <article>
+            <h3><a href="/courses">COURSES</a></h3> <!-- 이번 학기에 열린 강의 목록 / 링크 -->
+            <?php
+            $stmt = $conn->prepare("SELECT Course_number,Course_name FROM course");
+            $stmt->execute();
+            foreach($stmt->fetchAll() as $k=>$v) {
+                echo "<li><a>" . $v['Course_number'] ." ". $v['Course_name'] . "</a></li>";
+            }
+            ?>
+        </article>
+    </section>
+</main>
+
+<div id= "content">
+    <p>Content Start</p> <!-- dumb -->
+    <p>Content</p>
+    <p>Content</p>
+    <p>Content</p>
+    <p>Content</p>
+    <p>Content</p>
+    <p>Content</p>
+    <p>Content</p>
+    <p>Content</p>
+    <p>Content</p>
+    <p>Content End</p>
+</div>
+
+<footer role="contentinfo">
+    <div class="container">
+        <p>COPYRIGHT 2014 SELAB, ALL RIGHTS RESERVED. COMPUTER SCIENECE AND ENGINEERING, HANYANG UNIV. LOCATION: ENGINEERING BUILDING #3, ROOM 421. T +82-31-400-4754</p>
+    </div>
+</footer>
 </body>
 <?php $conn = null; // disconnect db ?>
 </html>

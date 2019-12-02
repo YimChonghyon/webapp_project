@@ -1,44 +1,8 @@
 body
 {
-    overflow-x: hidden;
+    overflow-x: scroll;
     width: 100%; margin-left: 0; margin-top: 0;
     background-color: white;
-}
-
-/* nav */
-nav 
-{
-    position: fixed;
-    width: 100%;
-    overflow: hidden;
-    top: 0;
-    background-color: #92B5D9;
-    text-decoration: none; text-transform: uppercase;
-    font-weight: bold; font-size: 18px;
-}
-
-nav ul li
-{
-    display: inline;
-    list-style: none;
-    color: ghostwhite;
-    padding: 0 10px;
-    
-}
-
-nav ul li a 
-{
-    display: inline; 
-    color: ghostwhite; 
-    text-align: center; text-decoration: none;}
-
-.pull-left 
-{
-    float: left; margin-top: 25px; border-left: 2px solid #EDEDEF; padding: 0 10px;
-}
-.pull-right 
-{
-    float: right; border-left: 2px solid #EDEDEF; padding: 0 10px; margin-right: 0.5em; margin-top: 25px; color: ghostwhite;
 }
 
 /* INDEX MAIN IMAGE */

@@ -30,28 +30,28 @@
 					<li class="pull-left"><a href="resource/gallery" >GALLERY</a></li>
 				</ul>
 
-					<div role= "login" class= "pull-right"><a href= "resource/login.php">LOGIN</a></div>
+				<div role= "login" class= "pull-right"><a href= "resource/login.php">LOGIN</a></div>
 
-					<div role= "logout" class= "pull-right"><a href= "resource/logout.php">LOGOUT</a></div>
-					<div role= "setting" class= "pull-right"><a href= "resource/setting.php">SETTING</a></div>
+				<div role= "logout" class= "pull-right"><a href= "resource/logout.php">LOGOUT</a></div>
+				<div role= "setting" class= "pull-right"><a href= "resource/setting.php">SETTING</a></div>
 
 			</nav>
 		</div>
 	</header>
 
-			<div class="contents">
-			<div class = "mainphoto">
-				<h1>COURSES</h1>
+	<div class="contents">
+		<div class = "mainphoto">
+			<h1>COURSES</h1>
+		</div>
+		<div class = "tab_class">
+			<div id="tab">
+				<button id = "present" onclick = present()>Present</button><br />
+				<button id = "undergraduate" onclick = undergraduate()>Undergraduate</button><br />
+				<button id = "postgraduate" onclick = postgraduate()>Postgraduate</button>
 			</div>
-				<div class = "tab_class">
-					<div id="tab">
-						<button id = "present" onclick = present()>Present</button><br />
-						<button id = "undergraduate" onclick = undergraduate()>Undergraduate</button><br />
-						<button id = "postgraduate" onclick = postgraduate()>Postgraduate</button>
-					</div>
 
-				<div class= "mainbody">
-					<div id = "present_course">
+			<div class= "mainbody">
+				<div id = "present_course">
 					<div id="course_table">
 						<table id ="first_table">
 							<tr>
@@ -424,7 +424,7 @@
 
 			</div>
 		</div>
-		</div>
+	</div>
 	<footer role="contentinfo">
 		<div class="container">
 			<p>COPYRIGHT 2014 SELAB, ALL RIGHTS RESERVED. COMPUTER SCIENECE AND ENGINEERING, HANYANG UNIV. LOCATION: ENGINEERING BUILDING #3, ROOM 421. T +82-31-400-4754</p>
