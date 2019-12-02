@@ -1,5 +1,5 @@
 # webapp_project
 
-CSS µðÀÚÀÎ »ç¿ë¿¡ BOOTSTRAP »ç¿ë(MIT license)
-common Æú´õ¿¡ ÀÌ¹ÌÁö/ÀÚ¹Ù½ºÅ©·¦Æ®/cssÆÄÀÏµî Æ÷ÇÔ
-resoucre Æú´õ¿¡ html/php ÆÄÀÏ Æ÷ÇÔ
+resource í´ë”ì— ì „ì—­ì ìœ¼ë¡œ ì‚¬ìš©í•˜ëŠ” css/javascript/image íŒŒì¼ì„ ì˜¬ë ¤ì£¼ì„¸ìš”.
+
+ê°œë³„í´ë”(notice,research,etc...)ì—ì„œ ê°œë³„ì ì¸ ì›¹íŽ˜ì´ì§€ ê°œë°œí•´ì£¼ì„¸ìš”.
