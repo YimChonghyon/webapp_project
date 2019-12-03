@@ -10,15 +10,16 @@ SELab 연구 분야에 관심이 있으신 분은 아래로 연락주세요!
 scottlee@hanyang.ac.kr
 031-400-5238 / 031-400-4754"),
 ("2014 PL-SE First Joint Workshop","Scott Uk-Jin Lee","내용 몰라유"),
-("Welcome to SELab Homepage!","Scott Uk-Jin Lee","비공개라 몰라유");
+("Welcome to SELab Homepage!","Scott Uk-Jin Lee","비공개라 몰라유"),
+("임시계정","UROPA_ISO","ISO,vector,scalar");
 
 #sample courese
 insert into course values
-("CSE326","Web Application Development","Undergraduate Courses","google.com","hello world!"),
-("CSE6050","Advanced Software Engineering","Postgraduate Courses","naver.com","hell world!");
+("CSE326","Web Application Development","Undergraduate Courses","hello world!"),
+("CSE6050","Advanced Software Engineering","Postgraduate Courses","hell world!");
 
 #sample user
-insert into user values
+insert into user(Id,Password,Name,Privilege) values
 ('ISO','$2y$10$Jv0KYrfZWH0ILao4PLjWk.6z4Pn1xYdadJ/pxKfewNkBJ.2gz6JQ2','masteraccount',3),
 ('vector','$2y$10$efi.igR3EozpWvL58WWwAOnbSfFo1xmF3Z.XTRkRn1kxIQ47yifXy','superaccount',2),
 ('scalar','$2y$10$xKhViHgtT.ECbiwd1mizO.1r13txETV3e8g8pAITbG9tJJ3gI6Ok6','Gil Dong Hong',1);

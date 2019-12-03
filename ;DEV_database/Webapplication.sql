@@ -3,275 +3,222 @@ create database selab;
 use selab;
 
 SET foreign_key_checks = 0;
-DROP TABLE IF EXISTS `Notice`;
-DROP TABLE IF EXISTS `Member`;
-DROP TABLE IF EXISTS `Publications`;
-DROP TABLE IF EXISTS `Course`;
-DROP TABLE IF EXISTS `Course_history`;
-DROP TABLE IF EXISTS `Gallery`;
-DROP TABLE IF EXISTS `User`;
-DROP TABLE IF EXISTS `Debate`;
-DROP TABLE IF EXISTS `Tag`;
-DROP TABLE IF EXISTS `Debate_Tag`;
-DROP TABLE IF EXISTS `Slide_Lecture`;
-DROP TABLE IF EXISTS `Slide_Lab`;
-DROP TABLE IF EXISTS `Course_notice`;
-DROP TABLE IF EXISTS `Course_schedule`;
-DROP TABLE IF EXISTS `Gallery_type`;
-DROP TABLE IF EXISTS `Publications_type`;
-DROP TABLE IF EXISTS `reply`;
+DROP TABLE IF EXISTS Publications_type;
+DROP TABLE IF EXISTS Publications;
+DROP TABLE IF EXISTS Gallery_type;
+DROP TABLE IF EXISTS Gallery;
+DROP TABLE IF EXISTS Notice;
+DROP TABLE IF EXISTS User;
+DROP TABLE IF EXISTS Course;
+DROP TABLE IF EXISTS Course_history;
+DROP TABLE IF EXISTS Slide_Lecture;
+DROP TABLE IF EXISTS Division;
+DROP TABLE IF EXISTS Course_schedule;
+DROP TABLE IF EXISTS Course_notice;
+DROP TABLE IF EXISTS Debate;
+DROP TABLE IF EXISTS Tag;
+DROP TABLE IF EXISTS Debate_Tag;
+DROP TABLE IF EXISTS reply;
+DROP TABLE IF EXISTS re_reply;
+SET foreign_key_checks = 1;
 
-CREATE TABLE `Notice` (
-	`Notice_number`	INT	NOT NULL	auto_increment,
-	`Title`	VARCHAR(60)	NOT NULL,
-	`Name`	VARCHAR(30)	NULL	DEFAULT 'Anonymous',
-	`Date`	TIMESTAMP	NULL	DEFAULT current_timestamp,
-	`View`	INT	NULL	DEFAULT 0,
-	`Content`	TEXT(500)	NOT NULL,
-	`open`	TINYINT	NOT NULL	DEFAULT 1,
-    CONSTRAINT PK_Notice PRIMARY KEY(Notice_number)
-
-);
-
-CREATE TABLE Notice_file (
-	Notice_file_number INT NOT NULL auto_increment,
-	Notice_number INT NOT NULL,
-	File_name CHAR(5) NOT NULL,
-	CONSTRAINT PK_Notice_file PRIMARY KEY(Notice_file_number,Notice_number),
-	CONSTRAINT FK_Notice_file foreign key(Notice_number)
-	REFERENCES Notice(Notice_number)
-);
-
-CREATE TABLE `Member` (
-	`Member_number`	INT	NOT NULL	auto_increment,
-	`Name`	VARCHAR(30)	NOT NULL,
-	`Email`	VARCHAR(60)	NULL,
-	`Homepage`	VARCHAR(60)	NULL,
-	`Introduce`	TEXT(500)	NULL,
-	`Other`	TEXT(500)	NULL,
-	`File`	VARCHAR(60)	NULL,
-    CONSTRAINT PK_Member PRIMARY KEY(Member_number)
-);
-
-
-CREATE TABLE `Publications` (
-	`Publications_number`	INT	NOT NULL	auto_increment,
-	`Type`	VARCHAR(30)	NOT NULL,
-	`Title`	VARCHAR(60)	NOT NULL,
-	`Url`	VARCHAR(60)	NULL,
-    CONSTRAINT PK_Publications PRIMARY KEY(Publications_number,type)
-);
-
-
-CREATE TABLE `Course` (
-	`Course_number`	CHAR(10)	NOT NULL,
-	`Course_name`	VARCHAR(30)	NOT NULL,
-	`Graduate`	VARCHAR(30)	NOT NULL,
-	`Url`	VARCHAR(60)	NULL,
-	`Introduce`	TEXT(500)	NULL,
-    CONSTRAINT PK_Course PRIMARY KEY(Course_number)
-);
-
-
-CREATE TABLE `Course_history` (
-	`Date`	DATE	NOT NULL,
-	`Course_number`	CHAR(10)	NOT NULL,
-    CONSTRAINT PK_Course_history PRIMARY KEY(Date,`Course_number`)
-);
-
-
-CREATE TABLE `Gallery` (
-	`Gallery_number`	INT	NOT NULL	auto_increment,
-	`Type`	VARCHAR(30)	NOT NULL,
-	`File`	VARCHAR(60)	NULL,
-    CONSTRAINT PK_Gallery PRIMARY KEY(Gallery_number,Type)
-);
-
-
-CREATE TABLE `User` (
-	`Id`	CHAR(20)	NOT NULL,
-	`Password`	VARCHAR(255)	NOT NULL,
-	Name	VARCHAR(30),
-	privilege TINYINT,
-    CONSTRAINT PK_User PRIMARY KEY(Id)
-);
-
-
-CREATE TABLE `Debate` (
-	`Debate_number`	INT	NOT NULL	auto_increment,
-	`Course_number`	CHAR(10)	NOT NULL,
-	`Title`	VARCHAR(60)	NOT NULL,
-	`Name`	VARCHAR(30)	NULL	DEFAULT 'Anonymous',
-	`Date`	TIMESTAMP	NULL	DEFAULT current_timestamp,
-	`Content`	TEXT(500)	NULL,
-	`password`	INT	NULL,
-    CONSTRAINT PK_Debate PRIMARY KEY(Debate_number,Course_number)
-);
-
-CREATE TABLE `Tag` (
-	`Type`	VARCHAR(30)	NOT NULL,
-    CONSTRAINT PK_Tag PRIMARY KEY(Type)
-);
-
-
-CREATE TABLE `Debate_Tag` (
-	`Debate_number`	INT	NOT NULL,
-	`Type`	VARCHAR(30)	NOT NULL,
-	`Course_number`	CHAR(10)	NOT NULL,
-    CONSTRAINT PK_Debate_Tag PRIMARY KEY(Debate_number,Type)
-);
-
-
-CREATE TABLE `Slide_Lecture` (
-	`Lecture_number`	INT	NOT NULL	auto_increment,
-	`Course_number`	CHAR(10)	NOT NULL,
-	`Title`	VARCHAR(60)	NULL,
-	`Url`	VARCHAR(60)	NULL,
-    CONSTRAINT PK_Slide_Lecture PRIMARY KEY(Lecture_number,Course_number)
-);
-
-
-CREATE TABLE `Slide_Lab` (
-	`Lab_number`	INT	NOT NULL	auto_increment,
-	`Course_number`	CHAR(10)	NOT NULL,
-	`Title`	VARCHAR(60)	NULL,
-	`Url`	VARCHAR(60)	NULL,
-    CONSTRAINT PK_Slide_Lab PRIMARY KEY(Lab_number,Course_number)
-);
-
-
-CREATE TABLE `Course_notice` (
-	`Course_notice_number`	INT	NOT NULL	auto_increment,
-	`Course_number`	CHAR(10)	NOT NULL,
-	`Title`	VARCHAR(60)	NOT NULL,
-	`Name`	VARCHAR(30)	NULL	DEFAULT ' Anonymous',
-	`Date`	TIMESTAMP	NULL	DEFAULT current_timestamp,
-	`VIew`	INT	NULL	DEFAULT 0,
-	`Content`	TEXT(500)	NULL,
-    CONSTRAINT PK_Course_notice PRIMARY KEY(Course_notice_number,Course_number)
-);
-
-
-CREATE TABLE `Course_schedule` (
-	`Week`	INT	NOT NULL,
-	`Course_number`	CHAR(10)	NOT NULL,
-	`Content`	VARCHAR(100)	NOT NULL,
-	`Date`	DATETIME	NOT NULL,
-	`Title`	VARCHAR(100)	NULL,
-    CONSTRAINT PK_Course_schedule PRIMARY KEY(Week,Course_number)
-);
-
-
-CREATE TABLE `Gallery_type` (
-	`Type`	VARCHAR(30)	NOT NULL,
-    CONSTRAINT PK_Gallery_type PRIMARY KEY(Type)
-);
-
-
-CREATE TABLE `Publications_type` (
-	`Type`	VARCHAR(30)	NOT NULL,
+CREATE TABLE Publications_type (
+    Type Varchar(30) not null,
     CONSTRAINT PK_Publications_type PRIMARY KEY(Type)
 );
 
-
-CREATE TABLE `reply` (
-	`reply_numbr`	INT	NOT NULL	auto_increment,
-	`Debate_number`	INT	NOT NULL,
-	`Course_number`	CHAR(10)NOT NULL,
-	`Name`	VARCHAR(30)	NULL	DEFAULT ' Anonymous',
-	`Date`	TIMESTAMP	NULL	DEFAULT current_timestamp,
-	`Content`	TEXT(500)	NULL,
-	`password`	INT	NULL,
-    CONSTRAINT PK_reply PRIMARY KEY(reply_numbr,Debate_number,Course_number)
+CREATE TABLE Publications (
+    Number INT not null auto_increment,
+    Type varchar(30) not null,
+    Title varchar(200) not null,
+    Url varchar(255),
+    CONSTRAINT PK_Publications PRIMARY KEY(Number,Type),
+    CONSTRAINT FK_Publications foreign key(Type)
+    REFERENCES Publications_type(Type) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
-ALTER TABLE `Publications` ADD CONSTRAINT `FK_Publications_type_TO_Publications_1` FOREIGN KEY (
-	`Type`
-)
-REFERENCES `Publications_type` (
-	`Type`
+CREATE TABLE Gallery_type (
+    Type Varchar(30) not null,
+    CONSTRAINT PK_Gallery_type PRIMARY KEY(Type)
 );
 
-ALTER TABLE `Course_history` ADD CONSTRAINT `FK_Course_TO_Course_history_1` FOREIGN KEY (
-	`Course_number`
-)
-REFERENCES `Course` (
-	`Course_number`
+CREATE TABLE Gallery (
+    Number INT not null auto_increment,
+    Type varchar(30) not null,
+    Title varchar(30) not null,
+    picutre longblob,
+    CONSTRAINT PK_Gallery PRIMARY KEY(Number,Type),
+    CONSTRAINT FK_Gallery foreign key(Type)
+    REFERENCES Gallery_type(Type) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
-ALTER TABLE `Gallery` ADD CONSTRAINT `FK_Gallery_type_TO_Gallery_1` FOREIGN KEY (
-	`Type`
-)
-REFERENCES `Gallery_type` (
-	`Type`
+CREATE TABLE Notice (
+    Number INT not null auto_increment,
+    Title varchar(60) not null,
+    Name varchar(30) default 'Anonymous',
+    Date timestamp default current_timestamp,
+    View int not null default 0,
+    Content TEXT,
+    Open tinyint not null default 1,
+    CONSTRAINT PK_Notice PRIMARY KEY(Number)
 );
 
-ALTER TABLE `Debate` ADD CONSTRAINT `FK_Course_TO_Debate_1` FOREIGN KEY (
-	`Course_number`
-)
-REFERENCES `Course` (
-	`Course_number`
+CREATE TABLE User (
+    Id char(20) not null,
+    Password varchar(255) not null,
+    Name varchar(30) not null,
+    Privilege tinyint not null default 1,
+    Email varchar(100),
+    Homepage varchar(100),
+    Introduce text,
+    Other text,
+    Picture longblob,
+    CONSTRAINT PK_User PRIMARY KEY(Id)
 );
 
-ALTER TABLE `Debate_Tag` ADD CONSTRAINT `FK_Debate_TO_Debate_Tag_1` FOREIGN KEY (
-	`Debate_number`
-)
-REFERENCES `Debate` (
-	`Debate_number`
+CREATE TABLE Course (
+    Course_number char(10) not null,
+    Course_name varchar(100) not null,
+    Graduate varchar(30) not null,
+    Introduce text,
+    CONSTRAINT PK_Course PRIMARY KEY(Course_number)
 );
 
-ALTER TABLE `Debate_Tag` ADD CONSTRAINT `FK_Debate_TO_Debate_Tag_2` FOREIGN KEY (
-	`Course_number`
-)
-REFERENCES `Debate` (
-	`Course_number`
+CREATE TABLE Course_history (
+    Course_date date not null,
+    Course_number char(10) not null,
+    Open tinyint not null default 1,
+    CONSTRAINT PK_Course_history PRIMARY KEY(Course_date,Course_number),
+    CONSTRAINT FK_Course_history foreign key(Course_number)
+    REFERENCES Course(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
-ALTER TABLE `Debate_Tag` ADD CONSTRAINT `FK_Tag_TO_Debate_Tag_1` FOREIGN KEY (
-	`Type`
-)
-REFERENCES `Tag` (
-	`Type`
+Create Table Division (
+    Division varchar(30) not null,
+    CONSTRAINT PK_Division PRIMARY KEY(Division)
 );
 
-ALTER TABLE `Slide_Lecture` ADD CONSTRAINT `FK_Course_TO_Slide_Lecture_1` FOREIGN KEY (
-	`Course_number`
-)
-REFERENCES `Course` (
-	`Course_number`
+CREATE TABLE Slide_Lecture (
+    Lecture_number int not null auto_increment,
+    Course_date date not null,
+    Course_number char(10) not null,
+    Division varchar(30) not null,
+    Title varchar(60),
+    Open tinyint not null default 1,
+    CONSTRAINT PK_Slide_Lecture PRIMARY KEY(Lecture_number,Course_date,Course_number,Division),
+    CONSTRAINT FK_Slide_Lecture_1 foreign key(Course_date)
+    REFERENCES Course_history(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_Slide_Lecture_2 foreign key(Course_number)
+    REFERENCES Course_history(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_Slide_Lecture_3 foreign key(Division)
+    REFERENCES Division(Division) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
-ALTER TABLE `Slide_Lab` ADD CONSTRAINT `FK_Course_TO_Slide_Lab_1` FOREIGN KEY (
-	`Course_number`
-)
-REFERENCES `Course` (
-	`Course_number`
+CREATE TABLE Course_notice (
+    Number int not null auto_increment,
+    Course_date date not null,
+    Course_number char(10) not null,
+    Title varchar(60) not null,
+    Name varchar(30) default 'Annonymous',
+    Date timestamp default current_timestamp,
+    View int not null default 0,
+    Content text,
+    CONSTRAINT PK_Course_notice PRIMARY KEY(Number,Course_date,Course_number),
+    CONSTRAINT FK_Course_notice_1 foreign key(Course_date)
+    REFERENCES Course_history(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_Course_notice_2 foreign key(Course_number)
+    REFERENCES Course_history(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
-ALTER TABLE `Course_notice` ADD CONSTRAINT `FK_Course_TO_Course_notice_1` FOREIGN KEY (
-	`Course_number`
-)
-REFERENCES `Course` (
-	`Course_number`
+CREATE TABLE Course_schedule (
+    Week int not null,
+    Course_date Date not null,
+    Course_number char(10) not null,
+    Content varchar(100) not null,
+    Date datetime not null,
+    Title varchar(100),
+    CONSTRAINT PK_Course_schedule PRIMARY KEY(Week,Course_date,Course_number),
+    CONSTRAINT FK_Course_schedule_1 foreign key(Course_date)
+    REFERENCES Course_history(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_Course_schedule_2 foreign key(Course_number)
+    REFERENCES Course_history(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
-ALTER TABLE `Course_schedule` ADD CONSTRAINT `FK_Course_TO_Course_schedule_1` FOREIGN KEY (
-	`Course_number`
-)
-REFERENCES `Course` (
-	`Course_number`
+CREATE TABLE Debate (
+    Debate_number int not null auto_increment,
+    Course_date date not null,
+    Course_number char(10) not null,
+    Title Varchar(60) not null,
+    Name varchar(30) default 'Anonymous',
+    Date timestamp default current_timestamp,
+    Content text,
+    Wanted int not null default 0,
+    Password int,
+    CONSTRAINT PK_Debate PRIMARY KEY(Debate_number,Course_date,Course_number),
+    CONSTRAINT FK_Debate_1 foreign key(Course_date)
+    REFERENCES Course_history(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_Debate_2 foreign key(Course_number)
+    REFERENCES Course_history(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
-ALTER TABLE `reply` ADD CONSTRAINT `FK_Debate_TO_reply_1` FOREIGN KEY (
-	`Debate_number`
-)
-REFERENCES `Debate` (
-	`Debate_number`
+CREATE TABLE Tag (
+    Type varchar(30) not null,
+    CONSTRAINT PK_Tag PRIMARY KEY(Type)
 );
 
-ALTER TABLE `reply` ADD CONSTRAINT `FK_Debate_TO_reply_2` FOREIGN KEY (
-	`Course_number`
-)
-REFERENCES `Debate` (
-	`Course_number`
+CREATE TABLE Debate_Tag (
+    Debate_number int not null,
+    Type varchar(30) not null,
+    Course_date date not null,
+    Course_number char(10) not null,
+    CONSTRAINT PK_Debate_Tag PRIMARY KEY(Debate_number,Type,Course_date,Course_number),
+    CONSTRAINT FK_Debate_Tag_1 foreign key(Debate_number)
+    REFERENCES Debate(Debate_number) ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_Debate_Tag_2 foreign key(Type)
+    REFERENCES Tag(Type) ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_Debate_Tag_3 foreign key(Course_date)
+    REFERENCES Debate(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_Debate_Tag_4 foreign key(Course_number)
+    REFERENCES Debate(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE Reply (
+    Reply_number int not null auto_increment,
+    Debate_number int not null,
+    Course_date date not null,
+    Course_number char(10) not null,
+    Name varchar(30) default 'Anonymous',
+    Date timestamp default current_timestamp,
+    Content text,
+    Password int,
+    Likes int not null default 0,
+    CONSTRAINT PK_Reply PRIMARY KEY(Reply_number,Debate_number,Course_date,Course_number),
+    CONSTRAINT FK_Reply_1 foreign key(Debate_number)
+    REFERENCES Debate(Debate_number) ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_Reply_2 foreign key(Course_date)
+    REFERENCES Debate(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_Reply_3 foreign key(Course_number)
+    REFERENCES Debate(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE RE_Reply (
+    Re_reply_number int not null auto_increment,
+    Reply_number int not null,
+    Debate_number int not null,
+    Course_date date not null,
+    Course_number char(10) not null,
+    Name varchar(30) default 'Anonymous',
+    Date timestamp default current_timestamp,
+    Content text,
+    Password int,
+    Likes int not null default 0,
+    CONSTRAINT PK_Reply PRIMARY KEY(Re_reply_number,Reply_number,Debate_number,Course_date,Course_number),
+    CONSTRAINT FK_RE_Reply_1 foreign key(Reply_number)
+    REFERENCES Reply(Reply_number) ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_RE_Reply_2 foreign key(Debate_number)
+    REFERENCES Reply(Debate_number) ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_RE_Reply_3 foreign key(Course_date)
+    REFERENCES Reply(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
+    CONSTRAINT FK_RE_Reply_4 foreign key(Course_number)
+    REFERENCES Reply(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
 );
