@@ -9,7 +9,7 @@
 
 <body>
     <?php 
-        include "../resource/nav.php";
+    include "../resource/nav.php";
     ?>
 
     <main>
@@ -18,14 +18,14 @@
     			<h1>Publication</h1>
     		</div>
 
-			<!-- contents here! -->
+           <!-- contents here! -->
 
-    	</div>
-    </main>
-    
-    <?php
-        include "../resource/footer.php";
-    ?>
+       </div>
+   </main>
+
+   <?php
+   include "../resource/footer.php";
+   ?>
 
 </body>
 </html>

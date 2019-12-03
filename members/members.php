@@ -9,7 +9,7 @@
 
 <body>
 	<?php 
-		include "../resource/nav.php";
+	include "../resource/nav.php";
 	?>
 
 	<main role="main">
@@ -20,9 +20,9 @@
 		</div>
 	</main>
 
-    <?php
-        include "../resource/footer.php";
-    ?>
+	<?php
+	include "../resource/footer.php";
+	?>
 
 </body>
 </html>

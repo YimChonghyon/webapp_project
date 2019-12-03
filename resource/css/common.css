@@ -1,79 +1,79 @@
 html,body{
-    background: white;
-    width: 100%;
-    margin: 0;
+  background: white;
+  width: 100%;
+  margin: 0;
 }
-
+.pull-left {float: left;}
+.pull-right {float: right;}
 /*nav*/
+header {
+  height: 70px; 
+  font-size: 1em;
+  font-family :'나눔고딕', 'Malgun Gothic', sans-serif;
+}
 nav {
-    position: fixed;
-    width: 100%;
-    height: 80px;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    background-color: #92B5D9;
-    text-decoration: none; 
-    text-transform: uppercase;
-    font-weight: bold; 
-    font-size: 22px;
-    vertical-align: middle;
-    border-bottom-right-radius: 0.7em;
-    border-bottom-left-radius: 0.7em;
-    z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: #92B5D9;
+  text-decoration: none; 
+  text-transform: uppercase;
+  font-weight: bold; 
+  font-size: 22px;
+  vertical-align: middle;
+  border-bottom-right-radius: 0.7em;
+  border-bottom-left-radius: 0.7em;
+  z-index: 1;
 }
 nav img{
-    margin: 10px;
+  margin: 10px;
 }
 nav ul{
-    height: inherit;
-    margin: 0;
+  height: inherit;
+  margin: 0;
 }
 nav ul li{
-    display: inline;
-    list-style: none;
-    color: ghostwhite;
-    margin: 5px;
+  display: inline;
+  list-style: none;
+  color: ghostwhite;
+  margin: 5px;
 }
 
 nav ul li a {
-    display: inline; 
-    color: ghostwhite; 
-    text-align: center; text-decoration: none;
-}
-
-.pull-left {
-    float: left;
-}
-.pull-right {
-    float: right;
+  display: inline; 
+  color: ghostwhite; 
+  text-align: center; text-decoration: none;
 }
 .nav-left{
-   margin-top: 25px; 
-   border-left: 2px solid #EDEDEF; 
-   padding: 0 10px;
+ margin-top: 25px; 
+ border-left: 2px solid #EDEDEF; 
+ padding: 0 10px;
 }
 .nav-right{
-    border-left: 2px solid #EDEDEF; 
-    padding: 0 10px; 
-    margin-right: 0.5em; 
-    margin-top: 25px; 
-    color: ghostwhite;
+  border-left: 2px solid #EDEDEF; 
+  padding: 0 10px; 
+  margin-right: 0.5em; 
+  margin-top: 25px; 
+  color: ghostwhite;
 }
+
+
 
 /*section title*/
 .main_section{
-    margin-top: 100px;
-    line-height: 400px;
-    width: 100%;
-    height: 400px;
-    text-align: center;
-    vertical-align: middle;
-    opacity: 0.8;
+  line-height: 400px;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 0.8;
 }
 .main_section h1{
-    font-size: 65pt;
-    color: silver;
+  font-size: 65pt;
+  color: silver;
 }
 
 /*footer*/
