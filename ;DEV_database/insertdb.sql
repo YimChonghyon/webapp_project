@@ -23,3 +23,31 @@ insert into user(Id,Password,Name,Privilege) values
 ('ISO','$2y$10$Jv0KYrfZWH0ILao4PLjWk.6z4Pn1xYdadJ/pxKfewNkBJ.2gz6JQ2','masteraccount',3),
 ('vector','$2y$10$efi.igR3EozpWvL58WWwAOnbSfFo1xmF3Z.XTRkRn1kxIQ47yifXy','superaccount',2),
 ('scalar','$2y$10$xKhViHgtT.ECbiwd1mizO.1r13txETV3e8g8pAITbG9tJJ3gI6Ok6','Gil Dong Hong',1);
+
+#sample publications_type
+insert into publications_type values
+('all'),
+('International Conference'),
+('International Journal'),
+('Domestic Conference'),
+('Domestic Journal');
+
+#sample gallery_type
+insert into gallery_type values
+('all'),
+('Social Activity'),
+('Conference'),
+('Etc');
+
+#sample Tag
+insert into tag values
+('Question'),
+('Debate'),
+('HTML'),
+('CSS'),
+('JavaScript'),
+('SQL'),
+('Solved'),
+('HELP'),
+('HOT'),
+('NEW');

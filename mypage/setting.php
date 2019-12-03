@@ -139,7 +139,7 @@
 					$stmt = $conn->prepare("SELECT * FROM publications_type");
 					$stmt->execute();
 					foreach ($stmt->fetchAll() as $key => $value) { ?>
-						<th><?=$value['Type']?></th>
+						<tr><th><?=$value['Type']?></th></tr>
 					<?php } ?>
 				</tbody>
 			</table>
@@ -171,7 +171,7 @@
 					$stmt = $conn->prepare("SELECT * FROM gallery_type");
 					$stmt->execute();
 					foreach ($stmt->fetchAll() as $key => $value) { ?>
-						<th><?=$value['Type']?></th>
+						<tr><th><?=$value['Type']?></th></tr>
 					<?php } ?>
 				</tbody>
 			</table>
