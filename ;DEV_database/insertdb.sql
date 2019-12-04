@@ -18,11 +18,18 @@ insert into course values
 ("CSE326","Web Application Development","Undergraduate Courses","hello world!"),
 ("CSE6050","Advanced Software Engineering","Postgraduate Courses","hell world!");
 
+#sample user_type
+insert into user_type values ("Professor");
+insert into user_type values ("Ph.D.");
+insert into user_type values ("M.E.");
+insert into user_type values ("Intern");
+insert into user_type values ("Alumni");
+
 #sample user
-insert into user(Id,Password,Name,Privilege) values
-('ISO','$2y$10$Jv0KYrfZWH0ILao4PLjWk.6z4Pn1xYdadJ/pxKfewNkBJ.2gz6JQ2','masteraccount',3),
-('vector','$2y$10$efi.igR3EozpWvL58WWwAOnbSfFo1xmF3Z.XTRkRn1kxIQ47yifXy','superaccount',2),
-('scalar','$2y$10$xKhViHgtT.ECbiwd1mizO.1r13txETV3e8g8pAITbG9tJJ3gI6Ok6','Gil Dong Hong',1);
+insert into user(Id,Password,Name,Type) values
+('ISO','$2y$10$Jv0KYrfZWH0ILao4PLjWk.6z4Pn1xYdadJ/pxKfewNkBJ.2gz6JQ2','masteraccount','Professor'),
+('vector','$2y$10$efi.igR3EozpWvL58WWwAOnbSfFo1xmF3Z.XTRkRn1kxIQ47yifXy','superaccount','Ph.D.'),
+('scalar','$2y$10$xKhViHgtT.ECbiwd1mizO.1r13txETV3e8g8pAITbG9tJJ3gI6Ok6','Gil Dong Hong','Ph.D.');
 
 #sample publications_type
 insert into publications_type values

@@ -40,24 +40,19 @@
               $stmt = $conn->prepare("SELECT * FROM notice");
               $stmt->execute();
               foreach($stmt->fetchAll() as $k=>$v) { ?>
-                <a href="#" onclick="SirenFunction('SirenDiv<?php echo $k; ?>');" class="blind_view">
-                  <ul> 
+                <ul> 
+                  <a href="#" onclick="SirenFunction('SirenDiv<?php echo $k; ?>');" class="blind_view">
                     <?php
-                    if($v['open'] == 0)
-                      continue;
-                    echo "<li  class='title pull-left'>" . $v[Title] . "</li>";
-                    echo "<li  class='name pull-left'>" . $v[Name] . "</li>";
-                    echo "<li  class='time pull-left'>" . $v[Date] . "</li>";
+                    echo "<li  class='title pull-left'>" . $v['Title'] . "</li>";
+                    echo "<li  class='name pull-left'>" . $v['Name'] . "</li>";
+                    echo "<li  class='time pull-left'>" . $v['Date'] . "</li>";
                     ?>
-                    <div class="singo_view pull-left" style="display:none; background-color: pink; width: 100%;" id="SirenDiv<?php echo $k;?>">
-                      <?php echo $v['Content']; ?>
-                    </div>
-                  </ul>
-                </a> 
+                    
+                  </a> <div class="singo_view pull-left" style="display:none; background-color: pink; width: 100%;" id="SirenDiv<?php echo $k;?>">
+                    <?php echo $v['Content']; ?>
+                  </div>
+                </ul>
                 <?php
-              }
-              if(isset($_SESSION['id'])){
-                echo "<button onclick=\"location.href='newnotice.php'\" >" . "글쓰기" . "</button>";
               }
             }
             catch(PDOException $e)
@@ -71,6 +66,10 @@
         </li>
       </div>
     </ul>
+    <?php 
+    if(isset($_SESSION['id'])){
+      echo "<button onclick=\"location.href='newnotice.php'\" >" . "글쓰기" . "</button>";
+    }?>
   </div>
 </main>
 

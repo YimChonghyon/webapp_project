@@ -63,17 +63,24 @@ CREATE TABLE Notice (
     CONSTRAINT PK_Notice PRIMARY KEY(Number)
 );
 
+CREATE TABLE User_type (
+   Type varchar(20) not null,
+    CONSTRAINT PK_User_type PRIMARY KEY(Type)
+);
+
 CREATE TABLE User (
     Id char(20) not null,
     Password varchar(255) not null,
     Name varchar(30) not null,
-    Privilege tinyint not null default 1,
+    Type varchar(20) not null,
     Email varchar(100),
     Homepage varchar(100),
     Introduce text,
     Other text,
     Picture longblob,
-    CONSTRAINT PK_User PRIMARY KEY(Id)
+    CONSTRAINT PK_User PRIMARY KEY(Id),
+    CONSTRAINT FK_User foreign key(Type)
+    REFERENCES User_type(Type) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
 CREATE TABLE Course (

@@ -20,18 +20,18 @@
 	<aside>
 		<p class="MENU">MENU</p>
 		<ul class="OPTION O1">
-			<li><button id="B1" onclick="Button_Tree('SETDIV1','B1')">CREATE NEW ACCOUNT</button></li>
-			<li><button id="B2" onclick="Button_Tree('SETDIV2','B2')">DELETE ACCOUNT</button></li>
+			<li><button class="B" id="B1" onclick="Button_Tree('SETDIV1','B1')">CREATE NEW ACCOUNT</button></li>
+			<li><button class="B" id="B2" onclick="Button_Tree('SETDIV2','B2')">DELETE ACCOUNT</button></li>
 		</ul>
 		<ul class="OPTION O2">
-			<li><button id="B3" onclick="Button_Tree('SETDIV3','B3')">CHAGE PASSWORD</button></li>
-			<li><button id="B4" onclick="Button_Tree('SETDIV4','B4')">CHANGE PROFILE</button></li>
-			<li><button id="B5" onclick="Button_Tree('SETDIV5','B5')">Withdrawal</button></li>
+			<li><button class="B" id="B3" onclick="Button_Tree('SETDIV3','B3')">CHAGE PASSWORD</button></li>
+			<li><button class="B" id="B4" onclick="Button_Tree('SETDIV4','B4')">CHANGE PROFILE</button></li>
+			<li><button class="B" id="B5" onclick="Button_Tree('SETDIV5','B5')">Withdrawal</button></li>
 		</ul>
 		<ul class="OPTION O3">
-			<li><button id="B6" onclick="Button_Tree('SETDIV6','B6')">SETTING	PUBLICATIONS</button></li>
-			<li><button id="B7" onclick="Button_Tree('SETDIV7','B7')">SETTING	GALLERY</button></li>
-			<li><button id="B8" onclick="Button_Tree('SETDIV8','B8')">CREATE NEW COURSE</button></li>
+			<li><button class="B" id="B6" onclick="Button_Tree('SETDIV6','B6')">SETTING	PUBLICATIONS</button></li>
+			<li><button class="B" id="B7" onclick="Button_Tree('SETDIV7','B7')">SETTING	GALLERY</button></li>
+			<li><button class="B" id="B8" onclick="Button_Tree('SETDIV8','B8')">CREATE NEW COURSE</button></li>
 		</ul>
 	</aside>
 
@@ -59,45 +59,30 @@
 	</div>
 
 	<div class="VIEWPOINT" id="SETDIV2">   
-		<?php
-		try{ 
-			?>
-			<h2>ALL ACCOUNTS</h2>
-			<table>   
-				<thead>
+		<h2>ALL ACCOUNTS</h2>
+		<table>   
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Privilege</th>
+					<th>DROP</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+				$stmt = $conn->prepare("SELECT id,Name,type FROM user");
+				$stmt->execute();
+				foreach ($stmt->fetchAll() as $key => $value) { ?>
 					<tr>
-						<th>ID</th>
-						<th>Name</th>
-						<th>Privilege</th>
-						<th>DROP</th>
+						<th><?= $value['id']?></th>
+						<th><?= $value['Name']?></th>
+						<th><?= $value['type']?></th>
+						<th><form action="" method="POST"><input type="submit" name="" value="byby" disabled></form></th>
 					</tr>
-				</thead>
-				<tbody>
-					<?php
-					$stmt = $conn->prepare("SELECT id,Name,Privilege FROM user");
-					$stmt->execute();
-					foreach ($stmt->fetchAll() as $key => $value) { ?>
-						<tr>
-							<th><?= $value['id']?></th>
-							<th><?= $value['Name']?></th>
-							<?php
-							if($value['Privilege'] == 1)
-								echo "<th>NORMAL</th>";
-							else if($value['Privilege'] == 2)
-								echo "<th>GREAT</th>";						
-							else if($value['Privilege'] == 3)
-								echo "<th>ALL</th>"; 
-							?>
-							<th><form action="" method="POST"><input type="submit" name="" value="byby" disabled></form></th>
-						</tr>
-					<?php } ?>
-				</tbody>
-			</table> 
-			<?php
-		} catch(PDOException $e){			
-			echo "Connection failed: " . $e->getMessage();
-		}
-		?>
+				<?php } ?>
+			</tbody>
+		</table>
 	</div>
 
 	<div class="VIEWPOINT" id="SETDIV3">
@@ -155,7 +140,7 @@
 		} catch(PDOException $e){			
 			echo "Connection failed: " . $e->getMessage();
 		}
-		?>
+		?>	
 	</div>
 
 	<div class="VIEWPOINT" id="SETDIV7">

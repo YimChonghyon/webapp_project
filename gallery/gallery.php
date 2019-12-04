@@ -10,6 +10,8 @@
 <body>
     <?php 
     include "../resource/nav.php";
+    include "../resource/DB_connect.php";
+    $conn = connect();
     ?>
 
     <main role="main">
@@ -18,18 +20,32 @@
     			<h1>GALLERY</h1>
     		</div>
 
-<!--     		<div class="tab">
-    			<div class="first-tab" data-type="all">All</div>
-    			<div class="deactive" data-type="social">Social Activity</div>
-    			<div class="deactive" data-type="conference">Conference</div>
-    			<div class="last-tab" data-type="etc">Etc</div>
-    		</div> -->
-    	</div>
+
+            <div class="tab_class">
+                <div id="tab">
+                    <?php               
+                    $stmt = $conn->prepare("SELECT type FROM user_type");
+                    $stmt->execute();
+                    $result = $stmt->fetchAll();
+                    foreach ($result as $key => $value) { ?>
+                        <button class="MEMBERS_BUTTON" id="<?=$value['type']?>" onclick="Button_Tree('<?=$value["type"]?>_DIV','<?=$value["type"]?>')"><?=$value['type']?></button><br>
+                    <?php } ?>
+                </div>
+                <div class="mainbody" id="START">
+                    <p>안녕하세요 MEMBER'S PAGE 입니다.</p>
+                </div>
+                <?php foreach ($result as $key => $value) { ?>
+                    <div class="mainbody" id="<?=$value['type']?>_DIV">
+                        <?=$key ?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
     </main>
 
     <?php
     include "../resource/footer.php";
     ?>
-    
+
 </body>
 </html>
