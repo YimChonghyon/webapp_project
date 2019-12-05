@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 
-<!--
-    학번 : 2015035732
-    이름 : 이수종
--->
 <html>
 <head>
     <meta charset="utf-8" />
@@ -26,6 +22,40 @@
     <div id= "main_image">
         <img src="http://appdata.hungryapp.co.kr/data_file/data_img_m/201502/10/1423580240_Nr4eu5HZAs.jpg" alt="main_image" width= 100% height= 500px;>
     </div>
+    
+     <!-- INDEX MAIN IMAGE -->
+     <style>
+        *{margin:0;padding:0;}
+        ul,li{list-style:none;}
+        .slide{height:500px; overflow:hidden;}
+        .slide ul{height:calc(100% * 4);animation:slide 8s infinite;}
+        .slide li{height:calc(100% / 4);}
+        .slide li:nth-child(1){background:#ffa;}
+        .slide li:nth-child(2){background:#faa;}
+        .slide li:nth-child(3){background:#afa;}
+        .slide li:nth-child(4){background:#aaf;}
+
+        @keyframes slide {
+        0% {margin-top:0;}
+        10% {margin-top:0;}
+        25% {margin-top:-500px;}
+        35% {margin-top:-500px;}
+        50% {margin-top:-1000px;}
+        60% {margin-top:-1000px;}
+        75% {margin-top:-1500px;}
+        85% {margin-top:-1500px;}
+        100% {margin-top:0;}
+        }
+     </style>
+
+  <div class="slide">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
 
     <main>
         <article>
