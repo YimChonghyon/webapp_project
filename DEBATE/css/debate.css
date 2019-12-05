@@ -1,4 +1,4 @@
-\html,body{
+html,body{
 	height: 100%;
 }
 body{
@@ -131,7 +131,7 @@ main{
 
 .name{
 	text-overflow: ellipsis;
-    /* overflow: hidden; */
+    overflow: hidden;
     display: inline-block;
     white-space: nowrap;
 	margin-right: 5px;
@@ -187,8 +187,8 @@ main{
 }
 
 .debate_content_container_main{
-	/* height: 60%; */
-	max-width: 90%;
+	height: 50%;
+	width: 90%;
     border: 1px solid #f0f0f0;
 	padding: 15px 15px 8px;
 	margin: 3%;
@@ -318,12 +318,12 @@ main{
 }
 
 .icon_container{
-	display: flex;
+	display: inline;
     flex-direction: row;
     justify-content: flex-end;
 	margin-left: auto;
     margin-top: 10px;
-    float: right;
+	float: right;
 }
 
 .question_container{
@@ -334,6 +334,11 @@ main{
 
 .question_icon_num{
 	color: #9b9b9b;
+	vertical-align: middle;
+    margin-left: 4px;
+    margin-bottom: 12px;
+    display: inline-block;
+    margin-top: 4px;
 }
 
 .comment_container{
@@ -344,6 +349,11 @@ main{
 
 .comment_icon_num{
 	color: #9b9b9b;
+	vertical-align: middle;
+    margin-left: 4px;
+    margin-bottom: 12px;
+    display: inline-block;
+    margin-top: 4px;
 }
 
 .write_infor{
@@ -361,18 +371,41 @@ main{
 
 .question_botton_icon{
 	width: 28px;
+	margin-top: 5px;
 }
 
 .question_botton{
 	margin : 5px;
+	text-align: right;
 }
 
 .question{
 	border: none;
 	border-radius: 10px;
-	background-color: rgb(157, 180, 255);
+	background-color: rgb(201, 213, 252);
+	
 }
 /* 
 .question p{
 	size:10pt;
 } */
+.titlebox{
+	margin:20px 5px 5px 5px;
+}
+
+.title_text{
+	font-size: 15px;
+}
+
+.titlebox_main{
+	margin:20px 10px 10px 10px;
+}
+
+.title_text_main{
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.contentsbox{
+	margin:30px;
+}
