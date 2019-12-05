@@ -1,4 +1,4 @@
-html,body{
+\html,body{
 	height: 100%;
 }
 body{
@@ -10,6 +10,7 @@ header{
 	width: 100%;
 	float: left;
 }
+
 .menu{
 }
 .pull-left{
@@ -27,7 +28,7 @@ main{
 	height: 90%;
 }
 .in_nav{
-	background-color: green;
+	background-color: rgb(64, 108, 255);
 	width: 100%;
 	height: 10%;
 }
@@ -35,13 +36,13 @@ main{
 	float: left;
 	width: 23%;
 	height: 90%;
-	background-color: blue;
+	background-color: rgb(240,240,240);
 }
 .debatebox{
 	float: left;
 	width: 77%;
 	height: 87%;
-	background-color: pink;
+	/* background-color: pink; */
 }
 .serch{
 	float: left;
@@ -54,11 +55,14 @@ main{
 #serchbox{
 	vertical-align: middle;
 }
-.querybox{
+/* .querybox{
 	background: gray;
-	width: 100%;
+	width: 90%;
 	height: 125px;
-}
+	border-radius: 15px;
+	margin:3%; 
+}*/
+
 .debate_content{
 	width: 100%;
 	height: 60%;
@@ -66,14 +70,15 @@ main{
 }
 .debate_relpy{
 	height: 40%;
-	overflow: auto;
+	position: relative;
+    overflow-y: scroll;
 }
 
 .infobox{
 	text-align: center;
 	height: 25px;
 	font-size:15px;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 }
 
 .number{
@@ -100,30 +105,44 @@ main{
 
 .tag{
 	float:left;
-	margin-left:5%;
+	/* margin-left:5%; */
 }
-.contentsbox{
-	height:50px;
-	border: 1px solid black;
-}
+
 
 .contents{
 	text-align: left;
 }
-
-.subinfobox{
-	border: 1px solid black;
-	height: 20px;
+.footer{
+	height: 13px;
+    margin-top: 17px;
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    align-items: center;
 }
 
-.questionnum{
-	float:right;
-	margin:2%;
+.write_infor{
+	max-width: 30%;
+    height: 19px;
+    font-size: 13px;
+    color: #9b9b9b;
+    display: flex;
 }
 
-.commentnum{
-	float:right;
-	margin:2%;
+.name{
+	text-overflow: ellipsis;
+    /* overflow: hidden; */
+    display: inline-block;
+    white-space: nowrap;
+	margin-right: 5px;
+	color: #3f3f3f;
+	font-weight: bold;
+	
+}
+
+.time{
+	min-width: 60px;
+    margin-right: 20px;
 }
 
 .commentbox{
@@ -131,16 +150,9 @@ main{
 	margin:2%;
 }
 
-.name{
-	float:left;
-	border: 1px solid black;
-}
 
-.comment{
-	width: 300px;
-    height: 50px;
-	border: 1px solid black;
-}
+
+
 
 .comment-content{
 
@@ -150,62 +162,217 @@ main{
 	float:right;
 	border: 1px solid black;
 }
-.comment_time{
-	float:right;
-	border: 1px solid black;
-}
-.debate_number{
-	float:left;
-	/* padding: 3%; */
-	width: 100%;
-	border: 1px solid black;
+
+.title_tag{
+	margin-bottom:10px;
 }
 
 .debate_tag{
-	/* text-align: left; */
-	/* padding:3%; */
-	width: 90%;
-	border: 1px solid black;
-}
-
-.debate_content{
 	text-align: left;
-	padding:3%;
-	width: 90%;
-	/* height: 300px; */
-	border: 1px solid black;
-}
-
-.debate_q{
-	text-align: right;
-	padding:3%;
-	width: 90%;
-	/* height: 300px; */
-	border: 1px solid black;
-}
-
-.debate_info{
-	/* text-align: right; */
-	padding:3%;
-	width: 90%;
-	/* height: 300px; */
-	border: 1px solid black;
-}
-
-.debate_name{
-	float: left;
 	/* padding:3%; */
+	width: 90%;
 	border: 1px solid black;
 }
 
-.debate_time{
-	float: left;
-	/* padding:3%; */
-	border: 1px solid black;
+.debate_content_container{
+	height: 115px;
+	border: 1px solid #f0f0f0;
+	margin: 5px;
+    padding: 15px 15px 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 8px rgba(0,0,0,.1);
+    border-radius: 10px;
+	cursor: pointer;
+	background-color: white;
 }
 
-.debate_botton{
-	float: right;
-	/* padding:3%; */
-	border: 1px solid black;
+.debate_content_container_main{
+	/* height: 60%; */
+	max-width: 90%;
+    border: 1px solid #f0f0f0;
+	padding: 15px 15px 8px;
+	margin: 3%;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 8px rgba(0,0,0,.1);
+    border-radius: 10px;
+    cursor: pointer;
 }
+.tag_number{
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 100%;
+    color: #9b9b9b;
+}
+
+.tag_catagory{
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+	line-height: 100%;
+	color: black;
+}
+
+.box{
+	height: 48px;
+    margin-top: 15px;
+    display: block;
+    vertical-align: middle;
+}
+
+.comment_container{
+	padding-top: 13px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.comment_contents_box{
+	position: relative;
+    display: flex;
+    margin-top: 8px;
+    margin-right: 20px;
+}
+
+.comment{
+	border-radius: 15px;
+    border-top-left-radius: 3px;
+    /* border-bottom-left-radius: 3px; */
+	width: 300px;
+	height: 50px;
+    background-color: #fff;
+    padding: 9px 15px;
+    font-size: 14px;
+    font-family: inherit;
+    line-height: 21px;
+	color: #4b4b4b;
+	border: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+.comment_text{
+	border: none;
+    color: inherit;
+   
+}
+
+.comment_time{
+	display: block;
+    top: 30px;
+    width: 50px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 100%;
+    color: #9b9b9b;
+}
+
+.comment_additional{
+	display: inline-flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    position: relative;
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+.heart{
+	position: relative;
+	display: inline-flex; 
+    align-items: baseline; 
+}
+.heart_button{
+	width: 20px;
+    cursor: pointer;
+}
+
+.out_button{
+	padding:5px;
+	width: 20px;
+    cursor: pointer;
+}
+
+.heart_num{
+	font-family: inherit;
+    font-weight: 800;
+    font-size: 12px;
+    margin-left: 1px;
+}
+
+.question_icon{
+	width: 15px;
+}
+
+.search_icon{
+	width:15px;
+}
+
+.comment_icon{
+	width:15px; 
+}
+
+.icon_container{
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+	margin-left: auto;
+    margin-top: 10px;
+    float: right;
+}
+
+.question_container{
+	display: inline;
+    flex-direction: row;
+    padding-bottom: 1px;
+}
+
+.question_icon_num{
+	color: #9b9b9b;
+}
+
+.comment_container{
+	display: inline;
+    flex-direction: row;
+    padding-bottom: 1px;
+}
+
+.comment_icon_num{
+	color: #9b9b9b;
+}
+
+.write_infor{
+	/* max-width: 30%; */
+    height: 19px;
+    font-size: 13px;
+    color: #9b9b9b;
+    display: flex;
+}
+
+.add_content_icon{
+	width: 40px;
+	margin: 10px;
+}
+
+.question_botton_icon{
+	width: 28px;
+}
+
+.question_botton{
+	margin : 5px;
+}
+
+.question{
+	border: none;
+	border-radius: 10px;
+	background-color: rgb(157, 180, 255);
+}
+/* 
+.question p{
+	size:10pt;
+} */
