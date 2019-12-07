@@ -1,0 +1,55 @@
+body
+{
+    overflow-x: scroll;
+    width: 100%; margin-left: 0; margin-top: 0;
+    background-color: white;
+}
+
+/* INDEX MAIN IMAGE */
+
+
+/* main */
+#index_layout_1 {
+    width: 90%;
+    height: 500px;
+    background: #92B5D9;
+    margin: auto;
+    text-align: center; text-decoration: none;
+}
+#index_notice {
+    width: 45%;
+    height: 500px;
+    background: #D3D3D3;
+    float: left;
+}
+#index_courses {
+    margin-left: 2%;
+    width: 45%;
+    height: 500px;
+    background: #D3D3D3;
+    float: right;
+}
+
+#index_layout_2 {
+    width: 90%;
+    height: 1500px;
+    background: #92B5D9;
+    margin: auto;
+    text-align: center; text-decoration: none;
+}
+
+#index_aboutus {
+    width: 60%;
+    height: 500px;
+    background: #D3D3D3;
+    bottom: 50%;
+    margin: 0 auto;
+}
+
+#index_map {
+    width: 60%;
+    height: 500px;
+    background: #D3D3D3;
+    top: 50%;
+    margin: 0 auto;
+}

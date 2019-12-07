@@ -1,0 +1,10 @@
+.main_section{
+ 	background-image: url('../../resource/images/notice.jpg');
+}
+.research{
+	margin: 5%;
+	text-align: center;
+}
+#research_img{
+	width: 90%;
+}

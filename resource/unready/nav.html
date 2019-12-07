@@ -1,0 +1,48 @@
+        <style>
+        
+        a:link { color: ghostwhite; text-decoration: none;}
+        a:visited { color: black; text-decoration: none;}
+        a:hover { color: #F77532; text-decoration: underline;}
+        a:active { background-color: #F77532;}
+        
+        nav {position: fixed; background-color: ghostwhite; width: 100%; overflow: hidden; height: 70px; top: 0;
+             text-decoration: none; text-transform: uppercase; background-color: #92B5D9;
+             font-weight: bold; font-size: 18px;}
+        nav ul {margin: 0; padding: 0; background-color: #92B5D9;}
+        nav ul li {display: inline; border-left: 1px solid #92B5D9; padding: 0 10px;}
+        nav ul li a {display: block; color: ghostwhite; text-align: center; text-decoration: none;}
+
+        .pull-left {float: left; margin-top: 25px; border-left: 2px solid #EDEDEF;}
+        .pull-right {float: right; padding: 0 10px; border-left: 2px solid #EDEDEF; padding: 0 10px; margin-right: 0.5em;
+                     margin-top: 25px;}
+        .pull-left:first-child {border-left: none;}
+        .pull-right:first-child {border-right: none;}
+        
+        </style>
+        
+        <header role= "banner">
+            <nav role= "navigation">
+                <div id= "logo" class= "pull-left"><a class= "active" href= ""><img src= "resource/images/selab_logo_S.png" /></a></div>
+
+                <ul id= "menu" class= "inline-list" class= "pull-left">
+                    <li class="pull-left"><a class= "active" href="resource/notice.php" >NOTICE</a></li> <!-- 해당 페이지로 이동 -->
+                    <li class="pull-left"><a class= "active" href="resource/members" >MEMBERS</a></li>
+                    <li class="pull-left"><a class= "active" href="resource/research" >RESEARCH</a></li>
+                    <li class="pull-left"><a class= "active" href="resource/publications" >PUBLICATIONS</a></li>
+                    <li class="pull-left"><a class= "active" href="resource/main_course.php" >COURSES</a></li>
+                    <li class="pull-left"><a class= "active" href="resource/gallery" >GALLERY</a></li>
+                </ul>
+                
+                <?php
+                if(!isset($_SESSION['id']))
+                    echo '<div role= "login" class= "pull-right"><a href= "resource/login.php">LOGIN</a></div>';
+                else{
+                    echo '<div role= "logout" class= "pull-right"><a href= "resource/logout.php">LOGOUT</a></div>';
+                    echo '<div role= "setting" class= "pull-right"><a href= "resource/setting.php">SETTING</a></div>';
+                }
+                ?>
+
+                <a id= "contact" href= "/contact" class= 'pull-right'>CONTACT</a>
+
+            </nav>
+        </header>
