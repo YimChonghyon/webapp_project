@@ -148,9 +148,15 @@ main{
 .commentbox{
 	float: left;
 	margin:2%;
+	width: 90%;
 }
 
-
+.re_commentbox{
+	float: left;
+	margin:2%;
+	margin-left: 5%;
+	width: 90%;
+}
 
 
 
@@ -229,21 +235,17 @@ main{
 .comment_container{
 	padding-top: 13px;
     margin-right: 20px;
-    margin-left: 20px;
+    margin-left: 7%;
 }
 
 .comment_contents_box{
 	position: relative;
     display: flex;
     margin-top: 8px;
-    margin-right: 20px;
+    margin-right: 10%;
 }
 
-.re_comment_container{
-	padding-top: 13px;
-    margin-right: 20px;
-    margin-left: 20px;
-}
+
 
 .comment{
 	border-radius: 15px;
