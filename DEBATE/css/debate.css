@@ -34,13 +34,13 @@ main{
 }
 .list{
 	float: left;
-	width: 23%;
+	width: 30%;
 	height: 90%;
 	background-color: rgb(240,240,240);
 }
 .debatebox{
 	float: left;
-	width: 77%;
+	width: 70%;
 	height: 87%;
 	/* background-color: pink; */
 }
