@@ -58,19 +58,12 @@
     </section>
 </main>
 
-<div id= "content">
-    <p>Content Start</p> <!-- dumb -->
-    <p>Content</p>
-    <p>Content</p>
-    <p>Content</p>
-    <p>Content</p>
-    <p>Content</p>
-    <p>Content</p>
-    <p>Content</p>
-    <p>Content</p>
-    <p>Content</p>
-    <p>Content End</p>
-</div>
+<article id="index_map">
+  <h3><a href="/research">CONTACT</a></h3>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.9242122905407!2d126.83208981526195!3d37.296929979849345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b6ef2f5a7cb73%3A0x26b59cb3d9af4a46!2z7ZWc7JaR64yA7ZWZ6rWQIEVSSUNB7Lqg7Y287Iqk!5e0!3m2!1sko!2skr!4v1575792959595!5m2!1sko!2skr"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
+  </iframe>
+</article>
 
 <footer role="contentinfo">
     <div class="container">
