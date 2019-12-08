@@ -154,6 +154,7 @@ main{
 .re_commentbox{
 	float: left;
 	margin:2%;
+	margin-top:0%;
 	margin-left: 5%;
 	width: 90%;
 }
