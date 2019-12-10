@@ -12,15 +12,95 @@
     <link rel="stylesheet" type="text/css" href="index.css" />
     <link href="/img/favicon.png" type="image/png" rel="shortcut icon" />
 
-<style>
+    <style>
+    *{margin:0;padding:0;}
+    ul,li{list-style:none;}
+    .slide{height:500px;overflow:hidden;}
+    .slide ul{width:calc(100% * 4);display:flex;animation:slide 8s infinite;} /* slide 8초 동안 진행, 반복*/
+    .slide li{width:calc(100% / 4);height:500px;}
+    .slide li:nth-child(1){background:#ffa;}
+    .slide li:nth-child(2){background:#faa;}
+    .slide li:nth-child(3){background:#afa;}
+    .slide li:nth-child(4){background:#aaf;}
+    @keyframes slide {
+      0% {margin-left:0;} /* 0 ~ 10  : 정지 */
+      10% {margin-left:0;} /* 10 ~ 25 : 변이 */
+      25% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
+      35% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+      50% {margin-left:-200%;}
+      60% {margin-left:-200%;}
+      75% {margin-left:-300%;}
+      85% {margin-left:-300%;}
+      100% {margin-left:0;}
+    }
 
-</style>
+    @media(max-width:767px) {
+   .menuBtn {
+       padding-top:6px;
+       padding-left:10px;
+       padding-right:10px;
+       padding-bottom:2px;
+       border:1px solid #AAAAAA;
+       border-radius:5px;
+       background-color:#FFFFFF;
+       cursor:pointer;
+   }
+
+   .menuBtn:hover {
+       background-color:#DDDDDD;
+   }
+
+   .menuBtn:focus {
+       outline:none;
+   }
+  
+   .menuBtn i {
+       color:#888888;
+   }
+
+   .menuBtn span {
+       display:inline-block;
+       text-indent:-999px;
+   }
+
+   nav {
+       display:none;
+   }
+}
+
+/* 768px 이상 */
+@media(min-width:768px) {
+
+  
+   .menuBtn {display:none;}
+   
+   nav {display:block !important;}
+
+   nav li {
+       float:left;
+       width:auto;
+          }
+}
+
+  </style>
+    <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+        jQuery(".menuBtn").click(function() {
+
+        jQuery(".menuNav").slideToggle();
+    });
+    });
+    </script>
 </head>
 
 <body>    
 <?php try{$conn=new PDO("mysql:host=localhost;dbname=selab","root","root");$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);}catch(PDOException $e){
     //echo "Connection failed: " . $e->getMessage();
 }?>
+        <button type="button" class="menuBtn">
+        <i><img src="icon-menu.svg" style="width:20px;height:20px;"/></i><span>MENU</span>
+        </button>
 
         <header role= "banner">
             <nav role= "navigation">
@@ -43,34 +123,17 @@
                 }
                 ?>
 
-                <a id= "contact" href= "/contact" class= 'pull-right'>CONTACT</a>
-
             </nav>
         </header>
 
                 <!-- INDEX MAIN IMAGE -->
-                <div class="container">
-	            <div class="wrap-slider">
-    	        <div class="css-slider">
-        	    <div class="mask">
-				<ul>
-					<li class="firstanimation first">
-						<a href="#"><img src="images/1.jpg" alt="White Cat"/></a>
-						<div class="tooltip"><h1>White Cat</h1></div>
-					</li>
-					<li class="secondanimation second">
-						<a href="#"><img src="images/2.jpg" alt="Owl"/></a>
-						<div class="tooltip"><h1>Owl</h1></div>
-					</li>
-					<li class="thirdanimation third">
-						<a href="#"><img src="images/3.jpg" alt="Baby Cats"/></a>
-						<div class="tooltip"><h1>Baby Cats</h1></div>
-					</li>
-				</ul>
-                </div>
-                <div class="progress-bar"></div>
-                </div>
-                </div>
+                <div class="slide">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
                 </div>
 
         <main>
@@ -111,13 +174,10 @@
 
             <article id="index_map">
                 <h3><a href="/research">CONTACT</a></h3>
-                <p>Content Start</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content End</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.9242122905407!2d126.83208981526195!3d37.296929979849345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b6ef2f5a7cb73%3A0x26b59cb3d9af4a46!2z7ZWc7JaR64yA7ZWZ6rWQIEVSSUNB7Lqg7Y287Iqk!5e0!3m2!1sko!2skr!4v1575792959595!5m2!1sko!2skr"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
+                </iframe>
             </article>
-            </div>
         </main>
 
     <footer role="contentinfo">
