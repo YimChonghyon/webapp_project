@@ -16,7 +16,7 @@
 	?>
 
 	<div class="contents">
-		<div class = "mainphoto">
+		<div class = "main_section">
 			<h1>COURSES</h1>
 		</div>
 		<div class = "tab_class">
@@ -26,7 +26,7 @@
 				<button id = "postgraduate" onclick = postgraduate()>Postgraduate</button>
 			</div>
 
-			<div class= "mainbody">
+
 				<div id = "present_course">
 					<div id="course_table">
 						<table id ="first_table">
@@ -34,12 +34,12 @@
 								<th class="coursenum" colspan="2">Present Courses</th>
 							</tr>
 							<tr>
-								<td class="coursenum active" data-href="cse326">CSE326</td>
-								<td class="course active" data-href="cse326"><a href="sub_course.html" class='selected'>Web Application Development</a></td>
+								<td class="coursenum_active" data-href="cse326">CSE326</td>
+								<td class="course_active" data-href="cse326" onclick = "location.href='sub_course.php'">Web Application Development</td>
 							</tr>
 							<tr>
-								<td class="coursenum active" data-href="cse6050">CSE6050</td>
-								<td class="course active" data-href="cse6050">Advanced Software Engineering</td>
+								<td class="coursenum_active" data-href="cse6050">CSE6050</td>
+								<td class="course_active" data-href="cse6050">Advanced Software Engineering</td>
 							</tr>
 						</table>
 						<div id="over">
@@ -103,7 +103,7 @@
 					</div>
 				</div>
 
-				<div id ="undergraduate_course">
+				<div id ="undergraduate_course" style = "display:none">
 					<div id="course_table">
 						<table id="first_table">
 							<tr>
@@ -122,8 +122,8 @@
 								<td class="course">Web Programming</td>
 							</tr>
 							<tr>
-								<td class="coursenum active" data-href="cse326">CSE326</td>
-								<td class="course active" data-href="cse326">Web Application Development</td>
+								<td class="coursenum_active" data-href="cse326">CSE326</td>
+								<td class="course_active" data-href="cse326">Web Application Development</td>
 							</tr>
 							<tr>
 								<td class="coursenum" data-href="cse406">CSE406</td>
@@ -250,7 +250,7 @@
 					</div>
 				</div>
 
-				<div id ="postgraduate_course">
+				<div id ="postgraduate_course" style = "display:none">
 					<div id="course_table">
 						<table id="first_table">
 							<tr>
@@ -273,8 +273,8 @@
 								<td class="course" data-href="cse639">Special Topics in Software Engineering</td>
 							</tr>
 							<tr>
-								<td class="coursenum active" data-href="cse6050">CSE6050</td>
-								<td class="course active" data-href="cse6050">Advanced Software Engineering</td>
+								<td class="coursenum_active" data-href="cse6050">CSE6050</td>
+								<td class="course_active" data-href="cse6050">Advanced Software Engineering</td>
 							</tr>
 						</table>
 						<div id="over">
@@ -400,7 +400,6 @@
 
 			</div>
 		</div>
-	</div>
 	<?php
 	include "../resource/footer.php";
 	?>

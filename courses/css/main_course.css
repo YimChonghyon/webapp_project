@@ -1,18 +1,38 @@
-.mainphoto {
-  text-align : center;
-  width : 100%;
-  height : 450px;
+.main_section {
   background-image : url("../../resource/images/course_2.jpg");
-  opacity : 0.8;
 }
 
-h1 {
-  font-size : 50px;
-  padding-top : 160px;
-  text-align : center;
-  text-shadow : 3px -1px gray;
-  vertical-align : center;
-  opacity : 1;
+#present_course {
+  border : 1px solid black;
+  border-radius : 12px;
+  background-color : #dcdcdc;
+  margin-left : 20%;
+  color : #0d0d0d;
+  width : 60%;
+  margin-top : 30px;
+  padding : 20px;
+}
+
+#undergraduate_course {
+  border : 1px solid black;
+  border-radius : 12px;
+  background-color : #dcdcdc;
+  margin-left : 20%;
+  color : #0d0d0d;
+  width : 60%;
+  margin-top : 30px;
+  padding : 20px;
+}
+
+#postgraduate_course {
+  border : 1px solid black;
+  border-radius : 12px;
+  background-color : #dcdcdc;
+  margin-left : 20%;
+  color : #0d0d0d;
+  width : 60%;
+  margin-top : 30px;
+  padding : 20px;
 }
 
 #course_table {
@@ -35,7 +55,6 @@ table th{
   background-color : white;
 	height: 45px;
 	vertical-align: middle;
-  border : 1px solid black;
 	text-align: center;
   margin : 0px;
 }
@@ -43,18 +62,11 @@ table th{
 table td{
 	height: 40px;
   background-color : #f2f2f2;
-  border : 1px solid black;
 	vertical-align: middle;
 	padding: 0px;
 	text-align: center;
   margin : 0px;
 }
-
-table tr td{
-	border-bottom: 1px solid #dfdfdf;
-  border : 1px solid black;
-}
-
 
 tr:nth-child(odd) td{
 	background-color: white;
@@ -62,7 +74,6 @@ tr:nth-child(odd) td{
 
 #first_table{
 	float : left;
-	border-right: 1px solid #dfdfdf;
   overflow : hidden;
 }
 
@@ -84,20 +95,30 @@ tr:nth-child(odd) td{
 
 .coursenum{
 	width: 70px;
+  border:white;
 }
 
 .course{
 	width: 310px;
-	border-right: 2px solid #dfdfdf;
+  border:white;
 }
 
-.active{
+.coursenum_active{
+  width : 70px;
 	background-color: skyblue !important;
 	cursor: pointer;
+  border : white;
 }
 
-.hovered{
-	background-color: #83D9FF !important;
+.course_active {
+  width : 310px;
+  background-color: skyblue !important;
+	cursor: pointer;
+  border : white;
+}
+
+.couse_active:hover {
+  background-color : red !important;
 }
 
 .circle {
@@ -108,4 +129,10 @@ tr:nth-child(odd) td{
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
 	display: inline-block;
+}
+
+.circle:hover {
+  width : 20px;
+  height : 20px;
+  background-color : red;
 }

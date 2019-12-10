@@ -1,29 +1,42 @@
-window.onload - function() {
 
-}
 function present() {
-  var con = document.getElementByID("present_course");
-  if(con.style.display == "none") {
-    con.style.display = "block";
-  }else {
-    con.style.display = "none";
-  }
+  var prc = document.getElementById("present_course");
+  var unc = document.getElementById("undergraduate_course");
+  var poc = document.getElementById("postgraduate_course");
+    prc.style.display = 'block';
+    unc.style.display = 'none';
+    poc.style.display = 'none';
+    if($(this).hasId('active')) {
+      $(this).removeId('active')
+    }else {
+      $(this).addId('active')
+    }
 }
 
 function undergraduate() {
-  var con = document.getElementByID("undergraduate_course");
-  if(con.style.display == "none") {
-    con.style.display = "block";
-  }else {
-    con.style.display = "none";
-  }
+  var prc = document.getElementById("present_course");
+  var unc = document.getElementById("undergraduate_course");
+  var poc = document.getElementById("postgraduate_course");
+    unc.style.display = 'block';
+    prc.style.display = 'none';
+    poc.style.display = 'none';
+    if($(this).hasId('active')) {
+      $(this).removeId('active')
+    }else {
+      $(this).addId('active')
+    }
 }
 
 function postgraduate() {
-  var con = document.getElementByID("postgraduate_course");
-  if(con.style.display == "none") {
-    con.style.display = "block";
-  }else {
-    con.style.display = "none";
-  }
+  var prc = document.getElementById("present_course");
+  var unc = document.getElementById("undergraduate_course");
+  var poc = document.getElementById("postgraduate_course");
+    poc.style.display = 'block';
+    unc.style.display = 'none';
+    prc.style.display = 'none';
+    if($(this).hasId('active')) {
+      $(this).removeId('active')
+    }else {
+      $(this).addId('active')
+    }
 }

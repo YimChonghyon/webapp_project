@@ -1,18 +1,5 @@
-.mainphoto {
-  text-align : center;
-  width : 100%;
-  height : 400px;
+.main_section {
   background-image : url("../../resource/images/course_3.jpg");
-  opacity : 0.8;
-}
-
-h1 {
-  font-size : 50px;
-  padding-top : 160px;
-  text-align : center;
-  text-shadow : 3px -1px gray;
-  vertical-align : center;
-  opacity : 1;
 }
 
 p1 {
@@ -20,9 +7,14 @@ p1 {
   margin-bottom : 5px;
 }
 
+a {
+  color : blue;
+
+}
+
 h3 {
   color : skyblue;
-  font-size : 30px;
+  font-size : 40px;
   text-shadow : 1px -1px gray;
 }
 
@@ -38,14 +30,15 @@ h3 {
   margin-left : 20%;
   color : #0d0d0d;
   width : 60%;
-  min-height: 530px;
+  min-height: 600px;
   padding : 20px;
+  margin-top : 30px;
 }
 
 #lecture {
   float : left;
   overflow: hidden;
-  margin-left : 80px;
+  margin-left : 20px;
 }
 
 #lecture th {
@@ -56,7 +49,7 @@ h3 {
 
 #lecture td {
   text-align : center;
-  font-size : 15px;
+  font-size : 18px;
   padding-top : 5px;
   padding-bottom : 5px;
 }
@@ -64,7 +57,7 @@ h3 {
 #lab {
   float : right;
   overflow : hidden;
-  margin-right : 80px;
+  margin-right : 20px;
 }
 
 #lab th {
@@ -75,7 +68,7 @@ h3 {
 
 #lab td {
   text-align : center;
-  font-size : 15px;
+  font-size : 18px;
   padding-top : 5px;
   padding-bottom : 5px;
 }

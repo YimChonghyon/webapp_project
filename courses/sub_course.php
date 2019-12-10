@@ -19,17 +19,16 @@
 	include "../resource/nav.php";
 	?>
 			<div class="contents">
-			<div class ="mainphoto">
+			<div class ="main_section">
 				<h1>Web Application Development</h1>
 			</div>
 			<div class = "tab_class">
 				<div id="tab">
-					<button id = "home" onclick = home()>Home</button><br />
+					<button id = "home_button" onclick = home_button()>Home</button><br />
 					<button id = "slide_button" onclick = slide_button()>Slides</button><br />
-					<button id = "debate" onclick = debate()>Debate</button>
 				</div>
+<div id="home">
 <div class="mainbody">
-	<div id="home">
   <div class="wrap-subcontent">
     <h3>Course Objectives</h3>
     <p1>
@@ -223,9 +222,7 @@
 </div>
 </div>
 
-
-
-<div id="slides">
+<div id="slides" style = "display:none">
   <div id="lecture">
     <table>
       <tr>
@@ -384,6 +381,8 @@
     </table>
   </div>
 </div>
+
+
 </div>
 </div>
 
