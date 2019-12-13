@@ -1,5 +1,6 @@
 .main_section{
- 	background-image: url('../../resource/images/notice.jpg');
+ 	background-image: url('../../resource/images/research.jpg');
+ 	background-size: cover;
 }
 .research{
 	margin: 5%;

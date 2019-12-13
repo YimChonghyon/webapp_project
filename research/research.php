@@ -20,7 +20,7 @@
 
 
       <div class = "research">
-        <img src="../../resource/images/notice.jpg" id="research_img" /> <!-- 여기 이미지!!!!! -->
+        <img src="../../resource/images/research_img.jpg" id="research_img" /> <!-- 여기 이미지!!!!! -->
       </div>
     </div>
   </main>

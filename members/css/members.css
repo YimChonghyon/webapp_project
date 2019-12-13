@@ -1,5 +1,6 @@
 .main_section{
-  background-image: url('../../resource/images/members.jpg');
+	background-image: url('../../resource/images/members.jpg');
+	background-size: cover;
 }
 .profile{
 	width: 100%;

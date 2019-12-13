@@ -1,3 +1,4 @@
 .main_section{
-  background-image: url('../../resource/images/gallery.jpg');
+	background-image: url('../../resource/images/gallery.jpg');
+	background-size: cover;
 }
