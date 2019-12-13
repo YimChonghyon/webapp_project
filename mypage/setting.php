@@ -243,9 +243,5 @@
 	<div class="VIEWPOINT" id="SETDIV8">
 		<h4>시간 관계상 COURSE 부분은 데이터베이스연결을 제외하도록 결정했습니다.</h4>
 	</div>
-
-	<?php
-	include "../resource/footer.php";
-	?>
 </body>
 </html>
