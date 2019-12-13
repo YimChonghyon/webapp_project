@@ -2,40 +2,6 @@
 <html>
 <head>
 	<title></title>
-<<<<<<< HEAD
-	<link rel="stylesheet" type="text/css" href="debate.css">
-</head>
-<body>
-	<header role= "banner">
-		<nav role= "navigation">
-			<div class="pull-left"><a href="../index.html"><img src="images/selab_logo_S.png" /></a></div>
-			<ul id= "menu" class="menu pull-left">
-				<li class="pull-left nav_link"><a href="notice.html" >NOTICE</a></li>
-				<li class="pull-left nav_link"><a href="members.html" >MEMBERS</a></li>
-				<li class="pull-left nav_link"><a href="research.html" >RESEARCH</a></li>
-				<li class="pull-left nav_link"><a href="publications.html" >PUBLICATIONS</a></li>
-				<li class="pull-left nav_link"><a href="courses.html" >COURSES</a></li>
-				<li class="pull-left nav_link"><a href="gallery.html" >GALLERY</a></li>
-			</ul>
-
-			<div role= "login" class= "pull-right nav_link"><a href= "login.html">LOGIN</a></div>
-			<a href= "contact.html" class= 'pull-right nav_link'>CONTACT</a>
-		</nav>
-	</header>
-	<main>
-		<div class="in_nav pull-left">
-			<a href="" class="pull-left"><h1>Web Application Development</h1></a>
-				<img class= "out_button pull-right" src="images/out.png">
-		</div>
-
-		<div class="list">
-			<div class="serch">
-				<div>
-				<input type="text" name="" id="serchbox">
-				<button type="submit">
-				<image class="pull-right search_icon" src="images/search.png">
-			</button>
-=======
 	<link rel="stylesheet" type="text/css" href="css/debate.css">
 	<link rel="stylesheet" type="text/css" href="../resource/css/common.css" />
 </head>
@@ -44,17 +10,17 @@
   include "../resource/nav.php";
   ?>
 	<main>
-		<div class="in_nav pull-left">
+		<!-- <div class="in_nav pull-left">
 			<a href="" class="pull-left"><h1>Web Application Development</h1></a>
-				<!-- <img class= "out_button pull-right" src="../resource/images/out.png"> -->
-		</div>
+				<img class= "out_button pull-right" src="../resource/images/out.png">
+		</div> -->
 
 		<div class="list scroll">
 			<form method="post" action="">
 				<div class="search">
 					<div>
-					<input type="text" name="" id="searchbox" name="search" >
-					<button type="submit">
+					<input type="text" name="" id="searchbox" size="30"  >
+					<button type="submit" class="button">
 					<image class="pull-right search_icon" src="../resource/images/search.png">
 				</button>
 					</div>
@@ -104,7 +70,6 @@
 						</div>
 						
 					</div>
->>>>>>> d388d00add97499fecd0694b23f358d7dd5d1f01
 				</div>
 			</div>
 			<div class="debate_content_container">
@@ -125,7 +90,7 @@
 						</div>
 					</div>
 				
-					<div class="footer">
+					<div class="bottom_infor">
 						<div class="write_infor">
 							<div class="name">
 								임정현
@@ -136,13 +101,13 @@
 						</div>
 						<div class="icon_container pull-right">
 							<div class="question_container pull-right">
-									<img class="question_icon" src="images/question.png">
+									<img class="question_icon" src="../resource/images/question.png">
 									<div class="question_icon_num">
 										3
 									</div>
 							</div>
 							<div class="comment_container pull-right">
-									<img class="comment_icon" src="images/comment.png">
+									<img class="comment_icon" src="../resource/images/comment.png">
 									<div class="comment_icon_num"> 
 										1
 									</div>
@@ -152,10 +117,6 @@
 					</div>
 				</div>
 			</div>
-<<<<<<< HEAD
-			<footer class="pull-right">
-				<img class="add_content_icon" src="images/plus.png">
-=======
 			<div class="debate_content_container">
 				<div>
 					<div class="title_tag">
@@ -166,7 +127,97 @@
 							#공지
 						</div>
 					</div>
->>>>>>> d388d00add97499fecd0694b23f358d7dd5d1f01
+				
+				
+					<div class="titlebox">
+						<div class="title_text">
+							안녕하세요. 제목입니다.
+						</div>
+					</div>
+				
+					<div class="bottom_infor">
+						<div class="write_infor">
+							<div class="name">
+								임정현
+							</div>
+							<div class="time">
+								23:03
+							</div>
+						</div>
+						<div class="icon_container pull-right">
+							<div class="question_container pull-right">
+									<img class="question_icon" src="../resource/images/question.png">
+									<div class="question_icon_num">
+										3
+									</div>
+							</div>
+							<div class="comment_container pull-right">
+									<img class="comment_icon" src="../resource/images/comment.png">
+									<div class="comment_icon_num"> 
+										1
+									</div>
+								</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="debate_content_container">
+				<div>
+					<div class="title_tag">
+						<div class="tag_number">
+							#1
+						</div>
+						<div class="tag_catagory">
+							#공지
+						</div>
+					</div>
+				
+				
+					<div class="titlebox">
+						<div class="title_text">
+						안녕하세요. 제목입니다.
+						</div>
+					</div>
+				
+					<div class="bottom_infor">
+						<div class="write_infor">
+							<div class="name">
+								임정현
+							</div>
+							<div class="time">
+								23:03
+							</div>
+						</div>
+
+						<div class="icon_container ">
+							<div class="question_container">
+									<img class="question_icon" src="../resource/images/question.png">
+									<div class="question_icon_num">
+										3
+									</div>
+							</div>
+							<div class="comment_container ">
+									<img class="comment_icon" src="../resource/images/comment.png">
+									<div class="comment_icon_num"> 
+										1
+									</div>
+								</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="debate_content_container">
+				<div>
+					<div class="title_tag">
+						<div class="tag_number">
+							#1
+						</div>
+						<div class="tag_catagory">
+							#공지
+						</div>
+					</div>
 				
 				
 					<div class="titlebox">
@@ -256,7 +307,8 @@
 				</div>
 		</form>
 		</div>
-		<div class="debatebox">
+		<div class="debatebox scroll">
+			<div class="debate_content_container_maincontainer">
 			<div class="debate_content_container_main">
 				<div class="title_tag"> 
 					<div class="tag_number">
@@ -286,15 +338,6 @@
 						안녕하세요. 웹애플리케이션 수업 토론 페이지 입니다.
 					</div>
 				</div>
-<<<<<<< HEAD
-					
-				<div class="question_botton">
-					<button class="question">
-						<img class="question_botton_icon" src="images/question.png">
-						<p>저도궁금해요!</p>
-					</button>
-				</div>
-=======
 				<form method="POST">
 					<div class="question_button">
 						<button type = "submit" class="question">
@@ -303,8 +346,8 @@
 						</button>
 					</div>
 				</form>	
->>>>>>> d388d00add97499fecd0694b23f358d7dd5d1f01
 			</div>
+</div>
 		
 				
 			
@@ -327,16 +370,11 @@
 								오후 11:30
 							</div>
 							<div class= "heart">
-<<<<<<< HEAD
-							<img class = "heart_button" src="images/hearts.png">
-							
-=======
 								<form method="POST">
 								<button type="submit" class ="button">
 									<img class = "heart_button" src="../resource/images/hearts.png">
 								</button>
 							</form>
->>>>>>> d388d00add97499fecd0694b23f358d7dd5d1f01
 							<div class="heart_num">
 								3
 							</div>
@@ -344,8 +382,72 @@
 
 						</div>
 					</div>
-<<<<<<< HEAD
-=======
+					
+				</div>
+			</div>
+			<div class="debate_reply">
+			<div class="comment_container">
+				<div class="commentbox">
+					<div class="name">
+						임정현
+					</div>
+					
+					<div class="comment_contents_box"> 
+						<div class="comment">
+							<div clss="comment_text">
+								최고에요!
+							</div>
+						</div>
+						<div class="comment_additional">
+							<div class= "comment_time">
+								오후 11:30
+							</div>
+							<div class= "heart">
+								<form method="POST">
+								<button type="submit" class ="button">
+									<img class = "heart_button" src="../resource/images/hearts.png">
+								</button>
+							</form>
+							<div class="heart_num">
+								3
+							</div>
+							</div>
+
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="debate_reply">
+			<div class="comment_container">
+				<div class="commentbox">
+					<div class="name">
+						임정현
+					</div>
+					
+					<div class="comment_contents_box"> 
+						<div class="comment">
+							<div clss="comment_text">
+								최고에요!
+							</div>
+						</div>
+						<div class="comment_additional">
+							<div class= "comment_time">
+								오후 11:30
+							</div>
+							<div class= "heart">
+								<form method="POST">
+								<button type="submit" class ="button">
+									<img class = "heart_button" src="../resource/images/hearts.png">
+								</button>
+							</form>
+							<div class="heart_num">
+								3
+							</div>
+							</div>
+
+						</div>
+					</div>
 					
 				</div>
 			</div>
@@ -410,7 +512,6 @@
 						</div>
 
 					</div>
->>>>>>> d388d00add97499fecd0694b23f358d7dd5d1f01
 				</div>
 			</div>
 		</div> -->

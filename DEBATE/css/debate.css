@@ -23,17 +23,20 @@ header{
 	margin-right: 20px;
 }
 main{
-	float: left;
-	width: 100%;
-	height: 90%;
+	/* float: left; */
+	/* width: 100%; */
+	height:100% ;
 }
 .in_nav{
 	background-color: rgb(64, 108, 255);
 	width: 100%;
 	height: 10%;
 }
+@media screen and (min-width:800px) {
 .list{
+	margin-top: 1% ;
 	float: left;
+<<<<<<< HEAD
 	width: 23%;
 	height: 90%;
 	background-color: rgb(240,240,240);
@@ -42,9 +45,48 @@ main{
 	float: left;
 	width: 77%;
 	height: 87%;
+=======
+	width: 29.5%;
+	height: 100%;
+	border: 1px solid #9b9b9b;
+	
+	/* text-align: center; */
+	
+	/* background-color: rgb(240,240,240); */
+}
+.debatebox{
+	float: right;
+	width: 70%;
+	height: 100%;
+	
+	/* border: 1px solid #9b9b9b; */
+>>>>>>> d388d00add97499fecd0694b23f358d7dd5d1f01
 	/* background-color: pink; */
 }
-.serch{
+}
+
+@media screen and (max-width: 800px) and (min-width: 320px){
+	.list{
+		margin-top: 1% ;
+		float: left;
+		width: 100%;
+		height: 30%;
+		border: 1px solid #9b9b9b;
+		
+		/* text-align: center; */
+		
+		/* background-color: rgb(240,240,240); */
+	}
+	.debatebox{
+		float: right;
+		width: 100%;
+		height: 70%;
+		
+		/* border: 1px solid #9b9b9b; */
+		/* background-color: pink; */
+	}
+}
+.search{
 	float: left;
 	text-align: center;
 	vertical-align: middle;
@@ -52,8 +94,10 @@ main{
 	height: 10%;
 	line-height: 50px;
 }
-#serchbox{
-	vertical-align: middle;
+#searchbox{
+	vertical-align: left;
+	text-align: center;
+	
 }
 /* .querybox{
 	background: gray;
@@ -116,7 +160,8 @@ main{
 	height: 13px;
     margin-top: 17px;
     display: flex;
-    flex-direction: row;
+	flex-direction: row;
+	font-size: 13px;
     vertical-align: middle;
     align-items: center;
 }
@@ -124,14 +169,14 @@ main{
 .write_infor{
 	max-width: 30%;
     height: 19px;
-    font-size: 13px;
+    
     color: #9b9b9b;
     display: flex;
 }
 
 .name{
 	text-overflow: ellipsis;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: inline-block;
     white-space: nowrap;
 	margin-right: 5px;
@@ -148,9 +193,23 @@ main{
 .commentbox{
 	float: left;
 	margin:2%;
+<<<<<<< HEAD
 }
 
 
+=======
+	margin-left: 3%;
+	width: 90%;
+}
+
+/* .re_commentbox{
+	float: left;
+	margin:2%;
+	margin-top:0%;
+	margin-left: 5%;
+	width: 90%;
+} */
+>>>>>>> d388d00add97499fecd0694b23f358d7dd5d1f01
 
 
 
@@ -184,13 +243,21 @@ main{
     border-radius: 10px;
 	cursor: pointer;
 	background-color: white;
+	overflow: hidden;
 }
+/* .debate_content_container_maincontainer{
+	vertical-align: middle;
+} */
 
+.hr{
+	border: 10px;
+}
 .debate_content_container_main{
 	height: 50%;
 	width: 90%;
+	
     border: 1px solid #f0f0f0;
-	padding: 15px 15px 8px;
+	padding: 15px 15px 1% 1%;
 	margin: 3%;
     margin-bottom: 10px;
     box-shadow: 0 5px 8px rgba(0,0,0,.1);
@@ -322,8 +389,8 @@ main{
     flex-direction: row;
     justify-content: flex-end;
 	margin-left: auto;
-    margin-top: 10px;
-	float: right;
+    /* margin-top: 10px; */
+	/* float: right; */
 }
 
 .question_container{
@@ -369,12 +436,12 @@ main{
 	margin: 10px;
 }
 
-.question_botton_icon{
+.question_button_icon{
 	width: 28px;
 	margin-top: 5px;
 }
 
-.question_botton{
+.question_button{
 	margin : 5px;
 	text-align: right;
 }
@@ -391,10 +458,13 @@ main{
 } */
 .titlebox{
 	margin:20px 5px 5px 5px;
+	height: 30%;
+	overflow: hidden;
 }
 
 .title_text{
 	font-size: 15px;
+	
 }
 
 .titlebox_main{
@@ -408,4 +478,82 @@ main{
 
 .contentsbox{
 	margin:30px;
+<<<<<<< HEAD
+=======
+}
+
+.comment_box{
+	position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    background: #f0f0f0;
+}
+
+.comment_input_container_box{
+	position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border: 5px solid #f0f0f0;
+    box-sizing: border-box;
+    width: calc(100% - 46px);
+}
+
+.comment_input_text_container{
+	position: relative;
+    width: 100%;
+}
+
+.comment_input_text_area{
+	max-height: 120px;
+    overflow-y: auto;
+    position: relative;
+    padding: 7px 20px 8px;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    line-height: 21px;
+    font-family: inherit;
+    resize: none;
+    border-radius: 10px;
+    color: transparent;
+	text-shadow: 0 0 #4b4b4b;
+	transition: color .3s ease;	
+	margin-bottom: 0px;
+}
+
+.reply{
+	display: flex;
+    flex-direction: column-reverse;
+    color: inherit;
+}
+.reply_container{
+	border: none;
+    color: inherit;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.reply_input{
+	width: 100%;
+	/* height: 100%; */
+	/* border: none; */
+}
+
+.scroll{
+	overflow-y: scroll;
+}
+
+.enter_button{
+	width: 20px;
+}
+
+.button{
+	border:none;
+	color:rgba(0,0,0,0);
+>>>>>>> d388d00add97499fecd0694b23f358d7dd5d1f01
 }
