@@ -28,14 +28,16 @@
 		</div>
 
 		<div class="list scroll">
-			<div class="serch">
-				<div>
-				<input type="text" name="" id="serchbox">
-				<button type="submit">
-				<image class="pull-right search_icon" src="../resource/images/search.png">
-			</button>
+			<form method="post" action="">
+				<div class="search">
+					<div>
+					<input type="text" name="" id="searchbox" name="search" >
+					<button type="submit">
+					<image class="pull-right search_icon" src="../resource/images/search.png">
+				</button>
+					</div>
 				</div>
-			</div>
+		</form>
 			<hr />
 			<div class="debate_content_container">
 				<div>
@@ -82,10 +84,13 @@
 					</div>
 				</div>
 			</div>
-			<footer class="pull-right">
-				<img class="add_content_icon" src="../resource/images/plus.png">
-				
-			</footer>
+			<form>
+				<div class="pull-right">
+					<button type="submit" class="button" >
+						<img class="add_content_icon" src="../resource/images/plus.png">
+					</button>
+				</div>
+		</form>
 		</div>
 		<div class="debatebox scroll">
 			<div class="debate_content_container_main">
@@ -117,13 +122,14 @@
 						안녕하세요. 웹애플리케이션 수업 토론 페이지 입니다.
 					</div>
 				</div>
-					
-				<div class="question_botton">
-					<button class="question">
-						<img class="question_botton_icon" src="../resource/images/question.png">
-						<p>저도궁금해요!</p>
-					</button>
-				</div>
+				<form method="POST">
+					<div class="question_button">
+						<button type = "submit" class="question">
+							<img class="question_button_icon" src="../resource/images/question.png">
+							<p>저도궁금해요!</p>
+						</button>
+					</div>
+				</form>	
 			</div>
 		
 				
@@ -147,8 +153,11 @@
 								오후 11:30
 							</div>
 							<div class= "heart">
-							<img class = "heart_button" src="../resource/images/hearts.png">
-							
+								<form method="POST">
+								<button type="submit" class ="button">
+									<img class = "heart_button" src="../resource/images/hearts.png">
+								</button>
+							</form>
 							<div class="heart_num">
 								3
 							</div>
@@ -160,7 +169,7 @@
 				</div>
 			</div>
 			<div class="comment_container">
-					<div class="re_commentbox">
+					<div class="commentbox">
 						<div class="name">
 							임정현
 						</div>
@@ -176,8 +185,11 @@
 									오후 11:30
 								</div>
 								<div class= "heart">
-								<img class = "heart_button" src="../resource/images/hearts.png">
-								
+										<form method="POST">
+												<button type="submit" class="button">
+													<img class = "heart_button" src="../resource/images/hearts.png">
+												</button>
+											</form>
 								<div class="heart_num">
 									3
 								</div>
@@ -189,7 +201,7 @@
 					</div>
 				</div>
 		</div>
-
+<form method="POST">
 		<div class="comment_box">
 			<div class="comment_input_container_box">
 				<div class ="comment_input_text_container">
@@ -197,13 +209,18 @@
 						<div class ="reply">
 							<div class ="reply_container">
 								<input type="text" class="reply_input">
+								<button type="submit" class="button">
+								<img class ="enter_button" src = "../resource/images/enter.png">
+							</button>
 							</div>
+							
 						</div>
 
 					</div>
 				</div>
 			</div>
 		</div>
+	</form>
 	</div>
 	</main>
 </body>

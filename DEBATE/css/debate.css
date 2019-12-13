@@ -44,7 +44,7 @@ main{
 	height: 87%;
 	/* background-color: pink; */
 }
-.serch{
+.search{
 	float: left;
 	text-align: center;
 	vertical-align: middle;
@@ -52,8 +52,9 @@ main{
 	height: 10%;
 	line-height: 50px;
 }
-#serchbox{
+#searchbox{
 	vertical-align: middle;
+	width: 80%;
 }
 /* .querybox{
 	background: gray;
@@ -131,7 +132,7 @@ main{
 
 .name{
 	text-overflow: ellipsis;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: inline-block;
     white-space: nowrap;
 	margin-right: 5px;
@@ -148,16 +149,17 @@ main{
 .commentbox{
 	float: left;
 	margin:2%;
+	margin-left: 3%;
 	width: 90%;
 }
 
-.re_commentbox{
+/* .re_commentbox{
 	float: left;
 	margin:2%;
 	margin-top:0%;
 	margin-left: 5%;
 	width: 90%;
-}
+} */
 
 
 
@@ -378,12 +380,12 @@ main{
 	margin: 10px;
 }
 
-.question_botton_icon{
+.question_button_icon{
 	width: 28px;
 	margin-top: 5px;
 }
 
-.question_botton{
+.question_button{
 	margin : 5px;
 	text-align: right;
 }
@@ -483,4 +485,12 @@ main{
 
 .scroll{
 	overflow-y: scroll;
+}
+
+.enter_button{
+	width: 20px;
+}
+
+.button{
+	border:none;
 }
