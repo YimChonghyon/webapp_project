@@ -202,13 +202,21 @@
 				</div>
 		</div>
 <form method="POST">
+	<fieldset>
+		<legend>댓글달기</legend>
+		<div>
+			ID: <input type="text" name= "Name" size="15" > 
+			Password: <input type="text" name= "Name" size="20" > 
+			익명: <input type = "checkbox" name="anonymous" checked="checked">
+	</div>
 		<div class="comment_box">
+			
 			<div class="comment_input_container_box">
 				<div class ="comment_input_text_container">
 					<div class ="comment_input_text_area">
 						<div class ="reply">
 							<div class ="reply_container">
-								<input type="text" class="reply_input">
+								<input type="text" class="reply_input" name="reply" >
 								<button type="submit" class="button">
 								<img class ="enter_button" src = "../resource/images/enter.png">
 							</button>
@@ -220,6 +228,7 @@
 				</div>
 			</div>
 		</div>
+	</fieldset>
 	</form>
 	</div>
 	</main>
