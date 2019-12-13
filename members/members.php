@@ -33,24 +33,38 @@
 				</div>
 
 				<div class="mainbody" id="START">
-					<p>안녕하세요 MEMBER'S PAGE 입니다.</p>
+					<h2>Hi. This is "MEMBER'S PAGE"</h2>
+					<p><strong>SAMPLE PROFILE of MEMBER</strong></p>
+					<div class="profile">
+						<img src="../mypage/img/empty.png" class="profile_picture" />
+						<div class="profile_data">
+							<h3>Name : SELAB_MEMBER</h3>
+							<p>Email : sdkiso@gamil.com</p>
+							<p>Homepage : <a href="#">MEMBER's Page</a></p>
+							<p>Introduce : Hi!, I'm sample member~</p>
+							<p>Other : We are alive for a week with sample data. I have not registered a profile picture.</p>
+						</div>
+					</div>
 				</div>
 
 				<?php foreach ($result as $key => $value) { ?>
-					<div class="mainbody" id="<?=$value['type']?>_DIV">  
+					<div class="mainbody" id="<?=$value['type']?>_DIV">
 						<?php          
-						$stmt_member = $conn->prepare("SELECT Name,Email,Homepage,Introduce,Other,Picture FROM user where type = :type");
+						$stmt_member = $conn->prepare("SELECT Id,Name,Email,Homepage,Introduce,Other FROM user where type = :type");
 						$stmt_member->bindValue(':type',$value['type']);
 						$stmt_member->execute();
 						$result_member = $stmt_member->fetchAll();
 						foreach ($result_member as $key => $value) { ?>
-							<img src="data:image/jpeg;base64,<?= base64_encode($value['Picture']) ?>" />
-							<h3>Name:<?=$value['Name']?></h3>
-							<p>Email:<?=$value['Email']?></p>
-							<p>Homepage:<?=$value['Homepage']?></p>
-							<p>Introduce:<?=$value['Introduce']?></p>
-							<p>Other:<?=$value['Other']?></p>
-							<hr />
+							<div class="profile">
+								<img src="../mypage/img/<?=$value['Id']?>" class='profile_picture' onerror="this.src='../mypage/img/empty.png'"/>
+								<div class="profile_data">
+									<h3>Name : <?=$value['Name']?></h3>
+									<p>Email : <?=$value['Email']?></p>
+									<p>Homepage : <?=$value['Homepage']?></p>
+									<p>Introduce : <?=$value['Introduce']?></p>
+									<p>Other : <?=$value['Other']?></p>
+								</div>
+							</div>
 						<?php } ?>
 					</div>
 				<?php } ?>
