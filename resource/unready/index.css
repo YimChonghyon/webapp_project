@@ -1,7 +1,7 @@
 body
 {
     overflow-x: scroll;
-    width: 100%; margin-left: 0; margin-top: 0;
+    width: 100%; margin-left: 0; margin-top: 0; height: 100%;
     background-color: ghostwhite;
 }
 
@@ -92,7 +92,7 @@ header {
 
 #index_notice h3 {
     text-decoration: none;
-    font-size: 22px;
+    font-size: 28px;
 }
 
 #index_courses {
@@ -109,13 +109,13 @@ header {
 
 #index_courses h3 {
     text-decoration: none;
-    font-size: 22px;
+    font-size: 28px;
 }
 
 #index_layout_2 {
-    font-size: 22px;
+
     width: 90%;
-    height: 1100px;
+    height: 800px;
     background: #ECEFF1;
     margin: auto;
     text-align: center; text-decoration: none;
@@ -132,15 +132,38 @@ header {
     margin-right: auto;
 }
 
+#index_aboutus h3 {
+    text-decoration: none;
+    font-size: 28px;
+}
+
 #index_aboutus p {
     text-decoration: none;
     font-size: 16px;
 }
 
+#index_map_info {
+    width: 50%;
+    height: 90%;
+    background: #ECEFF1;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    float: left;
+}
+
+#index_map_info h3 {
+    text-decoration: none;
+    font-size: 28px;
+}
+
 #index_map {
-    width: 60%;
-    height: 500px;
+    width: 50%;
+    height: 90%;
     background: #ECEFF1;
     top: 50%;
-    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    float: right;
 }
