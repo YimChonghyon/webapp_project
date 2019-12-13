@@ -12,7 +12,7 @@ function Button_Tree(Div,Button) {
 		button[i].style.backgroundColor = 'white';
 	}
 	if(Div != 'START') {
-		document.getElementById(Button).style.backgroundColor = '#D21593';
-		document.getElementById(Div).style.display = "block";
+		document.getElementById(Button).style.backgroundColor = '#DCDCDC';
 	}
+	document.getElementById(Div).style.display = "block";
 }

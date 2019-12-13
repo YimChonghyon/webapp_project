@@ -46,7 +46,6 @@ CREATE TABLE Gallery (
     Number INT not null auto_increment,
     Type varchar(30) not null,
     Title varchar(30) not null,
-    picutre longblob,
     CONSTRAINT PK_Gallery PRIMARY KEY(Number,Type),
     CONSTRAINT FK_Gallery foreign key(Type)
     REFERENCES Gallery_type(Type) ON UPDATE CASCADE ON DELETE RESTRICT
@@ -64,7 +63,8 @@ CREATE TABLE Notice (
 );
 
 CREATE TABLE User_type (
-   Type varchar(20) not null,
+    Type varchar(20) not null,
+    Privilege tinyint not null,
     CONSTRAINT PK_User_type PRIMARY KEY(Type)
 );
 
@@ -77,95 +77,20 @@ CREATE TABLE User (
     Homepage varchar(100),
     Introduce text,
     Other text,
-    Picture longblob,
     CONSTRAINT PK_User PRIMARY KEY(Id),
     CONSTRAINT FK_User foreign key(Type)
     REFERENCES User_type(Type) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
-CREATE TABLE Course (
-    Course_number char(10) not null,
-    Course_name varchar(100) not null,
-    Graduate varchar(30) not null,
-    Introduce text,
-    CONSTRAINT PK_Course PRIMARY KEY(Course_number)
-);
-
-CREATE TABLE Course_history (
-    Course_date date not null,
-    Course_number char(10) not null,
-    Open tinyint not null default 1,
-    CONSTRAINT PK_Course_history PRIMARY KEY(Course_date,Course_number),
-    CONSTRAINT FK_Course_history foreign key(Course_number)
-    REFERENCES Course(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
-);
-
-Create Table Division (
-    Division varchar(30) not null,
-    CONSTRAINT PK_Division PRIMARY KEY(Division)
-);
-
-CREATE TABLE Slide_Lecture (
-    Lecture_number int not null auto_increment,
-    Course_date date not null,
-    Course_number char(10) not null,
-    Division varchar(30) not null,
-    Title varchar(60),
-    Open tinyint not null default 1,
-    CONSTRAINT PK_Slide_Lecture PRIMARY KEY(Lecture_number,Course_date,Course_number,Division),
-    CONSTRAINT FK_Slide_Lecture_1 foreign key(Course_date)
-    REFERENCES Course_history(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT FK_Slide_Lecture_2 foreign key(Course_number)
-    REFERENCES Course_history(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT FK_Slide_Lecture_3 foreign key(Division)
-    REFERENCES Division(Division) ON UPDATE CASCADE ON DELETE RESTRICT
-);
-
-CREATE TABLE Course_notice (
-    Number int not null auto_increment,
-    Course_date date not null,
-    Course_number char(10) not null,
-    Title varchar(60) not null,
-    Name varchar(30) default 'Annonymous',
-    Date timestamp default current_timestamp,
-    View int not null default 0,
-    Content text,
-    CONSTRAINT PK_Course_notice PRIMARY KEY(Number,Course_date,Course_number),
-    CONSTRAINT FK_Course_notice_1 foreign key(Course_date)
-    REFERENCES Course_history(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT FK_Course_notice_2 foreign key(Course_number)
-    REFERENCES Course_history(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
-);
-
-CREATE TABLE Course_schedule (
-    Week int not null,
-    Course_date Date not null,
-    Course_number char(10) not null,
-    Content varchar(100) not null,
-    Date datetime not null,
-    Title varchar(100),
-    CONSTRAINT PK_Course_schedule PRIMARY KEY(Week,Course_date,Course_number),
-    CONSTRAINT FK_Course_schedule_1 foreign key(Course_date)
-    REFERENCES Course_history(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT FK_Course_schedule_2 foreign key(Course_number)
-    REFERENCES Course_history(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
-);
-
 CREATE TABLE Debate (
     Debate_number int not null auto_increment,
-    Course_date date not null,
-    Course_number char(10) not null,
     Title Varchar(60) not null,
     Name varchar(30) default 'Anonymous',
     Date timestamp default current_timestamp,
     Content text,
     Wanted int not null default 0,
     Password int,
-    CONSTRAINT PK_Debate PRIMARY KEY(Debate_number,Course_date,Course_number),
-    CONSTRAINT FK_Debate_1 foreign key(Course_date)
-    REFERENCES Course_history(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT FK_Debate_2 foreign key(Course_number)
-    REFERENCES Course_history(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
+    CONSTRAINT PK_Debate PRIMARY KEY(Debate_number)
 );
 
 CREATE TABLE Tag (
@@ -176,56 +101,22 @@ CREATE TABLE Tag (
 CREATE TABLE Debate_Tag (
     Debate_number int not null,
     Type varchar(30) not null,
-    Course_date date not null,
-    Course_number char(10) not null,
-    CONSTRAINT PK_Debate_Tag PRIMARY KEY(Debate_number,Type,Course_date,Course_number),
+    CONSTRAINT PK_Debate_Tag PRIMARY KEY(Debate_number,Type),
     CONSTRAINT FK_Debate_Tag_1 foreign key(Debate_number)
     REFERENCES Debate(Debate_number) ON UPDATE CASCADE ON DELETE RESTRICT,
     CONSTRAINT FK_Debate_Tag_2 foreign key(Type)
-    REFERENCES Tag(Type) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT FK_Debate_Tag_3 foreign key(Course_date)
-    REFERENCES Debate(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT FK_Debate_Tag_4 foreign key(Course_number)
-    REFERENCES Debate(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
+    REFERENCES Tag(Type) ON UPDATE CASCADE
 );
 
 CREATE TABLE Reply (
     Reply_number int not null auto_increment,
     Debate_number int not null,
-    Course_date date not null,
-    Course_number char(10) not null,
     Name varchar(30) default 'Anonymous',
     Date timestamp default current_timestamp,
     Content text,
     Password int,
     Likes int not null default 0,
-    CONSTRAINT PK_Reply PRIMARY KEY(Reply_number,Debate_number,Course_date,Course_number),
+    CONSTRAINT PK_Reply PRIMARY KEY(Reply_number,Debate_number),
     CONSTRAINT FK_Reply_1 foreign key(Debate_number)
-    REFERENCES Debate(Debate_number) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT FK_Reply_2 foreign key(Course_date)
-    REFERENCES Debate(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT FK_Reply_3 foreign key(Course_number)
-    REFERENCES Debate(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
-);
-
-CREATE TABLE RE_Reply (
-    Re_reply_number int not null auto_increment,
-    Reply_number int not null,
-    Debate_number int not null,
-    Course_date date not null,
-    Course_number char(10) not null,
-    Name varchar(30) default 'Anonymous',
-    Date timestamp default current_timestamp,
-    Content text,
-    Password int,
-    Likes int not null default 0,
-    CONSTRAINT PK_Reply PRIMARY KEY(Re_reply_number,Reply_number,Debate_number,Course_date,Course_number),
-    CONSTRAINT FK_RE_Reply_1 foreign key(Reply_number)
-    REFERENCES Reply(Reply_number) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT FK_RE_Reply_2 foreign key(Debate_number)
-    REFERENCES Reply(Debate_number) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT FK_RE_Reply_3 foreign key(Course_date)
-    REFERENCES Reply(Course_date) ON UPDATE CASCADE ON DELETE RESTRICT,
-    CONSTRAINT FK_RE_Reply_4 foreign key(Course_number)
-    REFERENCES Reply(Course_number) ON UPDATE CASCADE ON DELETE RESTRICT
+    REFERENCES Debate(Debate_number) ON UPDATE CASCADE
 );

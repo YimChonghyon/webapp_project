@@ -14,16 +14,16 @@ scottlee@hanyang.ac.kr
 ("임시계정","UROPA_ISO","ISO,vector,scalar");
 
 #sample courese
-insert into course values
-("CSE326","Web Application Development","Undergraduate Courses","hello world!"),
-("CSE6050","Advanced Software Engineering","Postgraduate Courses","hell world!");
+#insert into course values
+#("CSE326","Web Application Development","Undergraduate Courses","hello world!"),
+#("CSE6050","Advanced Software Engineering","Postgraduate Courses","hell world!");
 
 #sample user_type
-insert into user_type values ("Professor");
-insert into user_type values ("Ph.D.");
-insert into user_type values ("M.E.");
-insert into user_type values ("Intern");
-insert into user_type values ("Alumni");
+insert into user_type values ("Professor",1);
+insert into user_type values ("Ph.D.",2);
+insert into user_type values ("M.E.",3);
+insert into user_type values ("Intern",4);
+insert into user_type values ("Alumni",5);
 
 #sample user
 insert into user(Id,Password,Name,Type) values

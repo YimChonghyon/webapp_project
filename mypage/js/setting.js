@@ -14,3 +14,14 @@ function Button_Tree(Div,Button) {
 		document.getElementById(Button).style.backgroundColor = '#EE82EE';
 	document.getElementById(Div).style.display = "block";
 }
+
+function checking_withdrawal(){
+	var i = $('checkbox_withdrawal').checked;
+	if(!i){
+		alert('checkbox is unchecked!');
+		return false;
+	}
+	else{
+		return true;
+	}
+}
