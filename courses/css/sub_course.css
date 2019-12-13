@@ -2,14 +2,19 @@
   background-image : url("../../resource/images/course_3.jpg");
 }
 
-p1 {
+.wrap-subcontent p {
   font-weight : bold;
-  margin-bottom : 5px;
+  font-size : 20px;
+  margin-top : 0;
+  margin-bottom : 0;
 }
 
 a {
-  color : blue;
+  color : black;
+}
 
+a:hover {
+  color : blue;
 }
 
 h3 {

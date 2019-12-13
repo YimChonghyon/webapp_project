@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/sub_course.css" type="text/css" />
 	<link rel="stylesheet" href="../resource/css/common.css" type = "text/css" />
 	<script type="text/javascript" src="js/sub_course.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
 
 </head>
 
@@ -31,9 +32,9 @@
 <div class="mainbody">
   <div class="wrap-subcontent">
     <h3>Course Objectives</h3>
-    <p1>
+    <p>
       In this course, the followings will be covered to adequately enable web programming and web application development:
-		</p1>
+		</p>
 		<br />
     <ol>
   		<li>Understand the protocols, language  and systems used on the Web (HTML, CSS, HTTP, URLs, XML)</li>

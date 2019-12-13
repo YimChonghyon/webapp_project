@@ -34,13 +34,13 @@ main{
 }
 .list{
 	float: left;
-	width: 30%;
+	width: 23%;
 	height: 90%;
 	background-color: rgb(240,240,240);
 }
 .debatebox{
 	float: left;
-	width: 70%;
+	width: 77%;
 	height: 87%;
 	/* background-color: pink; */
 }
@@ -112,7 +112,7 @@ main{
 .contents{
 	text-align: left;
 }
-.bottom_infor{
+.footer{
 	height: 13px;
     margin-top: 17px;
     display: flex;
@@ -148,16 +148,9 @@ main{
 .commentbox{
 	float: left;
 	margin:2%;
-	width: 90%;
 }
 
-.re_commentbox{
-	float: left;
-	margin:2%;
-	margin-top:0%;
-	margin-left: 5%;
-	width: 90%;
-}
+
 
 
 
@@ -236,17 +229,15 @@ main{
 .comment_container{
 	padding-top: 13px;
     margin-right: 20px;
-    margin-left: 7%;
+    margin-left: 20px;
 }
 
 .comment_contents_box{
 	position: relative;
     display: flex;
     margin-top: 8px;
-    margin-right: 10%;
+    margin-right: 20px;
 }
-
-
 
 .comment{
 	border-radius: 15px;
@@ -417,70 +408,4 @@ main{
 
 .contentsbox{
 	margin:30px;
-}
-
-.comment_box{
-	position: relative;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    background: #f0f0f0;
-}
-
-.comment_input_container_box{
-	position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background: #fff;
-    border: 5px solid #f0f0f0;
-    box-sizing: border-box;
-    width: calc(100% - 46px);
-}
-
-.comment_input_text_container{
-	position: relative;
-    width: 100%;
-}
-
-.comment_input_text_area{
-	max-height: 120px;
-    overflow-y: auto;
-    position: relative;
-    padding: 7px 20px 8px;
-    background: none;
-    outline: none;
-    border: none;
-    font-size: 14px;
-    line-height: 21px;
-    font-family: inherit;
-    resize: none;
-    border-radius: 10px;
-    color: transparent;
-	text-shadow: 0 0 #4b4b4b;
-	transition: color .3s ease;	
-	margin-bottom: 0px;
-}
-
-.reply{
-	display: flex;
-    flex-direction: column-reverse;
-    color: inherit;
-}
-.reply_container{
-	border: none;
-    color: inherit;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.reply_input{
-	width: 100%;
-	/* height: 100%; */
-	/* border: none; */
-}
-
-.scroll{
-	overflow-y: scroll;
 }

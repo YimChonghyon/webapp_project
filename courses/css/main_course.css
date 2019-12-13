@@ -134,5 +134,5 @@ tr:nth-child(odd) td{
 .circle:hover {
   width : 20px;
   height : 20px;
-  background-color : red;
+  background-color : skyblue;
 }

@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/main_course.css" type="text/css" />
 	<link rel="stylesheet" href="../resource/css/common.css" type = "text/css" />
 	<script type="text/javascript" src = "js/main_course.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
 
 </head>
 
@@ -21,13 +22,12 @@
 		</div>
 		<div class = "tab_class">
 			<div id="tab">
-				<button id = "present" onclick = present()>Present</button><br />
-				<button id = "undergraduate" onclick = undergraduate()>Undergraduate</button><br />
-				<button id = "postgraduate" onclick = postgraduate()>Postgraduate</button>
+				<button id = "presentss" onclick = "presentss()">Present</button><br />
+				<button id = "undergraduate" onclick = "undergraduate()">Undergraduate</button><br />
+				<button id = "postgraduate" onclick = "postgraduate()">Postgraduate</button>
 			</div>
 
-
-				<div id = "present_course">
+				<div id = "present_course" style = "display:none">
 					<div id="course_table">
 						<table id ="first_table">
 							<tr>

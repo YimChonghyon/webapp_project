@@ -6,25 +6,10 @@ body
 }
 
 /* nav */
-nav li a:hover
-{
-    border-radius:5px;
-    background-color:#FF0000;
-    color:#FFFFFF;
-}
-
-nav ul:after
-{
-    content:"";
-    display:block;
-    clear:both;
-}
-
 nav 
 {
     position: fixed;
     width: 100%;
-    height: 70px;
     overflow: hidden;
     top: 0;
     background-color: #92B5D9;
@@ -61,11 +46,10 @@ nav ul li a
 
 /* main */
 #index_layout_1 {
-    
     width: 90%;
     height: 500px;
     background: #92B5D9;
-    margin-top: auto;
+    margin: auto;
     text-align: center; text-decoration: none;
 }
 #index_notice {
@@ -90,8 +74,7 @@ nav ul li a
     text-align: center; text-decoration: none;
 }
 
-#index_aboutus
-{
+#index_aboutus {
     width: 60%;
     height: 500px;
     background: #D3D3D3;
@@ -99,8 +82,7 @@ nav ul li a
     margin: 0 auto;
 }
 
-#index_map
-{
+#index_map {
     width: 60%;
     height: 500px;
     background: #D3D3D3;
