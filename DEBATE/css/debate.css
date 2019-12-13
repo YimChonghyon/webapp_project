@@ -226,7 +226,7 @@ main{
     border-radius: 10px;
 	cursor: pointer;
 	background-color: white;
-
+	overflow: hidden;
 }
 /* .debate_content_container_maincontainer{
 	vertical-align: middle;
@@ -443,10 +443,13 @@ main{
 } */
 .titlebox{
 	margin:20px 5px 5px 5px;
+	height: 30%;
+	overflow: hidden;
 }
 
 .title_text{
 	font-size: 15px;
+	
 }
 
 .titlebox_main{

@@ -176,7 +176,7 @@
 				
 					<div class="titlebox">
 						<div class="title_text">
-							안녕하세요. 제목입니다.
+						안녕하세요. 제목입니다.
 						</div>
 					</div>
 				
