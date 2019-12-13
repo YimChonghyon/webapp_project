@@ -47,13 +47,13 @@
 				if($_SESSION['privilege'] != 1)
 					echo "disabled";
 				?>
-				>SETTING	PUBLICATIONS</button>
+				>SETTING PUBLICATIONS</button>
 			</li>
 			<li><button class="B" id="B7" onclick="Button_Tree('SETDIV7','B7')"
 				<?php 
 				if($_SESSION['privilege'] != 1)
 					echo "disabled";
-				?>>SETTING	GALLERY</button>
+				?>>SETTING GALLERY</button>
 			</li>
 			<li><button class="B" id="B8" onclick="Button_Tree('SETDIV8','B8')"
 				<?php 
@@ -66,8 +66,17 @@
 
 	<div class="VIEWPOINT" id="START">
 		<h2>HOW TO USE SETTING PAGE</h2>
-		<p>i don't know sry</p>
-	</div>
+		<p>Press the moving button on the left to experience special features</p>
+		<p>Depending on your role, the available features are limited.</p>
+		<ol>
+			<li><strong>professor</strong> can use all the features.</li>
+			<li>Other roles can access all functions that do not serve as the backbone of a web page.</li>
+		</ol>
+
+		<p><strong>
+For the category of gallery and publication, if there is data using that, it cannot be deleted. Please delete the data beforehand or move to another category.</strong></p>
+		<p>Adding new roles, linking courses' databases, and modifying personal information except profile photos are not yet implemented.</p>
+	</div>	
 
 	<div class="VIEWPOINT" id="SETDIV1">
 		<form action="createmember.php" method="POST" onsubmit="return confirm('해당 내용으로 계정을 생성합니다.');">

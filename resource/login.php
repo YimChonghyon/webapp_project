@@ -26,10 +26,11 @@
 			</form>
 		<?php } else {
 			$user_id = $_SESSION['id'];
-			echo "<p><strong>$user_name</strong>($user_id)님은 이미 로그인하고 있습니다. ";
-			echo "<a href=\"index.php\">[돌아가기]</a>";
-			echo "<a href=\"logout.php\">[로그아웃]</a></p>";
-		} ?>
+			$user_name = $_SESSION['name'] ?>
+			<p><strong><?=$user_name?></strong>(<?=$user_id?>)님은 이미 로그인하고 있습니다. </p>
+			<a href="index.php">[돌아가기]</a>
+			<a href="logout.php">[로그아웃]</a></p>
+		<?php } ?>
 	</content>
 </div>
 </body>

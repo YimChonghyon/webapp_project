@@ -8,15 +8,15 @@
 				<li class="pull-left nav-left"><a href="../publications/publication.php" >PUBLICATIONS</a></li>
 				<li class="pull-left nav-left"><a href="../courses/main_course.php" >COURSES</a></li>
 				<li class="pull-left nav-left"><a href="../gallery/gallery.php" >GALLERY</a></li>
+				<li class="pull-left nav-left"><a href="../DEBATE/debate.php" >DEBATE</a></li>
 				<?php 
 				session_start();
-				if(!isset($_SESSION['id']))
-					echo '<div role= "login" class= "pull-right nav-right"><a href= "../resource/login.php">LOGIN</a></div>';
-				else{
-					echo '<div role= "logout" class= "pull-right nav-right"><a href= "../resource/logout.php">LOGOUT</a></div>';
-					echo '<div role= "setting" class= "pull-right nav-right"><a href= "../mypage/setting.php">SETTING</a></div>';
-				}
-				?>
+				if(!isset($_SESSION['id'])){ ?>
+				<div role= "login" class= "pull-right nav-right"><a href= "../resource/login.php">LOGIN</a></div>
+				<?php }else{ ?>
+					<div role= "logout" class= "pull-right nav-right"><a href= "../resource/logout.php">LOGOUT</a></div>
+					<div role= "setting" class= "pull-right nav-right"><a href= "../mypage/setting.php">SETTING</a></div>
+				<?php } ?>
 			</ul>
 		</nav>
 	</header>
