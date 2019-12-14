@@ -5,7 +5,7 @@
 	<title>Software Engineering Lab - Publication</title>
 	<link rel="stylesheet" href="css/publication.css" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="../resource/css/common.css" />
-  <script type="text/javascript" src="js/publication.js"></script>
+  <script type="text/javascript" src="js/publications.js"></script>
 </head>
 
 <body>
@@ -13,6 +13,9 @@
   include "../resource/nav.php";
   include "../resource/DB_connect.php";
   $conn=connect();
+  $filter = 0;
+  if(!empty($_SESSION['privilege']) && $_SESSION['privilege'] <= 1)
+    $filter = 1;
   ?>
 
   <main>
@@ -21,7 +24,10 @@
      <h1>Publication</h1>
    </div>
 
-   <div class="tab_class">
+   <?php if($filter){?>
+    <button onclick="location.href='newpublication.php'">글쓰기</button>
+  <?php } ?>
+  <div class="tab_class">
     <div id="tab">
       <?php               
       $stmt = $conn->prepare("SELECT type FROM publications_type");
