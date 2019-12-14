@@ -1,8 +1,11 @@
 html,body{
 	height: 100%;
+	/* overflow-y: hidden; */
 }
 body{
 	margin: 0;
+	/* overflow-y: hidden; */
+	
 }
 header{
 	background-color:skyblue;
@@ -24,8 +27,9 @@ header{
 }
 main{
 	/* float: left; */
-	/* width: 100%; */
+	width: 100%;
 	height:100% ;
+	/* overflow-y: hidden; */
 }
 .in_nav{
 	background-color: rgb(64, 108, 255);
@@ -45,10 +49,11 @@ main{
 	/* background-color: rgb(240,240,240); */
 }
 .debatebox{
-	
+	/* padding-top : 15%; */
 	float: right;
 	width: 70%;
 	height: 100%;
+	
 	
 	/* border: 1px solid #9b9b9b; */
 	/* background-color: pink; */
@@ -102,7 +107,7 @@ main{
 	position: fixed;
 	/* background-color: #8a2727; */
 	width:29%;
-	top:calc(85px);
+	top:calc(80px);
 	margin-bottom:100px ;
 	margin-left:0.1%;	
 	z-index: 2;
@@ -158,7 +163,7 @@ main{
 .debate_relpy{
 	height: 40%;
 	position: relative;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .infobox{
@@ -343,6 +348,9 @@ main{
     font-size: 20px;
 	line-height: 100%;
 	color: black;
+}
+.debate_reply{
+	margin-bottom: 100px;
 }
 
 .box{
@@ -657,7 +665,7 @@ width: 90%;
 }
 @media screen and (max-width: 800px) and (min-width: 320px){
 .reply_box_container{
-	/* margin-top:10%; */
+	margin-top:100px;
 	position:fixed;
 	bottom:0px;
 	background-color: #ffffff;
@@ -666,9 +674,10 @@ width: 90%;
 }
 @media screen and (min-width:800px) {
 .reply_box_container{
-	margin-top:10%;
+	margin-top:100px;
 	position:fixed;
 	bottom:0px;
+	right:0px;
 	background-color: #ffffff;
 	width:70%;
 }

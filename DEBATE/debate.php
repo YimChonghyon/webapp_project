@@ -17,7 +17,7 @@
 
 			
 		<div class="list  scroll">
-			<div class="search_box scroll ">
+			<div class="search_box  ">
 			<div class="search">
 			<form method="post" action="" >
 				<select id ="tag_selecter" class="tagselect">
@@ -105,6 +105,97 @@
 				</div>
 			</div>
 
+			<div class="debate_content_container">
+				<div>
+					<div class="title_tag">
+						<div class="tag_number">
+							#1
+						</div>
+						<div class="tag_catagory">
+							#공지
+						</div>
+					</div>
+				
+				
+					<div class="titlebox">
+						<div class="title_text">
+						안녕하세요. 제목입니다.
+						</div>
+					</div>
+				
+					<div class="bottom_infor">
+						<div class="write_infor">
+							<div class="name">
+								임정현
+							</div>
+							<div class="time">
+								23:03
+							</div>
+						</div>
+
+						<div class="icon_container pull-right">
+							<div class="question_container">
+									<img class="question_icon" src="../resource/images/question.png">
+									<div class="question_icon_num">
+										3
+									</div>
+							</div>
+							<div class="comment_container ">
+									<img class="comment_icon" src="../resource/images/comment.png">
+									<div class="comment_icon_num"> 
+										1
+									</div>
+								</div>
+						</div>
+						
+					</div>
+				</div>
+			</div><div class="debate_content_container">
+				<div>
+					<div class="title_tag">
+						<div class="tag_number">
+							#1
+						</div>
+						<div class="tag_catagory">
+							#공지
+						</div>
+					</div>
+				
+				
+					<div class="titlebox">
+						<div class="title_text">
+						안녕하세요. 제목입니다.
+						</div>
+					</div>
+				
+					<div class="bottom_infor">
+						<div class="write_infor">
+							<div class="name">
+								임정현
+							</div>
+							<div class="time">
+								23:03
+							</div>
+						</div>
+
+						<div class="icon_container pull-right">
+							<div class="question_container">
+									<img class="question_icon" src="../resource/images/question.png">
+									<div class="question_icon_num">
+										3
+									</div>
+							</div>
+							<div class="comment_container ">
+									<img class="comment_icon" src="../resource/images/comment.png">
+									<div class="comment_icon_num"> 
+										1
+									</div>
+								</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
 			<div class="debate_content_container">
 				<div>
 					<div class="title_tag">
@@ -259,6 +350,7 @@
 
 
 		<div class="debatebox scroll">
+			<!-- <div class="scroll"> -->
 			<div class="debate_content_container_maincontainer">
 			<div class="debate_content_container_main">
 			<form method="POST">
@@ -479,6 +571,8 @@
 				</div>
 			</div>
 </div>
+</div>
+</div>
 			
 		
 
@@ -504,7 +598,7 @@
 				</form>
 				</div>
 			</div>
-</div>
+
 		</div>
 </div>
 	</main>
