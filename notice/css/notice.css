@@ -6,18 +6,36 @@
 /*공지사항의 테이블 속성 관련 css 입니다.*/
 /* table 제목 */
 caption{
-	font-weight: bold;
+	background-color : black;
+  color : white;
+  border-top-left-radius : 12px;
+  border-top-right-radius : 12px;
+  font-size : 25px;
+  font-weight : bold;
+  font-style : italic;
+  height : 40px;
+  padding-top : 5px;
 }
 table {
 	width: 80%;
 	transform: translate(10%,10%); /* 중앙 정렬 */
+	text-align : center;
 }
-table, th, td {
-	border: 1px solid #bcbcbc;
+
+th {
+  font-style : italic;
+  font-size : 18px;
+  border-bottom : 1px solid skyblue;
+  padding : 5px;
 }
-thead{
-	background-color: gray;
+
+td {
+  height : 50px;
+  font-weight : bold;
+  border-bottom : 1px solid skyblue;
 }
+
+
 /* table_out(table index) -> table_contents(내용) */
 .table_out{
 	cursor: pointer;
