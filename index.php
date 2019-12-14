@@ -8,7 +8,47 @@
     <link rel="stylesheet" type="text/css" href="resource/css/index.css" />
     <link rel="stylesheet" type="text/css" href="resource/css/common.css" />
     <link href="./img/favicon.png" type="image/png" rel="shortcut icon" />
-</head>    
+
+    <style>
+    *{margin:0;padding:0;}
+    ul,li{list-style:none;}
+    .slide{height:500px;overflow:hidden;}
+    .slide ul{width:calc(100% * 4);display:flex;animation:slide 10s infinite;} /* slide 8초 동안 진행, 반복*/
+    .slide li{width:calc(100% / 4);height:500px;}
+    .slide li:nth-child(1){}
+    .slide li:nth-child(2){}
+
+    @keyframes slide {
+      0% {margin-left:0;} /* 0 ~ 10  : 정지 */
+      25% {margin-left:0;} /* 10 ~ 25 : 변이 */
+      50% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
+      75% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+
+    }
+
+  </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+   	   <script>
+   	      $(function(){
+   	      	var pull=$('#pull');
+   	      	    menu=$('nav ul');
+   	      	    menuHeight=menu.height();   	      
+   	      $(pull).on('click', function(e){
+   	      	e.preventDefault();
+   	      	menu.slideToggle();   	      	
+   	      });
+   	      $(window).resize(function(){
+   	      	var w=$(window).width();
+   	      	if(w>600 && menu.is(':hidden'))
+   	      		{menu.removeAttr('common');}
+   	      });
+   	  });
+   	</script>
+
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> <!-- 아이콘 -->
+</head>
+
 <body>    
     <?php //db 연결
     include "resource/DB_connect.php";
@@ -19,57 +59,84 @@
     include "resource/nav.php";
     ?>
 
-    <div id= "main_image">
-        <img src="http://appdata.hungryapp.co.kr/data_file/data_img_m/201502/10/1423580240_Nr4eu5HZAs.jpg" alt="main_image" width= 100% height= 500px;>
-    </div>
+    <!-- INDEX MAIN IMAGE -->
+                <div class="slide">
+                <ul>
+                    <li><a href="#"><img src="resource/images/main_1.jpg" style="max-width: 100%; height: auto;"/></li>
+                    <li><a href="#"><img src="resource/images/main_2.jpg" style="max-width: 100%; height: auto;"/></li>
+                </ul>
+                </div>
 
-    <main>
-        <article>
-            <h3><a href="/research">ABOUT US</a></h3>
-            <p>welcome to Software Engineering Laboratory within the CSE Dept @ HYU(ERICA) led by asst. prof. Scott LEE</p>
-            <p>Content Start</p> <!-- 사진 내용 3개 -->
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content</p>
-            <p>Content End</p>
-        </article>
-        <article>
-            <h3><a href="resource/notice.html">NOTICE</a></h3> <!-- 기본적인 notice 링크 -->
+                <main>
+            <div id= "index_layout_1">
+                <!-- NOTICE -->
+            <article id="index_notice">
+            <br>
+            <h3><a href="resource/notice.html">NOTICE&nbsp;&nbsp;<i class="fas fa-bell"></i></a></h3> <!-- 기본적인 notice 링크 -->
+            <br>
+                <p>Content Start</p>
+                <p>Content</p>
+                <p>Content</p>
+                <p>Content</p>
+                <p>Content End</p>
             <ul>
                 <?php
-                $stmt = $conn->prepare("SELECT title FROM notice limit 3");
-                $stmt->execute();
-                foreach($stmt->fetchAll() as $k=>$v) {
-                    echo "<li>" . $v['title'] . "</li>";
-                }
+                
                 ?>
             </ul>
         </article>
-        <article>
-            <h3><a href="/courses">COURSES</a></h3> <!-- 이번 학기에 열린 강의 목록 / 링크 -->
-            <?php
-            $stmt = $conn->prepare("SELECT Course_number,Course_name FROM course");
-            $stmt->execute();
-            foreach($stmt->fetchAll() as $k=>$v) {
-                echo "<li><a>" . $v['Course_number'] ." ". $v['Course_name'] . "</a></li>";
-            }
-            ?>
-        </article>
-    </section>
-</main>
 
-<article id="index_map">
-  <h3><a href="/research">CONTACT</a></h3>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.9242122905407!2d126.83208981526195!3d37.296929979849345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b6ef2f5a7cb73%3A0x26b59cb3d9af4a46!2z7ZWc7JaR64yA7ZWZ6rWQIEVSSUNB7Lqg7Y287Iqk!5e0!3m2!1sko!2skr!4v1575792959595!5m2!1sko!2skr"
-                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
-  </iframe>
-</article>
+                <!-- COURSES -->
+            <article id="index_courses">
+            <br>
+                <h3><a href="/courses">COURSES&nbsp;&nbsp;<i class="fab fa-discourse"></i></a></h3> <!-- 이번 학기에 열린 강의 목록 / 링크 -->
+                <br>
+                <p>Content Start</p>
+                <p>Content</p>
+                <p>Content</p>
+                <p>Content</p>
+                <p>Content End</p>
+            </article>
+            </div>    
+        
+            <div id="index_layout_2">
+                <!-- ABOUT US -->
+            <article id="index_aboutus">
+            <br>
+                <h3><a href="/research">ABOUT US&nbsp;&nbsp;<i class="fas fa-address-card"></i></a></h3>
+                <br>
+                <p>Web & Web security</p>
+                <p>Formal Engineering Methods</p> <!-- 사진 내용 3개 -->
+                <p>Requirement Engineering</p>
+                <p>Real-Time Software Engineering</p>
+                <p>Semi-structured Data</p>
+            </article>
 
-<footer role="contentinfo">
-    <div class="container">
-        <p>COPYRIGHT 2014 SELAB, ALL RIGHTS RESERVED. COMPUTER SCIENECE AND ENGINEERING, HANYANG UNIV. LOCATION: ENGINEERING BUILDING #3, ROOM 421. T +82-31-400-4754</p>
-    </div>
-</footer>
+            <article id="index_map_info">
+            <br>
+                <h3><a href="/research">CONTACT&nbsp;&nbsp;<i class="fas fa-map-pin"></i></i></a></h3>
+                <br>
+                <p>welcome to Software Engineering Laboratory within the CSE Dept</p>
+                <p> @ HYU(ERICA) led by asst. prof. Scott LEE</p> <!-- 사진 내용 3개 -->
+                <p>Content</p>
+                <p>Content</p>
+                <p>Content</p>
+                <p>Content End</p>
+            </article>
+
+            <article id="index_map">
+            <br>           
+                
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.9242122905407!2d126.83208981526195!3d37.296929979849345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b6ef2f5a7cb73%3A0x26b59cb3d9af4a46!2z7ZWc7JaR64yA7ZWZ6rWQIEVSSUNB7Lqg7Y287Iqk!5e0!3m2!1sko!2skr!4v1575792959595!5m2!1sko!2skr"
+                    frameborder="0" style="border:0; width: 66%; height: 46.5%;" allowfullscreen="">
+                </iframe>
+            </article>
+        </main>
+
+        <?php
+        include "resource/footer.php";
+        ?>
 </body>
 <?php $conn = null; // disconnect db ?>
 </html>
