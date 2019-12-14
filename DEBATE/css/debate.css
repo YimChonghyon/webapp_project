@@ -560,3 +560,21 @@ width: 90%;
 .reply_infor{
 	margin-top:3%;
 }
+
+.question_num{
+	font-family: inherit;
+    font-weight: bold;
+    font-size: 12px;
+	margin-right: 1px;
+	
+}
+
+.reply_box{
+	border:  1.5px solid #dddddd;
+    box-shadow: 0 10px 8px  rgba(0,0,0,.1);
+    border-radius: 5px;
+}
+
+.reply_box_container{
+	margin-top: 3%;
+}
