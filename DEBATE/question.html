@@ -8,6 +8,7 @@
 
 <body>
     <main>
+        <form method="POST">
     <div class="question_box ">
 		<div class = "header">	
             <div class="pull-right">
@@ -16,28 +17,42 @@
                 </button>
                     
             </div>
-            <div>
+            <!-- <div class="">
                 <span>질문</span>
-            </div>
+            </div> -->
     </div>	
-            <div class="infor">
-                    ID: <input type="text" name= "Name" size="15" > 
-                    Password: <input type="text" name= "Name" size="20" > 
-                    익명: <input type = "checkbox" name="anonymous" checked="checked">
+            
+
+            <div class="tag infor">
+                <!-- <fieldset class="fieldset"> -->
+                    <!-- <legend>분류</legend> -->
+                    #질문<input id="tagbutton" type="checkbox" name="" />
+                    <input id="tagbutton" type="checkbox" name="" value="#토의">
+                <!-- </fieldset> -->
+                <!-- 질문 <input type="checkbox" name="" > -->
             </div>
 
             <div class="infor">
-                제목:  <input type="text" name= "Name" size="90%" > 
+                    제목  <input id ="text_input" type="text" name= "Name"  > 
+                </div>
+
+            <div class="infor">
+                <span>ID <input type="text" name= "Name" size="20" > </span>
+                <span>Password <input type="text" name= "Name" size="20" > </span>
+                <span> 익명 <input type = "checkbox" name="anonymous" checked="checked"></span>
             </div>
-            <div class="text">
-                <textarea rows="5" cols=100%></textarea>
+
             
-            <button type="submit" class="button">
+            <div class="text">
+                <textarea class =" textarea" ></textarea>
+            
+            <button type="submit" class="button pull-right">
                 <img class ="enter_button" src = "../resource/images/enter.png">
             </button>
         </div>
 
     </div>
+</form>
 </main>
 </body>
 </html>
