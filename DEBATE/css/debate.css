@@ -369,6 +369,8 @@ main{
 	width:15px; 
 }
 .bottom_infor{
+	margin-top:3%;
+	font-size: 13px;
 	
 }
 .icon_container{
@@ -410,13 +412,13 @@ main{
     margin-top: 4px;
 }
 
-.write_infor{
-	/* max-width: 30%; */
+/* .write_infor{
+	max-width: 30%;
     height: 19px;
-    font-size: 13px;
+    
     color: #9b9b9b;
     display: flex;
-}
+} */
 
 .add_content_icon{
 	width: 40px;

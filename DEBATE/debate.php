@@ -56,7 +56,7 @@
 							</div>
 						</div>
 
-						<div class="icon_container ">
+						<div class="icon_container pull-right">
 							<div class="question_container">
 									<img class="question_icon" src="../resource/images/question.png">
 									<div class="question_icon_num">
