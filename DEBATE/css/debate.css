@@ -92,6 +92,7 @@ main{
 	border-top:1px solid #7a7a7a;
 	border-bottom:1px solid #7a7a7a;
 	background-color: #ffffff;
+	/* z-index: 1; */
 	/* left:0px; */
 	
 }
@@ -102,6 +103,7 @@ main{
 	top:calc(90px);
 	margin-bottom:100px ;
 	margin-left:0.1%;	
+	z-index: 1;
 	}
 }
 
@@ -117,6 +119,7 @@ main{
 		border-top:1px solid #7a7a7a;
 		border-bottom:1px solid #7a7a7a;
 		background-color: #ffffff;
+		/* z-index: 1; */
 		/* left:0px; */
 		
 	}
@@ -127,6 +130,7 @@ main{
 		top:calc(90px);
 		margin-bottom:100px ;
 		margin-left:0.1%;	
+		z-index: 1;
 		}
 	}
 #searchbox{

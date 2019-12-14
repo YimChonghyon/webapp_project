@@ -349,7 +349,7 @@
 						<!-- <legend>댓글달기</legend> -->
 						<div class="reply_infor">
 							ID <input type="text" name= "Name" size="15" > 
-							Password <input type="text" name= "password" size="20" maxlength="10"  > 
+							Password <input type="text" name= "password" size="20" maxlength="10" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"> 
 							익명 <input type = "checkbox" name="anonymous" checked="checked">
 						</div>
 	
