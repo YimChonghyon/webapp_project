@@ -25,7 +25,7 @@
    </div>
 
    <?php if($filter){?>
-    <button onclick="location.href='newpublication.php'">글쓰기</button>
+    <button onclick="location.href='newpublication.php'">NEW PUBLICATION</button>
   <?php } ?>
   <div class="tab_class">
     <div id="tab">

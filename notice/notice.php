@@ -26,7 +26,7 @@
     </div>
 
     <?php if($filter){?>
-      <button onclick="location.href='newnotice.php'">글쓰기</button>
+      <button onclick="location.href='newnotice.php'">NEW NOTICE</button>
     <?php } ?>  
     <!-- 공지사항의 내용을 테이블로 구현하는 골격입니다. -->
     <table>

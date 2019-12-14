@@ -2,7 +2,7 @@
 <?php session_start(); ?>
 <html>
 <head>
-	<title></title>
+	<title>NEW NOTICE</title>
 	<link rel="stylesheet" type="text/css" href="css/newnotice.css" />
 	<link rel="stylesheet" type="text/css" href="../resource/css/common.css" />
 </head>
