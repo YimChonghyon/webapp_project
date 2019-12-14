@@ -5,12 +5,19 @@
 	<title>Software Engineering Lab - Notice</title>
   <link rel="stylesheet" type="text/css" href="../resource/css/common.css" />
   <link rel="stylesheet" type="text/css" href="css/notice.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
   <script type="text/javascript" src="js/notice.js"></script>
 </head>
 
 <body>
   <?php 
   include "../resource/nav.php";
+  include "../resource/DB_connect.php";
+  $conn = connect();
+  $filter = 0;
+  if(!empty($_SESSION['privilege']) && $_SESSION['privilege'] <= 1)
+    $filter = 1;
+  echo $filter;
   ?>
 
   <main role="main">
@@ -19,57 +26,55 @@
       <h1>NOTICE</h1>
     </div>
 
+    <!-- 공지사항의 내용을 테이블로 구현하는 골격입니다. -->
+    <table>
+      <caption>NOTICE INDEX</caption>
+      <thead>
+        <tr>
+          <th>Notice number</th>
+          <th>Title</th>
+          <th>name</th>
+          <th>date</th>
+          <?php if($filter){ ?>
+            <th>delete</th>
+            <th>open/unopen</th>
+          <?php } ?>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        $sql = "select * from notice";
+        $stmt = $conn -> prepare($sql);
+        $stmt -> execute();
+        $stmt -> setFetchMode(PDO::FETCH_ASSOC);
+        while ($row = $stmt->fetch()) {
+          if($row['Open'] == 0 && !$filter)
+            continue;
+          ?>
+          <tr class="table_out" id="<?=$row['Number']?>" >
+            <th><?=$row['Number']?></th>
+            <td><?=$row['Title']?></td>
+            <td><?=$row['Name']?></td>
+            <td><?=$row['Date']?></td>
+            <?php if($filter){ ?>
+              <th><button>by</button></th>
+              <th>
+                now : <?=tostringboolean($row['Open'],"open","lock")?>
+                <form action="changeopen.php" method="POST">
+                  <input type="hidden" name="id" value="<?=$row['Number']?>" />
+                  <input type="submit" value="change" />
+                </form>
+              </th>
+            <?php } ?>
+          </tr>
+          <tr class="table_contents" id="content_<?=$row['Number']?>" >
+            <td colspan="4"><?=$row['Content']?></td>
+          </tr>
+        <?php } ?>
+      </tbody>
+    </table>
 
-    <ul id="board">
-      <li class="header">
-        <ul>
-          <li class="title pull-left">Title</li>
-          <li class="name pull-left">Name</li>
-          <li class="time pull-left">Date</li>
-        </ul>
-      </li>
 
-
-      <div>
-        <li class="entry">
-          <div class="information">
-            <?php
-            include "../resource/DB_connect.php";
-            $conn = connect();
-            try {
-              $stmt = $conn->prepare("SELECT * FROM notice");
-              $stmt->execute();
-              foreach($stmt->fetchAll() as $k=>$v) { ?>
-                <ul> 
-                  <a href="#" onclick="SirenFunction('SirenDiv<?php echo $k; ?>');" class="blind_view">
-                    <?php
-                    echo "<li  class='title pull-left'>" . $v['Title'] . "</li>";
-                    echo "<li  class='name pull-left'>" . $v['Name'] . "</li>";
-                    echo "<li  class='time pull-left'>" . $v['Date'] . "</li>";
-                    ?>
-                    
-                  </a> <div class="singo_view pull-left" style="display:none; background-color: pink; width: 100%;" id="SirenDiv<?php echo $k;?>">
-                    <?php echo $v['Content']; ?>
-                  </div>
-                </ul>
-                <?php
-              }
-            }
-            catch(PDOException $e)
-            {
-              echo "<ul>";
-              echo "<li>" . "Connection failed: " . $e->getMessage() . "</li>";
-              echo "</ul>";
-            }
-            ?>
-          </div>
-        </li>
-      </div>
-    </ul>
-    <?php 
-    if(isset($_SESSION['id'])){
-      echo "<button onclick=\"location.href='newnotice.php'\" >" . "글쓰기" . "</button>";
-    }?>
   </div>
 </main>
 

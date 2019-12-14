@@ -56,7 +56,6 @@ CREATE TABLE Notice (
     Title varchar(60) not null,
     Name varchar(30) default 'Anonymous',
     Date timestamp default current_timestamp,
-    View int not null default 0,
     Content TEXT,
     Open tinyint not null default 1,
     CONSTRAINT PK_Notice PRIMARY KEY(Number)
