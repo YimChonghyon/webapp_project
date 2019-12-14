@@ -47,11 +47,13 @@
 					</div>
 				</div>
 
-				<?php foreach ($result as $key => $value) { ?>
+				<?php 
+				$stmt_member = $conn->prepare("SELECT Id,Name,Email,Homepage,Introduce,Other FROM user where type = :type");
+				$stmt_member->bindParam(':type',$type);
+				foreach ($result as $key => $value) { ?>
 					<div class="mainbody" id="<?=$value['type']?>_DIV">
-						<?php          
-						$stmt_member = $conn->prepare("SELECT Id,Name,Email,Homepage,Introduce,Other FROM user where type = :type");
-						$stmt_member->bindValue(':type',$value['type']);
+						<?php
+						$type = $value['type'];
 						$stmt_member->execute();
 						$result_member = $stmt_member->fetchAll();
 						foreach ($result_member as $key => $value) { ?>

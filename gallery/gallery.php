@@ -5,6 +5,7 @@
 	<title>Software Engineering Lab - Gallery</title>
 	<link rel="stylesheet" type="text/css" href="css/gallery.css" />
 	<link rel="stylesheet" type="text/css" href="../resource/css/common.css" />
+    <script type="text/javascript" src="js/gallery.js"></script>
 </head>
 
 <body>
@@ -24,19 +25,33 @@
             <div class="tab_class">
                 <div id="tab">
                     <?php               
-                    $stmt = $conn->prepare("SELECT type FROM user_type");
+                    $stmt = $conn->prepare("SELECT type FROM gallery_type");
                     $stmt->execute();
                     $result = $stmt->fetchAll();
                     foreach ($result as $key => $value) { ?>
-                        <button class="MEMBERS_BUTTON" id="<?=$value['type']?>" onclick="Button_Tree('<?=$value["type"]?>_DIV','<?=$value["type"]?>')"><?=$value['type']?></button><br>
+                        <button class="Gallerys_BUTTON" id="<?=$value['type']?>" onclick="Button_Tree('<?=$value["type"]?>_DIV','<?=$value["type"]?>')"><?=$value['type']?></button><br>
                     <?php } ?>
                 </div>
                 <div class="mainbody" id="START">
-                    <p>안녕하세요 MEMBER'S PAGE 입니다.</p>
+                    <p>안녕하세요 Gallery'S PAGE 입니다.</p>
                 </div>
-                <?php foreach ($result as $key => $value) { ?>
+                <?php 
+                $stmt_gallery = $conn->prepare("SELECT * FROM gallery where type = :type");
+                $stmt_gallery -> bindParam(':type',$type);
+                foreach ($result as $key => $value) { ?>
                     <div class="mainbody" id="<?=$value['type']?>_DIV">
-                        <?=$key ?>
+                        <?php
+                        $type = $value['type'];
+                        $stmt_gallery->execute();
+                        $result_gallery = $stmt_gallery->fetchAll();
+                        foreach ($result_gallery as $key => $value) { ?>
+                            <div class="gallerys">
+                                <img src="../img/<?=$value['Id']?>" class='gallery_picture' onerror="this.src='../mypage/img/empty.png'"/>
+                                <div class="gallery_data">
+                                    <h3><?=$value['Title']?></h3>
+                                </div>
+                            </div>
+                        <?php } ?>
                     </div>
                 <?php } ?>
             </div>
