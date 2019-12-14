@@ -39,12 +39,11 @@ td {
 /* table_out(table index) -> table_contents(내용) */
 .table_out{
 	cursor: pointer;
-	background-color: skyblue;
 }
 .table_out > td{
 	text-align: center;
 }
 .table_contents{
-	background-color: pink;
+	background-color: skyblue;
 }
 /*table (end)*/

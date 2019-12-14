@@ -17,7 +17,6 @@
   $filter = 0;
   if(!empty($_SESSION['privilege']) && $_SESSION['privilege'] <= 1)
     $filter = 1;
-  echo $filter;
   ?>
 
   <main role="main">
@@ -26,6 +25,9 @@
       <h1>NOTICE</h1>
     </div>
 
+    <?php if($filter){?>
+      <button onclick="location.href='newnotice.php'">글쓰기</button>
+    <?php } ?>  
     <!-- 공지사항의 내용을 테이블로 구현하는 골격입니다. -->
     <table>
       <caption>NOTICE INDEX</caption>
@@ -57,7 +59,12 @@
             <td><?=$row['Name']?></td>
             <td><?=$row['Date']?></td>
             <?php if($filter){ ?>
-              <th><button>by</button></th>
+              <th>
+                <form action="deletenotice.php" method="POST">
+                  <input type="hidden" name="id" value="<?=$row['Number']?>" />
+                  <input type="submit" value="delete" />
+                </form>
+              </th>
               <th>
                 now : <?=tostringboolean($row['Open'],"open","lock")?>
                 <form action="changeopen.php" method="POST">
