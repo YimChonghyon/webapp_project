@@ -501,7 +501,7 @@
 							<div class ="reply_container"> -->
 								<div>
 								
-								<textarea rows="3" >
+								<textarea rows="3" cols="100%" class="scroll" >
 								</textarea>
 								<button type="submit" class="button">
 								<img class ="enter_button" src = "../resource/images/enter.png">
