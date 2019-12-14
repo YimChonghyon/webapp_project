@@ -22,4 +22,11 @@ function verify_password($id,$password){
 		return true;
 	$conn = null;
 }
+
+function tostringboolean($boolean,$true,$false){
+	if($boolean === 1)
+		return $true;
+	else
+		return $false;
+}
 ?>
