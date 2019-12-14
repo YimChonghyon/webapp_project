@@ -4,12 +4,6 @@ html,body{
   margin: 0;
 }
 
-/* a */
-a:link {text-decoration: none; color: #333333;}
-a:visited {text-decoration: none; color: #333333;}
-a:active {text-decoration: none; color: #333333;}
-a:hover {text-decoration: underline; color: #333333;}
-
 main{
   padding-bottom: 100px;
 }
