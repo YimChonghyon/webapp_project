@@ -53,7 +53,7 @@
             $result_gallery = $stmt_gallery->fetchAll();
             foreach ($result_gallery as $key => $value) { ?>
                 <div class="gallerys">
-                    <img src="../img/<?=$value['Id']?>" class='gallery_picture' onerror="this.src='../mypage/img/empty.png'"/>
+                    <img src="img/<?=$value['Id']?>" class='gallery_picture' onerror="this.src='../mypage/img/empty.png'"/>
                     <div class="gallery_data">
                         <h3><?=$value['Title']?></h3>
                     </div>

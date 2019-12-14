@@ -3,8 +3,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['id']) && is_uploaded_f
 	$max_file_size = 5242880;
 	if($_FILES['picture']['size'] > $max_file_size){
 		echo "<script>alert('USE UNDER 5MB FILES');";
-		echo "window.location.replace('../index.php');</script>";
-		exit();
+		echo "window.history.go(-1);</script>";
+		exit;
 	}
 	$tmp_file = $_FILES['picture']['tmp_name'];
 	$file_path = 'img/'.$_POST['id'];
@@ -14,6 +14,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['id']) && is_uploaded_f
 } else{
 	echo "<script>alert('The wrong approach.');";
 	echo "window.location.replace('../index.php');</script>";
-	exit();
+	exit;
 }
 ?>

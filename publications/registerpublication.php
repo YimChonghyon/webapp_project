@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 } else{
 	echo "<script>alert('Wrong approach');";
-	echo "window.location.replace('notice.php');</script>";
+	echo "window.location.replace('../index.php');</script>";
 	exit;
 }
 ?>
