@@ -61,7 +61,7 @@ main{
 		float: left;
 		width: 100%;
 		height: 30%;
-		border-right: 1.5px solid #9b9b9b;
+		border-bottom: 2px solid #9b9b9b;
 		
 		/* text-align: center; */
 		
@@ -246,7 +246,7 @@ main{
     margin-bottom: 10px;
     box-shadow: 0 5px 8px rgba(0,0,0,.1);
     border-radius: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .tag_number{
     position: relative;
@@ -340,7 +340,8 @@ main{
 }
 .heart_button{
 	width: 20px;
-    cursor: pointer;
+	cursor: pointer;
+	color: (0,0,0,0);
 }
 
 .out_button{
@@ -367,7 +368,9 @@ main{
 .comment_icon{
 	width:15px; 
 }
-
+.bottom_infor{
+	
+}
 .icon_container{
 	display: inline;
     flex-direction: row;
@@ -423,17 +426,21 @@ main{
 .question_button_icon{
 	width: 28px;
 	margin-top: 5px;
+	
+	
 }
 
 .question_button{
 	margin : 5px;
 	text-align: right;
+	/* cursor: pointer; */
 }
 
 .question{
 	border: none;
 	border-radius: 10px;
 	background-color: rgb(201, 213, 252);
+	cursor: pointer;
 	
 }
 /* 
@@ -528,11 +535,15 @@ main{
 
 .enter_button{
 	width: 20px;
+	cursor: pointer;
 }
 
 .button{
 	border:none;
-	color:rgba(0,0,0,0);
+	background-color:rgba(0,0,0,0);
+	cursor: pointer;
+	border-radius: 300px;
+
 }
 
 .reply_text{
