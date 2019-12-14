@@ -16,16 +16,32 @@
 		</div> -->
 
 		<div class="list scroll">
+				
 			<form method="post" action="">
 				<div class="search">
-					<div>
+					
 					<input type="text" name="" id="searchbox" size="30"  >
 					<button type="submit" class="button">
 					<image class="pull-right search_icon" src="../resource/images/search.png">
-				</button>
-					</div>
+					</button>
+					
+					
+				<!-- <span class="pull-right">
+					<button type="submit" class="button" >
+						<img class="add_content_icon" src="../resource/images/plus.png">
+					</button>
+				</span> -->
+		
 				</div>
-		</form>
+				<div class="">
+					<button type="submit" class="plus button" >
+						<img class="add_content_icon" src="../resource/images/plus.png">
+					</button>
+				</div>
+			</form>
+			<form>
+				
+			</form>
 			<hr />
 	
 			<div class="debate_content_container">
@@ -42,7 +58,7 @@
 				
 					<div class="titlebox">
 						<div class="title_text">
-						안녕하세요. 제목입니다.
+						안녕하세요. 제목입니다.안녕하세요. 제목입니다.안녕하세요. 제목입니다.안녕하세요. 제목입니다.안녕하세요. 제목입니다.안녕하세요. 제목입니다.안녕하세요. 제목입니다.안녕하세요. 제목입니다.안녕하세요. 제목입니다.
 						</div>
 					</div>
 				
@@ -76,14 +92,16 @@
 			</div>
 			
 
-			<form>
-				<div class="pull-right">
-					<button type="submit" class="button" >
+			<!-- <form>
+				<div class="">
+					<button type="submit" class="plus button" >
 						<img class="add_content_icon" src="../resource/images/plus.png">
 					</button>
 				</div>
-		</form>
+			</form> -->
 		</div>
+
+
 		<div class="debatebox scroll">
 			<div class="debate_content_container_maincontainer">
 			<div class="debate_content_container_main">
@@ -100,7 +118,7 @@
 						<input class="delete button" type="button" value="삭제">
 					</span>
 				</div>
-				</form>
+			</form>
 			
 				<div class="titlebox_main">
 					<div class="title_text_main">
@@ -135,7 +153,7 @@
 					</div>
 				</form>	
 			</div>
-</div>
+			</div>
 		
 				
 			
@@ -148,7 +166,7 @@
 					<div class ="namebox">
 					<div class="name">임정현
 						<span class="deletebox">
-						<input class="delete button" type="button" value="수정">
+						<input class="delete button" type="button" value="수정" onClick="##">
 						<input class="delete button" type="button" value="삭제">
 						</span>
 					</div>
@@ -157,6 +175,71 @@
 					<div class="comment_contents_box"> 
 						<div class="comment">
 							<div clss="comment_text">
+								
+							최고에요!최고에요!최고에요!최고에요!최고에요!최고에요!
+							최고에요!최고에요!최고에요!최고에요!최고에요!최고에요!
+							
+							</div>
+						</div>
+						<div class="comment_additional">
+							<div class= "comment_time">
+								오후 11:30
+							</div>
+							<div class= "heart">
+								<form method="POST">
+								<button type="submit" class ="button">
+									<img class = "heart_button" src="../resource/images/hearts.png">
+								</button>
+							</form>
+							<div class="heart_num">
+								3
+							</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			<div class="comment_container">
+				<div class="commentbox">
+					<div class="name">
+						임정현
+					</div>
+					
+					<div class="comment_contents_box"> 
+						<div class="comment">
+							<div clss="comment_text">
+							최고에요!
+							</div>
+						</div>
+						<div class="comment_additional">
+							<div class= "comment_time">
+								오후 11:30
+							</div>
+							<div class= "heart">
+								<form method="POST">
+								<button type="submit" class ="button">
+									<img class = "heart_button" src="../resource/images/hearts.png">
+								</button>
+							</form>
+							<div class="heart_num">
+								3
+							</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			<div class="comment_container">
+				<div class="commentbox">
+					<div class="name">
+						임정현
+					</div>
+					
+					<div class="comment_contents_box"> 
+						<div class="comment">
+							<div clss="comment_text">
 								최고에요!
 							</div>
 						</div>
@@ -177,70 +260,8 @@
 						</div>
 					</div>	
 				</div>
+			</div>
 </div>
-
-			<div class="comment_container">
-				<div class="commentbox">
-					<div class="name">
-						임정현
-					</div>
-					
-					<div class="comment_contents_box"> 
-						<div class="comment">
-							<div clss="comment_text">
-								최고에요!
-							</div>
-						</div>
-						<div class="comment_additional">
-							<div class= "comment_time">
-								오후 11:30
-							</div>
-							<div class= "heart">
-								<form method="POST">
-								<button type="submit" class ="button">
-									<img class = "heart_button" src="../resource/images/hearts.png">
-								</button>
-							</form>
-							<div class="heart_num">
-								3
-							</div>
-							</div>
-						</div>
-					</div>	
-				</div>
-			</div>
-
-			<div class="comment_container">
-				<div class="commentbox">
-					<div class="name">
-						임정현
-					</div>
-					
-					<div class="comment_contents_box"> 
-						<div class="comment">
-							<div clss="comment_text">
-								최고에요!
-							</div>
-						</div>
-						<div class="comment_additional">
-							<div class= "comment_time">
-								오후 11:30
-							</div>
-							<div class= "heart">
-								<form method="POST">
-								<button type="submit" class ="button">
-									<img class = "heart_button" src="../resource/images/hearts.png">
-								</button>
-							</form>
-							<div class="heart_num">
-								3
-							</div>
-							</div>
-						</div>
-					</div>	
-				</div>
-			</div>
-
 			
 		
 
@@ -251,9 +272,9 @@
 					<fieldset class="reply_box">
 						<!-- <legend>댓글달기</legend> -->
 						<div class="reply_infor">
-							ID: <input type="text" name= "Name" size="15" > 
-							Password: <input type="text" name= "Name" size="20" > 
-							익명: <input type = "checkbox" name="anonymous" checked="checked">
+							ID <input type="text" name= "Name" size="15" > 
+							Password <input type="text" name= "Name" size="20" > 
+							익명 <input type = "checkbox" name="anonymous" checked="checked">
 						</div>
 	
 								
@@ -263,9 +284,12 @@
 								</button>
 							
 					</fieldset>
-			</form>
+				</form>
+				</div>
 			</div>
+</div>
 		</div>
+</div>
 	</main>
 </body>
 </html>
