@@ -15,15 +15,25 @@
 				<img class= "out_button pull-right" src="../resource/images/out.png">
 		</div> -->
 
-		<div class="list scroll">
+			
+		<div class="list  scroll">
+			<div class="search_box scroll ">
+			<div class="search">
+			<form method="post" action="" >
+				<select id ="tag_selecter" class="tagselect">
+				<optgroup label="태그선택">
+					<option>질문</option>
+					<option>토의</option>
+				</optgroup>
+				</select>
 				
-			<form method="post" action="">
-				<div class="search">
-					
-					<input type="text" name="" id="searchbox" size="30"  >
-					<button type="submit" class="button">
-					<image class="pull-right search_icon" src="../resource/images/search.png">
-					</button>
+				<input type="text" name="" id="searchbox" size="30"  >
+				<button type="submit" class="button">
+				<image class="pull-right search_icon" src="../resource/images/search.png">
+				</button>
+			</form>
+
+
 					
 					
 				<!-- <span class="pull-right">
@@ -33,17 +43,21 @@
 				</span> -->
 		
 				</div>
+				</div>
+
+			<form method="post" action="">
 				<div class="">
 					<button type="submit" class="plus button" >
 						<img class="add_content_icon" src="../resource/images/plus.png">
 					</button>
+					
 				</div>
 			</form>
-			<form>
-				
-			</form>
-			<hr />
-	
+			
+			
+			
+		
+	<div class="list_container ">
 			<div class="debate_content_container">
 				<div>
 					<div class="title_tag">
@@ -90,6 +104,7 @@
 					</div>
 				</div>
 			</div>
+</div>
 			
 
 			<!-- <form>
@@ -239,6 +254,68 @@
 					<div class="comment_contents_box"> 
 						<div class="comment">
 							<div clss="comment_text">
+							최고에요!
+							</div>
+						</div>
+						<div class="comment_additional">
+							<div class= "comment_time">
+								오후 11:30
+							</div>
+							<div class= "heart">
+								<form method="POST">
+								<button type="submit" class ="button">
+									<img class = "heart_button" src="../resource/images/hearts.png">
+								</button>
+							</form>
+							<div class="heart_num">
+								3
+							</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			<div class="comment_container">
+				<div class="commentbox">
+					<div class="name">
+						임정현
+					</div>
+					
+					<div class="comment_contents_box"> 
+						<div class="comment">
+							<div clss="comment_text">
+							최고에요!
+							</div>
+						</div>
+						<div class="comment_additional">
+							<div class= "comment_time">
+								오후 11:30
+							</div>
+							<div class= "heart">
+								<form method="POST">
+								<button type="submit" class ="button">
+									<img class = "heart_button" src="../resource/images/hearts.png">
+								</button>
+							</form>
+							<div class="heart_num">
+								3
+							</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			<div class="comment_container">
+				<div class="commentbox">
+					<div class="name">
+						임정현
+					</div>
+					
+					<div class="comment_contents_box"> 
+						<div class="comment">
+							<div clss="comment_text">
 								최고에요!
 							</div>
 						</div>
@@ -272,7 +349,7 @@
 						<!-- <legend>댓글달기</legend> -->
 						<div class="reply_infor">
 							ID <input type="text" name= "Name" size="15" > 
-							Password <input type="text" name= "Name" size="20" > 
+							Password <input type="text" name= "password" size="20" maxlength="10"  > 
 							익명 <input type = "checkbox" name="anonymous" checked="checked">
 						</div>
 	
