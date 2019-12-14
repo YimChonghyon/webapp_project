@@ -96,8 +96,8 @@
 						#공지
 					</div>
 					<span class="deletebox pull-right">
-						<input class="delete" type="button" value="수정">
-						<input class="delete" type="button" value="삭제">
+						<input class="delete button" type="button" value="수정">
+						<input class="delete button" type="button" value="삭제">
 					</span>
 				</div>
 				</form>
@@ -148,8 +148,8 @@
 					<div class ="namebox">
 					<div class="name">임정현
 						<span class="deletebox">
-						<input class="delete" type="button" value="수정">
-						<input class="delete" type="button" value="삭제">
+						<input class="delete button" type="button" value="수정">
+						<input class="delete button" type="button" value="삭제">
 						</span>
 					</div>
 					</form>
