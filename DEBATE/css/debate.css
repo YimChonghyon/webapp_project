@@ -36,31 +36,21 @@ main{
 .list{
 	margin-top: 1% ;
 	float: left;
-<<<<<<< HEAD
-	width: 23%;
-	height: 90%;
-	background-color: rgb(240,240,240);
-}
-.debatebox{
-	float: left;
-	width: 77%;
-	height: 87%;
-=======
 	width: 29.5%;
 	height: 100%;
-	border: 1px solid #9b9b9b;
+	border-right: 1.5px solid #9b9b9b;
 	
 	/* text-align: center; */
 	
 	/* background-color: rgb(240,240,240); */
 }
 .debatebox{
+	
 	float: right;
 	width: 70%;
 	height: 100%;
 	
 	/* border: 1px solid #9b9b9b; */
->>>>>>> d388d00add97499fecd0694b23f358d7dd5d1f01
 	/* background-color: pink; */
 }
 }
@@ -71,7 +61,7 @@ main{
 		float: left;
 		width: 100%;
 		height: 30%;
-		border: 1px solid #9b9b9b;
+		border-bottom: 2px solid #9b9b9b;
 		
 		/* text-align: center; */
 		
@@ -193,11 +183,6 @@ main{
 .commentbox{
 	float: left;
 	margin:2%;
-<<<<<<< HEAD
-}
-
-
-=======
 	margin-left: 3%;
 	width: 90%;
 }
@@ -209,7 +194,6 @@ main{
 	margin-left: 5%;
 	width: 90%;
 } */
->>>>>>> d388d00add97499fecd0694b23f358d7dd5d1f01
 
 
 
@@ -262,7 +246,7 @@ main{
     margin-bottom: 10px;
     box-shadow: 0 5px 8px rgba(0,0,0,.1);
     border-radius: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .tag_number{
     position: relative;
@@ -356,7 +340,8 @@ main{
 }
 .heart_button{
 	width: 20px;
-    cursor: pointer;
+	cursor: pointer;
+	color: (0,0,0,0);
 }
 
 .out_button{
@@ -383,7 +368,11 @@ main{
 .comment_icon{
 	width:15px; 
 }
-
+.bottom_infor{
+	margin-top:3%;
+	font-size: 13px;
+	
+}
 .icon_container{
 	display: inline;
     flex-direction: row;
@@ -423,13 +412,13 @@ main{
     margin-top: 4px;
 }
 
-.write_infor{
-	/* max-width: 30%; */
+/* .write_infor{
+	max-width: 30%;
     height: 19px;
-    font-size: 13px;
+    
     color: #9b9b9b;
     display: flex;
-}
+} */
 
 .add_content_icon{
 	width: 40px;
@@ -439,17 +428,21 @@ main{
 .question_button_icon{
 	width: 28px;
 	margin-top: 5px;
+	
+	
 }
 
 .question_button{
 	margin : 5px;
 	text-align: right;
+	/* cursor: pointer; */
 }
 
 .question{
 	border: none;
 	border-radius: 10px;
 	background-color: rgb(201, 213, 252);
+	cursor: pointer;
 	
 }
 /* 
@@ -478,8 +471,6 @@ main{
 
 .contentsbox{
 	margin:30px;
-<<<<<<< HEAD
-=======
 }
 
 .comment_box{
@@ -538,11 +529,7 @@ main{
     line-height: 24px;
 }
 
-.reply_input{
-	width: 100%;
-	/* height: 100%; */
-	/* border: none; */
-}
+
 
 .scroll{
 	overflow-y: scroll;
@@ -550,10 +537,26 @@ main{
 
 .enter_button{
 	width: 20px;
+	cursor: pointer;
 }
 
 .button{
 	border:none;
-	color:rgba(0,0,0,0);
->>>>>>> d388d00add97499fecd0694b23f358d7dd5d1f01
+	background-color:rgba(0,0,0,0);
+	cursor: pointer;
+	border-radius: 300px;
+
+}
+
+.reply_text{
+margin-top: 3%;
+resize: none;
+border:  1px solid #9b9b9b;
+overflow-y: scroll;
+width: 90%;
+
+}
+
+.reply_infor{
+	margin-top:3%;
 }

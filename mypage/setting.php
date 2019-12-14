@@ -152,8 +152,9 @@ For the category of gallery and publication, if there is data using that, it can
 			<input type="file" onchange="this.form.submit()" name="picture" accept="image/gif,image/jpeg,image/png" />
 		</form>
 		<?php
-		$sql_profile = "select Name,Type,Email,Homepage,Introduce,Other from user";
+		$sql_profile = "select Name,Type,Email,Homepage,Introduce,Other from user where Id = :id";
 		$stmt_profile = $conn -> prepare($sql_profile);
+		$stmt_profile -> bindParam(":id",$_SESSION['id']);
 		$stmt_profile -> execute();
 		$result_profile = $stmt_profile -> fetch();
 		?>

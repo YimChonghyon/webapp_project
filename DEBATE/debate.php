@@ -27,141 +27,7 @@
 				</div>
 		</form>
 			<hr />
-			<div class="debate_content_container">
-				<div>
-					<div class="title_tag">
-						<div class="tag_number">
-							#1
-						</div>
-						<div class="tag_catagory">
-							#공지
-						</div>
-					</div>
-				
-				
-					<div class="titlebox">
-						<div class="title_text">
-							안녕하세요. 제목입니다.
-						</div>
-					</div>
-				
-					<div class="bottom_infor">
-						<div class="write_infor">
-							<div class="name">
-								임정현
-							</div>
-							<div class="time">
-								23:03
-							</div>
-						</div>
-						<div class="icon_container pull-right">
-							<div class="question_container pull-right">
-									<img class="question_icon" src="../resource/images/question.png">
-									<div class="question_icon_num">
-										3
-									</div>
-							</div>
-							<div class="comment_container pull-right">
-									<img class="comment_icon" src="../resource/images/comment.png">
-									<div class="comment_icon_num"> 
-										1
-									</div>
-								</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-			<div class="debate_content_container">
-				<div>
-					<div class="title_tag">
-						<div class="tag_number">
-							#1
-						</div>
-						<div class="tag_catagory">
-							#공지
-						</div>
-					</div>
-				
-				
-					<div class="titlebox">
-						<div class="title_text">
-							안녕하세요. 제목입니다.
-						</div>
-					</div>
-				
-					<div class="bottom_infor">
-						<div class="write_infor">
-							<div class="name">
-								임정현
-							</div>
-							<div class="time">
-								23:03
-							</div>
-						</div>
-						<div class="icon_container pull-right">
-							<div class="question_container pull-right">
-									<img class="question_icon" src="../resource/images/question.png">
-									<div class="question_icon_num">
-										3
-									</div>
-							</div>
-							<div class="comment_container pull-right">
-									<img class="comment_icon" src="../resource/images/comment.png">
-									<div class="comment_icon_num"> 
-										1
-									</div>
-								</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-			<div class="debate_content_container">
-				<div>
-					<div class="title_tag">
-						<div class="tag_number">
-							#1
-						</div>
-						<div class="tag_catagory">
-							#공지
-						</div>
-					</div>
-				
-				
-					<div class="titlebox">
-						<div class="title_text">
-							안녕하세요. 제목입니다.
-						</div>
-					</div>
-				
-					<div class="bottom_infor">
-						<div class="write_infor">
-							<div class="name">
-								임정현
-							</div>
-							<div class="time">
-								23:03
-							</div>
-						</div>
-						<div class="icon_container pull-right">
-							<div class="question_container pull-right">
-									<img class="question_icon" src="../resource/images/question.png">
-									<div class="question_icon_num">
-										3
-									</div>
-							</div>
-							<div class="comment_container pull-right">
-									<img class="comment_icon" src="../resource/images/comment.png">
-									<div class="comment_icon_num"> 
-										1
-									</div>
-								</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
+	
 			<div class="debate_content_container">
 				<div>
 					<div class="title_tag">
@@ -190,7 +56,7 @@
 							</div>
 						</div>
 
-						<div class="icon_container ">
+						<div class="icon_container pull-right">
 							<div class="question_container">
 									<img class="question_icon" src="../resource/images/question.png">
 									<div class="question_icon_num">
@@ -208,96 +74,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="debate_content_container">
-				<div>
-					<div class="title_tag">
-						<div class="tag_number">
-							#1
-						</div>
-						<div class="tag_catagory">
-							#공지
-						</div>
-					</div>
-				
-				
-					<div class="titlebox">
-						<div class="title_text">
-							안녕하세요. 제목입니다.
-						</div>
-					</div>
-				
-					<div class="bottom_infor">
-						<div class="write_infor">
-							<div class="name">
-								임정현
-							</div>
-							<div class="time">
-								23:03
-							</div>
-						</div>
-						<div class="icon_container pull-right">
-							<div class="question_container pull-right">
-									<img class="question_icon" src="../resource/images/question.png">
-									<div class="question_icon_num">
-										3
-									</div>
-							</div>
-							<div class="comment_container pull-right">
-									<img class="comment_icon" src="../resource/images/comment.png">
-									<div class="comment_icon_num"> 
-										1
-									</div>
-								</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-			<div class="debate_content_container">
-				<div>
-					<div class="title_tag">
-						<div class="tag_number">
-							#1
-						</div>
-						<div class="tag_catagory">
-							#공지
-						</div>
-					</div>
-				
-				
-					<div class="titlebox">
-						<div class="title_text">
-							안녕하세요. 제목입니다.
-						</div>
-					</div>
-				
-					<div class="bottom_infor">
-						<div class="write_infor">
-							<div class="name">
-								임정현
-							</div>
-							<div class="time">
-								23:03
-							</div>
-						</div>
-						<div class="icon_container pull-right">
-							<div class="question_container pull-right">
-									<img class="question_icon" src="../resource/images/question.png">
-									<div class="question_icon_num">
-										3
-									</div>
-							</div>
-							<div class="comment_container pull-right">
-									<img class="comment_icon" src="../resource/images/comment.png">
-									<div class="comment_icon_num"> 
-										1
-									</div>
-								</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
+			
 
 			<form>
 				<div class="pull-right">
@@ -487,7 +264,7 @@
 <form method="POST">
 	<fieldset>
 		<!-- <legend>댓글달기</legend> -->
-		<div>
+		<div class="reply_infor">
 			ID: <input type="text" name= "Name" size="15" > 
 			Password: <input type="text" name= "Name" size="20" > 
 			익명: <input type = "checkbox" name="anonymous" checked="checked">
@@ -501,8 +278,7 @@
 							<div class ="reply_container"> -->
 								<div>
 								
-								<textarea rows="3" >
-								</textarea>
+								<textarea  class=reply_text></textarea>
 								<button type="submit" class="button">
 								<img class ="enter_button" src = "../resource/images/enter.png">
 							</button>
