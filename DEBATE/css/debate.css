@@ -213,6 +213,7 @@ main{
 
 .title_tag{
 	margin-bottom:10px;
+	
 }
 
 .debate_tag{
@@ -634,7 +635,8 @@ width: 90%;
 	bottom:0px;
 	/* top: 0; */
 	/* right: 0px; */
-	left: 22%;
+	left: calc(30% - 70px);
+	
 }
 }
 

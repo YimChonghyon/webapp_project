@@ -11,7 +11,7 @@
     margin-bottom: 10px;
     box-shadow: 0 5px 8px rgba(0,0,0,.1);
     border-radius: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
     margin-top: 20%;
     margin-left: 25%;
     /* overflow-y: scroll; */
@@ -27,12 +27,13 @@
         margin-bottom: 10px;
         box-shadow: 0 5px 8px rgba(0,0,0,.1);
         border-radius: 10px;
-        cursor: pointer;
+        /* cursor: pointer; */
         margin-top: 20%;
         /* margin-left: 25%; */
         /* overflow-y: scroll; */
     }
 }
+
 
 .enter_button{
     width: 20px;
@@ -89,13 +90,32 @@
 }
 
 
-input[type="checkbox"] {
+input[class="tagbutton"] {
     -webkit-appearance: none;
+    /* display: none; */
+    appearance: button;
+    color: #7a7a7a;
+    /* border-radius: 5px;
+    background: #fff;
+    height: 30px;
+    border: 1.5px solid #c7c7c7;
+    line-height: 26px;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px; */
+}
+.taglabel{
+    display:inline-block;
     appearance: button;
     color: #7a7a7a;
     border-radius: 5px;
     background: #fff;
-    /* height: 30px; */
+    height: 30px;
     border: 1.5px solid #c7c7c7;
     line-height: 26px;
     font-size: 14px;
@@ -108,13 +128,14 @@ input[type="checkbox"] {
     margin-bottom: 10px;
 }
 
-
-input[type="checkbox"]:checked {
+input[class="tagbutton"]:checked {
+    -webkit-appearance: none;
     color: #4b4b4b;
+    appearance: button;
     border-radius: 8px;
     background: rgba(75,75,75,.05);
-    border: 1.5px solid #fff;
-    height: 30px;
+    /* border: 1.5px solid #fff; */
+    /* height: 30px;
     line-height: 26px;
     font-size: 14px;
     font-weight: 800;
@@ -122,7 +143,7 @@ input[type="checkbox"]:checked {
     padding-left: 10px;
     padding-right: 10px;
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; */
 }
 
 #text_input{
