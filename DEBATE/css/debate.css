@@ -175,6 +175,10 @@ main{
 	
 }
 
+.namebox{
+	width: 50%;
+}
+
 .time{
 	min-width: 60px;
     margin-right: 20px;
@@ -572,9 +576,18 @@ width: 90%;
 .reply_box{
 	border:  1.5px solid #dddddd;
     box-shadow: 0 10px 8px  rgba(0,0,0,.1);
-    border-radius: 5px;
+	border-radius: 5px;
+	/* margin-top:10%; */
 }
 
 .reply_box_container{
-	margin-top: 3%;
+	margin-top:10%;
+}
+
+.delete{
+	border:none;
+}
+
+.deletebox{
+	margin-left:3%;
 }
