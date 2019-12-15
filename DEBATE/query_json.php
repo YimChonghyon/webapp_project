@@ -26,7 +26,7 @@ foreach ($result as $key => $value) {
 	print "\"number\": \"" . $number . "\", ";
 	print "\"title\": \"" . $value['Title'] . "\", "; 
 	print "\"name\": \"" . $value['Name'] . "\", ";
-	print "\"date\": \"" . $value['Date'] . "\", ";
+	print "\"date\": \"" . date ("m/d H:i",$value['Date']) . "\", ";
 	print "\"content\": \"" . $value['Content'] . "\", ";
 	print "\"wanted\": \"" . $value['Wanted'] . "\", ";
 	print "\"password\": \"" . $value['Password'] . "\",";

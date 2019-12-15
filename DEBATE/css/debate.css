@@ -281,7 +281,6 @@ main{
 }
 @media screen and (min-width:800px) {
 .debate_content_container{
-	height: 115px;
 	border: 1px solid #f0f0f0;
 	margin: 3%;
     padding: 15px 15px 8px;
@@ -296,7 +295,6 @@ main{
 
 @media screen and (max-width: 800px) and (min-width: 320px){
 .debate_content_container{
-	height: 115px;
 	border: 1px solid #f0f0f0;
 	margin: 3%;
     padding: 15px 15px 3% 3%;

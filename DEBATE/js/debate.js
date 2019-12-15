@@ -26,7 +26,7 @@ function query_JSON(ajax) {
 		var tag_catagory = document.createElement('div');
 		tag_catagory.className = 'tag_catagory';
 		for (var j = 0; j < data.debates[i].tags.length; j++) {
-			tag_catagory.innerHTML += data.debates[i].tags[j];
+			tag_catagory.innerHTML += '#' + data.debates[i].tags[j]+ " ";
 		}
 		$$('.title_tag')[i].appendChild(tag_catagory);
 
