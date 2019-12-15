@@ -17,7 +17,7 @@
     /* overflow-y: scroll; */
 }}
 
-@media screen and (max-width:950px) {
+@media screen and (max-width:950px) and (min-width:602px) {
     .question_box{
         /* height: 300px; */
         width: 90%;
@@ -90,12 +90,12 @@
 }
 
 
-input[class="tagbutton"] {
+/* input[class="tagbutton"] {
     -webkit-appearance: none;
-    /* display: none; */
+    display: none;
     appearance: button;
     color: #7a7a7a;
-    /* border-radius: 5px;
+    border-radius: 5px;
     background: #fff;
     height: 30px;
     border: 1.5px solid #c7c7c7;
@@ -107,7 +107,7 @@ input[class="tagbutton"] {
     padding-left: 10px;
     padding-right: 10px;
     margin-right: 10px;
-    margin-bottom: 10px; */
+    margin-bottom: 10px;
 }
 .taglabel{
     display:inline-block;
@@ -134,8 +134,8 @@ input[class="tagbutton"]:checked {
     appearance: button;
     border-radius: 8px;
     background: rgba(75,75,75,.05);
-    /* border: 1.5px solid #fff; */
-    /* height: 30px;
+    border: 1.5px solid #fff;
+    height: 30px;
     line-height: 26px;
     font-size: 14px;
     font-weight: 800;
@@ -143,8 +143,8 @@ input[class="tagbutton"]:checked {
     padding-left: 10px;
     padding-right: 10px;
     margin-right: 10px;
-    margin-bottom: 10px; */
-}
+    margin-bottom: 10px;
+} */
 
 #text_input{
     /* border: 1.5px solid #c7c7c7; */
