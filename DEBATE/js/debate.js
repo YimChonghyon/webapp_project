@@ -5,6 +5,7 @@ window.onload = function() {
 		onFailure : ajaxFailed,
 		onException : ajaxFailed
 	});
+	$$('.debate_content_container').each(function(element){element.observe('click',query_select})
 }
 
 function query_JSON(ajax) {
@@ -13,7 +14,6 @@ function query_JSON(ajax) {
 	for(var i=0;i<data.debates.length;i++) {
 		var debate_content_container = document.createElement('div');
 		debate_content_container.className = 'debate_content_container';
-		debate_content_container.onclick = 'query_select(i)';
 		$$('.list_container')[0].appendChild(debate_content_container);
 
 		var title_tag = document.createElement('div');
@@ -83,7 +83,7 @@ function query_JSON(ajax) {
 	}
 }
 
-function query_select(number) {
+function query_select() {
 	alert(number);
 }
 
