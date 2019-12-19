@@ -95,8 +95,11 @@
             <br>
                 <h3><a href="courses/main_course.php">COURSES&nbsp;&nbsp;<i class="fab fa-discourse"></i></a></h3> <!-- 이번 학기에 열린 강의 목록 / 링크 -->
                 <br>
-                <p>CSE1002</p>
-                <p>CSE1003</p>
+                <p>Understand the protocols, language and systems used on the Web</p>
+                <p>Understand the functions of clients and servers on the Web</p>
+                <p>learn how to implement JavaScript and PHP</p>
+                <p>Obtain ability to design and implement an interactive web site</p>
+                <p>Learn how to use/manage database associated with web applications</p>
             </article>
             </div>    
         
