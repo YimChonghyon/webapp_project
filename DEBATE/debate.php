@@ -125,10 +125,10 @@
 					<div class="debate_content_container_main">
 						<form method="POST">
 							<div class="title_tag"> 
-								<div class="tag_number">
+								<div class="tag_number" id="main_number">
 									#1
 								</div>
-								<div class="tag_catagory">
+								<div class="tag_catagory" id="main_tag">
 									#공지
 								</div>
 								<span class="deletebox pull-right">
@@ -139,7 +139,7 @@
 						</form>
 
 						<div class="titlebox_main">
-							<div class="title_text_main">
+							<div class="title_text_main" id="main_title">
 								안녕하세요. 제목입니다.
 							</div>
 						</div>
@@ -153,7 +153,7 @@
 						
 
 						<div class="contentsbox">
-							<div class="content_text">
+							<div class="content_text" id="main_content">
 								안녕하세요. 웹애플리케이션 수업 토론 페이지 입니다.
 							</div>
 						</div>
@@ -162,7 +162,7 @@
 								<button type = "submit" class="question">
 									<img class="question_button_icon" src="../resource/images/question.png">
 
-									<span class="question_num">
+									<span class="question_num" id="main_question">
 										3
 									</span>
 									<p>저도궁금해요!</p>
@@ -177,199 +177,74 @@
 
 				<hr />
 
-				<div class="debate_reply">
+				<div class="debate_reply" id="reply_container">
+
+
+					<!-- reply box container START -->
 					<div class="comment_container">
 						<div class="commentbox">
-							<form method="POST">
-								<div class ="namebox">
-									<div class="name">임정현
-										<span class="deletebox">
-											<input class="delete button" type="button" value="수정" onClick="##">
-											<input class="delete button" type="button" value="삭제">
-										</span>
-									</div>
-								</form>
-
-								<div class="comment_contents_box"> 
-									<div class="comment">
-										<div clss="comment_text">
-
-											최고에요!최고에요!최고에요!최고에요!최고에요!최고에요!
-
-										</div>
-									</div>
-									<div class="comment_additional">
-										<div class= "comment_time">
-											오후 11:30
-										</div>
-										<div class= "heart">
-											<form method="POST">
-												<button type="submit" class ="button">
-													<img class = "heart_button" src="../resource/images/hearts.png">
-												</button>
-											</form>
-											<div class="heart_num">
-												3
-											</div>
-										</div>
-									</div>
-								</div>	
+							<div class="name">
+								임정현
 							</div>
-						</div>
 
-						<div class="comment_container">
-							<div class="commentbox">
-								<div class="name">
-									임정현
+							<div class="comment_contents_box"> 
+								<div class="comment">
+									<div clss="comment_text">
+										최고에요!
+									</div>
 								</div>
-
-								<div class="comment_contents_box"> 
-									<div class="comment">
-										<div clss="comment_text">
-											최고에요!
+								<div class="comment_additional">
+									<div class= "comment_time">
+										오후 11:30
+									</div>
+									<div class= "heart">
+										<form method="POST">
+											<button type="submit" class ="button">
+												<img class = "heart_button" src="../resource/images/hearts.png">
+											</button>
+										</form>
+										<div class="heart_num">
+											3
 										</div>
 									</div>
-									<div class="comment_additional">
-										<div class= "comment_time">
-											오후 11:30
-										</div>
-										<div class= "heart">
-											<form method="POST">
-												<button type="submit" class ="button">
-													<img class = "heart_button" src="../resource/images/hearts.png">
-												</button>
-											</form>
-											<div class="heart_num">
-												3
-											</div>
-										</div>
-									</div>
-								</div>	
-							</div>
-						</div>
-
-						<div class="comment_container">
-							<div class="commentbox">
-								<div class="name">
-									임정현
 								</div>
-
-								<div class="comment_contents_box"> 
-									<div class="comment">
-										<div clss="comment_text">
-											최고에요!
-										</div>
-									</div>
-									<div class="comment_additional">
-										<div class= "comment_time">
-											오후 11:30
-										</div>
-										<div class= "heart">
-											<form method="POST">
-												<button type="submit" class ="button">
-													<img class = "heart_button" src="../resource/images/hearts.png">
-												</button>
-											</form>
-											<div class="heart_num">
-												3
-											</div>
-										</div>
-									</div>
-								</div>	
-							</div>
-						</div>
-
-						<div class="comment_container">
-							<div class="commentbox">
-								<div class="name">
-									임정현
-								</div>
-
-								<div class="comment_contents_box"> 
-									<div class="comment">
-										<div clss="comment_text">
-											최고에요!
-										</div>
-									</div>
-									<div class="comment_additional">
-										<div class= "comment_time">
-											오후 11:30
-										</div>
-										<div class= "heart">
-											<form method="POST">
-												<button type="submit" class ="button">
-													<img class = "heart_button" src="../resource/images/hearts.png">
-												</button>
-											</form>
-											<div class="heart_num">
-												3
-											</div>
-										</div>
-									</div>
-								</div>	
-							</div>
-						</div>
-
-						<div class="comment_container">
-							<div class="commentbox">
-								<div class="name">
-									임정현
-								</div>
-
-								<div class="comment_contents_box"> 
-									<div class="comment">
-										<div clss="comment_text">
-											최고에요!
-										</div>
-									</div>
-									<div class="comment_additional">
-										<div class= "comment_time">
-											오후 11:30
-										</div>
-										<div class= "heart">
-											<form method="POST">
-												<button type="submit" class ="button">
-													<img class = "heart_button" src="../resource/images/hearts.png">
-												</button>
-											</form>
-											<div class="heart_num">
-												3
-											</div>
-										</div>
-									</div>
-								</div>	
-							</div>
+							</div>	
 						</div>
 					</div>
+					<!-- reply box container END -->
+
+
 
 				</div>
 
+			</div>
 
 
 
 
-				<div class="reply_box_container">
-					<form method="POST">
-						<fieldset class="reply_box">
-							<!-- <legend>댓글달기</legend> -->
-							<div class="reply_infor">
-								ID <input type="text" name= "Name" size="15" > 
-								Password <input type="text" name= "password" size="20" maxlength="10" patte> 
-								익명 <input type = "checkbox" name="anonymous" checked="checked">
-							</div>
+
+			<div class="reply_box_container">
+				<form method="POST">
+					<fieldset class="reply_box">
+						<!-- <legend>댓글달기</legend> -->
+						<div class="reply_infor">
+							ID <input type="text" name= "Name" size="15" > 
+							Password <input type="text" name= "password" size="20" maxlength="10" patte> 
+							익명 <input type = "checkbox" name="anonymous" checked="checked">
+						</div>
 
 
-							<textarea  class=reply_text></textarea>
-							<button type="submit" class="button">
-								<img class ="enter_button" src = "../resource/images/enter.png">
-							</button>
-							
-						</fieldset>
-					</form>
-				</div>
+						<textarea  class=reply_text></textarea>
+						<button type="submit" class="button">
+							<img class ="enter_button" src = "../resource/images/enter.png">
+						</button>
+
+					</fieldset>
+				</form>
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 </main>
 </body>

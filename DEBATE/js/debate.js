@@ -5,15 +5,18 @@ window.onload = function() {
 		onFailure : ajaxFailed,
 		onException : ajaxFailed
 	});
-	$$('.debate_content_container').each(function(element){element.observe('click',query_select})
 }
 
+var querys;
 function query_JSON(ajax) {
-	var data = JSON.parse(ajax.responseText);
+	querys = ajax.responseText;
+	var data = JSON.parse(querys);
 	$$('.list_container')[0].descendants().each(function(element){element.remove();});
 	for(var i=0;i<data.debates.length;i++) {
 		var debate_content_container = document.createElement('div');
 		debate_content_container.className = 'debate_content_container';
+		debate_content_container.id = i;
+		debate_content_container.observe('click',query_select);
 		$$('.list_container')[0].appendChild(debate_content_container);
 
 		var title_tag = document.createElement('div');
@@ -84,8 +87,46 @@ function query_JSON(ajax) {
 }
 
 function query_select() {
-	alert(number);
-}
+	var data = JSON.parse(querys);
+	//내용 갱신
+	$('main_number').innerHTML = '#' + data.debates[this.id].number;
+	$('main_tag').innerHTML = "";
+	for (var j = 0; j < data.debates[this.id].tags.length; j++) {
+		$('main_tag').innerHTML += '#' + data.debates[this.id].tags[j]+ " ";
+	}
+	$('main_title').innerHTML = data.debates[this.id].title;
+	$('main_content').innerHTML = data.debates[this.id].content;
+	$("main_question").innerHTML = data.debates[this.id].wanted;
+
+	//댓글 초기화
+	$('reply_container').descendants().each(function(element){element.remove();});
+	for (var i = 0; i < data.debates[this.id].replys.length; i++) {
+		var comment_container = document.createElement('div');
+		comment_container.className = 'comment_container';
+
+		var commentbox = document.createElement('div');
+		commentbox.className = 'commentbox';
+
+		var name = document.createElement('div');
+		name.className = 'name';
+		name.innerHTML = data.debates[this.id].replys[i].name;
+
+		var comment_contents_box = document.createElement('div');
+		comment_contents_box.className = 'comment_contents_box';
+
+		var comment = document.createElement('div');
+		comment.className = 'comment';
+
+		var comment_text = document.createElement('div');
+		comment_text.className = 'comment_text';
+		comment_text.innerHTML = data.debates[this.id].replys[i].content;
+
+		var comment = document.createElement('div');
+		comment.className = 'comment';
+		// $('reply_container').appendChild(comment_container);
+		// $('reply_container').appendChild(commentbox);
+	}
+}	
 
 function ajaxFailed(ajax, exception) {
 	var errorMessage = "Error making Ajax request:\n\n";
