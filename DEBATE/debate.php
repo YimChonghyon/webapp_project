@@ -22,8 +22,8 @@
 				<div class="search_box  ">
 					<div class="search">
 						<form method="post" action="" >
-							<select id ="tag_selecter" class="tagselect">
-								<optgroup label="태그선택">
+							<select id ="tag_selecter" class="tagselect" multiple="multiple">
+								<optgroup label="태그선택" id="TEL_tag">
 									<option>질문</option>
 									<option>토의</option>
 								</optgroup>

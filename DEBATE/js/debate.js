@@ -5,6 +5,12 @@ window.onload = function() {
 		onFailure : ajaxFailed,
 		onException : ajaxFailed
 	});
+	new Ajax.Request("tag_json.php",{
+		method : "get",
+		onSuccess : tag_JSON,
+		onFailure : ajaxFailed,
+		onException : ajaxFailed
+	});
 	$('anonymous_button').checked = true;
 	$('reply_id').disabled = true;
 	$('reply_button').disabled = true;
@@ -208,7 +214,18 @@ function query_select() {
 		// $('reply_container').appendChild(comment_container);
 		// $('reply_container').appendChild(commentbox);
 	}
-}	
+}
+
+function tag_JSON(ajax) {
+	var data = JSON.parse(ajax.responseText);
+	$('TEL_tag').descendants().each(function(element){element.remove();});
+	for (var i = 0; i < data.tags.length; i++) {	
+		var option = document.createElement('option');
+		option.innerHTML = data.tags[i];
+		$('TEL_tag').appendChild(option);
+	}
+
+}
 
 function ajaxFailed(ajax, exception) {
 	var errorMessage = "Error making Ajax request:\n\n";
