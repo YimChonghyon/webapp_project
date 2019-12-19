@@ -4,7 +4,7 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/question.css">
     <link rel="stylesheet" type="text/css" href="../resource/css/common.css" />
-    <script type="text/javascript" src="../js/newquestion.js"></script>
+    <script type="text/javascript" src="js/newquestion.js"></script>
 </head>
 
 <body>
@@ -40,13 +40,13 @@
 
             <div class="infor">
                 <span>ID <input type="text" name= "Name" size="20" > </span>
-                <span>Password <input type="text" name= "Name" size="20" > </span>
+                <span>Password <input type="text" name= "Name" size="20" maxlength="10"  onKeyup="this.value=this.value.replace(/[^0-9]/g,'')"> </span>
                 <span>Anonymity <input type = "checkbox" name="anonymous" checked="checked"></span>
             </div>
 
             
             <div class="text">
-                <textarea class =" textarea" ></textarea>
+                <textarea class =" textarea" onkeydown="textareaAutoHeight(this)" onkeyup="textareaAutoHeight(this)" placeholder="" ></textarea>
             
             <button type="button" class="button pull-right"  onclick="self.close()">
                 <img class ="enter_button" src = "../resource/images/enter.png">
