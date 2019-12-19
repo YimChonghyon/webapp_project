@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../resource/css/common.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/debate.js"></script>
+	<script type="text/javascript" src="js/newquestion.js"></script>
 </head>
 <body>
 	<?php 
@@ -412,13 +413,6 @@
 
 
 
-<<<<<<< HEAD
-=======
-					</fieldset>
-				</form>
-			</div>
-		<!-- </div> -->
->>>>>>> 66b1597b96fc253f532a6eaf451e8dbfebe182ae
 
 		</div>
 		<div class="reply_box_container">
