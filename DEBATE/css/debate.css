@@ -349,6 +349,9 @@ main{
 }
 .debate_reply{
 	margin-bottom: 100px;
+	padding-bottom: 100px;
+	width : 90%;
+	height:45%;
 }
 
 .box{
