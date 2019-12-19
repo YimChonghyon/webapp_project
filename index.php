@@ -62,8 +62,8 @@
     <!-- INDEX MAIN IMAGE -->
                 <div class="slide">
                 <ul>
-                    <li><a href="#"><img src="resource/images/main_1.jpg" style="max-width: 100%; height: auto;"/></li>
-                    <li><a href="#"><img src="resource/images/main_2.jpg" style="max-width: 100%; height: auto;"/></li>
+                 <li><a href="#"><img src="resource/images/main_1.jpg" style="width: 100%; height: 100%; min-height: 500px;"/></li>
+                 <li><a href="#"><img src="resource/images/main_2.jpg" style="width: 100%; height: 100%; min-height: 500px;"/></li>
                 </ul>
                 </div>
 
