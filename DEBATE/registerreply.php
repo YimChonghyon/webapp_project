@@ -8,12 +8,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		exit;
 	}
 
+	if(empty($_POST['name']))
+		$name = 'Anonymous';
+	else
+		$name = $_POST['name'];
 	include '../resource/DB_connect.php';
 	try {
 		$conn = connect();
 		$stmt = $conn->prepare("insert into reply values (NULL,:number,:name,CURRENT_TIMESTAMP,:content,:password,0)");
 		$stmt -> bindValue(":number",$_POST['debate_id']);
-		$stmt -> bindValue(":name",$_POST['name']);
+
+		$stmt -> bindValue(":name",$name);
 		$stmt -> bindValue(":content",$_POST['content']);
 		$stmt -> bindValue(":password",$_POST['password']);
 		$stmt->execute();
