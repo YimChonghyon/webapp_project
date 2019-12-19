@@ -39,28 +39,24 @@ function ajaxFailed(ajax, exception) {
 	alert(errorMessage);
 }
 
-// function Close() {
-//     self.close();
-//   }
+function textareaAutoHeight(el) {
+	setTimeout(() => {
+		el.style.height = 'auto';
 
-  function textareaAutoHeight(el) {
-    setTimeout(() => {
-        el.style.height = 'auto';
+		let scrollHeight = el.scrollHeight;
+		let outlineHeight = el.offsetHeight - el.clientHeight;
 
-        let scrollHeight = el.scrollHeight;
-        let outlineHeight = el.offsetHeight - el.clientHeight;
-
-        el.style.height = (scrollHeight + outlineHeight) + 'px';
-    }, 0);
+		el.style.height = (scrollHeight + outlineHeight) + 'px';
+	}, 0);
 }
 
 function showPopup() {
-    var url = "question.html";
-    var name = "question";
-    var option = "width=900, height=550, left= 100, top = 50";
-    window.open(url, name, option);
-    
- }
+	var url = "question.html";
+	var name = "question";
+	var option = "width=900, height=550, left= 100, top = 50";
+	window.open(url, name, option);
+	
+}
 function Close() {
 	self.close();
 }

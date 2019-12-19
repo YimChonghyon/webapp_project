@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$stmt -> bindValue(":number",$_POST['debate_id']);
 
 		$stmt -> bindValue(":name",$name);
-		$stmt -> bindValue(":content",$_POST['content']);
+		$stmt -> bindValue(":content",preg_replace('/\r\n|\r|\n/','<br/>',$_POST['content']));
 		$stmt -> bindValue(":password",$_POST['password']);
 		$stmt->execute();
 		$conn = null;

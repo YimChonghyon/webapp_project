@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$stmt = $conn->prepare("insert into debate(Title,Name,Content,Password) values (:title,:name,:content,:password)");
 		$stmt -> bindValue(":title",$_POST['title']);
 		$stmt -> bindValue(":name",$name);
-		$stmt -> bindValue(":content",$_POST['content']);
+		$stmt -> bindValue(":content",preg_replace('/\r\n|\r|\n/','<br/>',$_POST['content']));
 		$stmt -> bindValue(":password",$_POST['password']);
 		$stmt -> execute();
 		$debateid = $conn->lastInsertId();
