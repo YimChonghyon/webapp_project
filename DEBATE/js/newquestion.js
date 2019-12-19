@@ -16,7 +16,8 @@ function tag_JSON(ajax){
 
 		var tagbutton = document.createElement('input');
 		tagbutton.type = "checkbox";
-		tagbutton.name = data.tags[i];
+		tagbutton.name = 'tags[]';
+		tagbutton.value = data.tags[i];
 		label.appendChild(tagbutton);
 		label.innerHTML += data.tags[i];
 		$('tagselector').appendChild(label);
