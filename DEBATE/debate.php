@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../resource/css/common.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/debate.js"></script>
+	<script type="text/javascript" src="js/question.js"></script>
 </head>
 <body>
 	<?php 
@@ -29,10 +30,10 @@
 								</optgroup>
 							</select>
 
-							<input type="text" name="" id="searchbox" size="30"  >
-							<button type="submit" class="button">
+							<input type="text" name="" id="searchbox" size="30"/>
+							<button type="button" class="button">
 								<image class="pull-right search_icon" src="../resource/images/search.png">
-								</button>
+							</button>
 							</form>
 
 
@@ -49,7 +50,7 @@
 
 		<form method="post" action="">
 			<div class="">
-				<button type="submit" class="plus button" >
+				<button type="button" class="plus button" onclick="showPopup()" >
 					<img class="add_content_icon" src="../resource/images/plus.png">
 				</button>
 
@@ -159,7 +160,7 @@
 						</div>
 						<form method="POST">
 							<div class="question_button">
-								<button type = "submit" class="question">
+								<button type = "button" class="question">
 									<img class="question_button_icon" src="../resource/images/question.png">
 
 									<span class="question_num" id="main_question">
@@ -199,7 +200,7 @@
 									</div>
 									<div class= "heart">
 										<form method="POST">
-											<button type="submit" class ="button">
+											<button type="button" class ="button">
 												<img class = "heart_button" src="../resource/images/hearts.png">
 											</button>
 										</form>
@@ -235,7 +236,7 @@
 
 
 						<textarea  class=reply_text></textarea>
-						<button type="submit" class="button">
+						<button type="button" class="button">
 							<img class ="enter_button" src = "../resource/images/enter.png">
 						</button>
 
