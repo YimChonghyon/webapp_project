@@ -210,14 +210,201 @@
 									</div>
 								</div>
 							</div>	
-						</div>
+						</div>	
 					</div>
+
+					<div class="comment_container">
+						<div class="commentbox">
+							<div class="name">
+								임정현
+							</div>
+
+							<div class="comment_contents_box"> 
+								<div class="comment">
+									<div clss="comment_text">
+										최고에요!
+									</div>
+								</div>
+								<div class="comment_additional">
+									<div class= "comment_time">
+										오후 11:30
+									</div>
+									<div class= "heart">
+										<form method="POST">
+											<button type="button" class ="button">
+												<img class = "heart_button" src="../resource/images/hearts.png">
+											</button>
+										</form>
+										<div class="heart_num">
+											3
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>	
+					</div>
+
+					<div class="comment_container">
+						<div class="commentbox">
+							<div class="name">
+								임정현
+							</div>
+
+							<div class="comment_contents_box"> 
+								<div class="comment">
+									<div clss="comment_text">
+										최고에요!
+									</div>
+								</div>
+								<div class="comment_additional">
+									<div class= "comment_time">
+										오후 11:30
+									</div>
+									<div class= "heart">
+										<form method="POST">
+											<button type="button" class ="button">
+												<img class = "heart_button" src="../resource/images/hearts.png">
+											</button>
+										</form>
+										<div class="heart_num">
+											3
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>	
+					</div>
+
+					<div class="comment_container">
+						<div class="commentbox">
+							<div class="name">
+								임정현
+							</div>
+
+							<div class="comment_contents_box"> 
+								<div class="comment">
+									<div clss="comment_text">
+										최고에요!
+									</div>
+								</div>
+								<div class="comment_additional">
+									<div class= "comment_time">
+										오후 11:30
+									</div>
+									<div class= "heart">
+										<form method="POST">
+											<button type="button" class ="button">
+												<img class = "heart_button" src="../resource/images/hearts.png">
+											</button>
+										</form>
+										<div class="heart_num">
+											3
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>	
+					</div>
+
+					<div class="comment_container">
+						<div class="commentbox">
+							<div class="name">
+								임정현
+							</div>
+
+							<div class="comment_contents_box"> 
+								<div class="comment">
+									<div clss="comment_text">
+										최고에요!
+									</div>
+								</div>
+								<div class="comment_additional">
+									<div class= "comment_time">
+										오후 11:30
+									</div>
+									<div class= "heart">
+										<form method="POST">
+											<button type="button" class ="button">
+												<img class = "heart_button" src="../resource/images/hearts.png">
+											</button>
+										</form>
+										<div class="heart_num">
+											3
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>	
+					</div>
+
+					<div class="comment_container">
+						<div class="commentbox">
+							<div class="name">
+								임정현
+							</div>
+
+							<div class="comment_contents_box"> 
+								<div class="comment">
+									<div clss="comment_text">
+										최고에요!
+									</div>
+								</div>
+								<div class="comment_additional">
+									<div class= "comment_time">
+										오후 11:30
+									</div>
+									<div class= "heart">
+										<form method="POST">
+											<button type="button" class ="button">
+												<img class = "heart_button" src="../resource/images/hearts.png">
+											</button>
+										</form>
+										<div class="heart_num">
+											3
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>	
+					</div>
+
+					<div class="comment_container">
+						<div class="commentbox">
+							<div class="name">
+								임정현
+							</div>
+
+							<div class="comment_contents_box"> 
+								<div class="comment">
+									<div clss="comment_text">
+										최고에요!
+									</div>
+								</div>
+								<div class="comment_additional">
+									<div class= "comment_time">
+										오후 11:30
+									</div>
+									<div class= "heart">
+										<form method="POST">
+											<button type="button" class ="button">
+												<img class = "heart_button" src="../resource/images/hearts.png">
+											</button>
+										</form>
+										<div class="heart_num">
+											3
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>	
+					</div>
+					
 					<!-- reply box container END -->
 
 
 
 				</div>
-
+</div>
 			</div>
 
 
@@ -243,7 +430,7 @@
 					</fieldset>
 				</form>
 			</div>
-		</div>
+		<!-- </div> -->
 	</div>
 </div>
 </div>
