@@ -6,7 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="../resource/css/common.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/debate.js"></script>
-	<script type="text/javascript" src="js/newquestion.js"></script>
 </head>
 <body>
 	<?php 
