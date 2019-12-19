@@ -50,7 +50,7 @@ foreach ($result as $key => $value) {
 		print "\t{";
 		print "\"number\": \"" . $value['Reply_number'] . "\", ";
 		print "\"name\": \"" . $value['Name'] . "\", ";
-		print "\"date\": \"" . $value['Date'] . "\", ";
+		print "\"date\": \"" . date("m/d H:i",strtotime($value['Date'])) . "\", ";
 		print "\"content\": \"" . $value['Content'] . "\", ";
 		print "\"password\": \"" . $value['Password'] . "\",";
 		print "\"like\": \"" . $value['Likes'] . "\"";

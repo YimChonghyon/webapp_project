@@ -18,6 +18,6 @@
 					<div role= "setting" class= "pull-right nav-right"><a href= "../mypage/setting.php">SETTING</a></div>
 				<?php } ?>
 			</ul>
-			<a id="pull" class="menubox" href="#"><img src="resource/images/index_menu.png"></a>
+			<a id="pull" class="menubox" href="#"><img src="../resource/images/index_menu.png"></a>
 		</nav>
 	</header>
