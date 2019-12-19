@@ -1,6 +1,11 @@
 function showPopup() {
-    window.open("question.html", "question" }
+    var url = "question.html";
+    var name = "question";
+    var option = "width=900, height=550, left= 100, top = 50";
+    window.open(url, name, option);
+    
+ }
 
-function moveClose() {
+function Close() {
     self.close();
   }

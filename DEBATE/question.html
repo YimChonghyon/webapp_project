@@ -3,7 +3,8 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/question.css">
-	<link rel="stylesheet" type="text/css" href="../resource/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resource/css/common.css" />
+    <script type="text/javascript" src="../js/newquestion.js"></script>
 </head>
 
 <body>
@@ -12,7 +13,7 @@
     <div class="question_box ">
 		<div class = "header">	
             <div class="pull-right">
-                <button type = "button" class="button" onclick="moveClose()">
+                <button type = "button" class="button" onclick="self.close()">
                     <img class= "out_button " src="../resource/images/out.png">
                 </button>
                     
@@ -26,28 +27,28 @@
             <div class="tag infor">
                 <!-- <fieldset class="fieldset"> -->
                     <!-- <legend>분류</legend> -->
-                    <label class="taglabel" >질문<input class="tagbutton" type="checkbox" name="" /></label>
-                    <label class="taglabel" >토의<input class="tagbutton" type="checkbox" name="" /></label>
+                    <label class="taglabel" >Question<input class="tagbutton" type="checkbox" name="" /></label>
+                    <label class="taglabel" >Discussion<input class="tagbutton" type="checkbox" name="" /></label>
                    
                 <!-- </fieldset> -->
                 <!-- 질문 <input type="checkbox" name="" > -->
             </div>
 
             <div class="infor">
-                    제목  <input id ="text_input" type="text" name= "Name"  > 
+                    Title  <input id ="text_input" type="text" name= "Name"  > 
                 </div>
 
             <div class="infor">
                 <span>ID <input type="text" name= "Name" size="20" > </span>
                 <span>Password <input type="text" name= "Name" size="20" > </span>
-                <span> 익명 <input type = "checkbox" name="anonymous" checked="checked"></span>
+                <span>Anonymity <input type = "checkbox" name="anonymous" checked="checked"></span>
             </div>
 
             
             <div class="text">
                 <textarea class =" textarea" ></textarea>
             
-            <button type="button" class="button pull-right"  onclick="moveClose()">
+            <button type="button" class="button pull-right"  onclick="self.close()">
                 <img class ="enter_button" src = "../resource/images/enter.png">
             </button>
         </div>
