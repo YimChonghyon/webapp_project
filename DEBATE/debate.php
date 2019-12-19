@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../resource/css/common.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/debate.js"></script>
-	<script type="text/javascript" src="js/newquestion.js"></script>
+	<script type="text/javascript" src="js/question.js"></script>
 </head>
 <body>
 	<?php 
@@ -50,7 +50,7 @@
 
 		<form method="post" action="">
 			<div class="">
-				<button type="button" class="plus button" onclick="showPopup()" >'
+				<button type="button" class="plus button" onclick="showPopup()" >
 					<img class="add_content_icon" src="../resource/images/plus.png">
 				</button>
 
@@ -412,18 +412,18 @@
 
 
 			<div class="reply_box_container">
-				<form method="POST">
+				<form method="POST" action="registerreply.php" onsubmit="return check_reply_blank();">
 					<fieldset class="reply_box">
 						<!-- <legend>댓글달기</legend> -->
 						<div class="reply_infor">
-							ID <input type="text" name= "Name" size="15" > 
-							Password <input type="text" name= "password" size="20" maxlength="10" onKeyup="this.value=this.value.replace(/[^0-9]/g,'')"> 
-							익명 <input type = "checkbox" name="anonymous" checked="checked">
+							<input type="hidden" name="debate_id" value="0" id="reply_debate_id" />
+							ID <input type="text" name= "name" size="15" id="reply_id"> 
+							Password <input type="text" name= "password" size="20" maxlength="10" id="reply_password" onKeyup="this.value=this.value.replace(/[^0-9]/g,'')"> 
+							익명 <input type = "checkbox" name="anonymous" id="anonymous_button">
 						</div>
 
-
-						<textarea  class=reply_text></textarea>
-						<button type="button" class="button">
+						<textarea  class=reply_text name="content" id="reply_content"></textarea>
+						<button class="button" id="reply_button">
 							<img class ="enter_button" src = "../resource/images/enter.png">
 						</button>
 
@@ -431,6 +431,9 @@
 				</form>
 			</div>
 		<!-- </div> -->
+
+
+		</div>
 	</div>
 </div>
 </div>

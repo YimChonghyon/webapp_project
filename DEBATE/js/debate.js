@@ -5,6 +5,49 @@ window.onload = function() {
 		onFailure : ajaxFailed,
 		onException : ajaxFailed
 	});
+	$('anonymous_button').checked = true;
+	$('reply_id').disabled = true;
+	$('reply_button').disabled = true;
+	$('reply_id').value = 'anonymous';
+	$('anonymous_button').observe('click', checking_anonymous_button);
+}
+var idmemory = "";
+function checking_anonymous_button() {
+	//익명 체크 버튼 체크 상태에 따라 ID 입력칸 비활성화
+	if(this.checked == true){
+		$('reply_id').disabled = true;
+		idmemory = $('reply_id').value;
+		$('reply_id').value = 'anonymous';
+	}
+	else{
+		$('reply_id').disabled = false;
+		$('reply_id').value = idmemory;
+	}
+}
+
+function check_reply_blank() {
+	//댓글 작성시 포맷을 제대로 작성했는지 검사
+	if($('reply_debate_id').value == 0){
+		alert('게시글을 선택해 주세요.');
+		return false;
+	}
+
+	if($('anonymous_button').checked == false && !$('reply_id').value){
+		alert('아이디를 입력해 주세요.');
+		return false;
+	}
+
+	if(!$('reply_password').value){
+		alert('비밀번호를 입력해 주세요.');
+		return false;
+	}
+
+	if(!$('reply_content').value){
+		alert('댓글을 입력해 주세요.');
+		return false;
+	}
+
+	return true;
 }
 
 var querys;
@@ -88,6 +131,8 @@ function query_JSON(ajax) {
 
 function query_select() {
 	var data = JSON.parse(querys);
+	$('reply_button').disabled = false;
+	$('reply_debate_id').value = data.debates[this.id].number;
 	//내용 갱신
 	$('main_number').innerHTML = '#' + data.debates[this.id].number;
 	$('main_tag').innerHTML = "";
@@ -121,8 +166,45 @@ function query_select() {
 		comment_text.className = 'comment_text';
 		comment_text.innerHTML = data.debates[this.id].replys[i].content;
 
-		var comment = document.createElement('div');
-		comment.className = 'comment';
+		var comment_additional = document.createElement('div');
+		comment_additional.className = 'comment_additional';
+
+		var comment_time = document.createElement('div');
+		comment_time.className = 'comment_time';
+		comment_time.innerHTML = data.debates[this.id].replys[i].date;
+
+		var heart = document.createElement('div');
+		heart.className = 'heart';
+
+		var replyform = document.createElement('form');
+		replyform.method = 'POST';
+
+		var button = document.createElement('button');
+		button.className = 'button';
+
+		var heart_button = document.createElement('img');
+		heart_button.className = 'heart_button';
+		heart_button.src = '../resource/images/hearts.png';
+
+		var heart_num = document.createElement('div');
+		heart_num.className = 'heart_num';
+		heart_num.innerHTML = data.debates[this.id].replys[i].like;
+
+
+		//adding reply
+		button.appendChild(heart_button);
+		replyform.appendChild(button);
+		heart.appendChild(replyform);
+		heart.appendChild(heart_num);
+		comment_additional.appendChild(comment_time);
+		comment_additional.appendChild(heart);
+		comment.appendChild(comment_text);
+		comment_contents_box.appendChild(comment);
+		comment_contents_box.appendChild(comment_additional);
+		commentbox.appendChild(name);
+		commentbox.appendChild(comment_contents_box);
+		comment_container.appendChild(commentbox);
+		$('reply_container').appendChild(comment_container);
 		// $('reply_container').appendChild(comment_container);
 		// $('reply_container').appendChild(commentbox);
 	}
