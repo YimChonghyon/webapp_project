@@ -74,11 +74,18 @@
             <br>
             <h3><a href="resource/notice.html">NOTICE&nbsp;&nbsp;<i class="fas fa-bell"></i></a></h3> <!-- 기본적인 notice 링크 -->
             <br>
-                <p>Content Start</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content End</p>
+            <?php 
+            try{
+            $sql_notice = 'select Title from notice order by Date desc limit 5';
+            $stmt_notice = $conn -> prepare($sql_notice);
+            $stmt_notice -> execute();
+            $result_notice = $stmt_notice->fetchAll();
+        } catch(PDOExceptin $e){
+            echo "데이터 베이스에 연결할 수 없습니다.";
+        }
+            foreach ($result_notice as $key => $value) { ?>
+                <p><?=$value['Title']?></p>
+            <?php } ?>
             <ul>
                 <?php
                 
@@ -91,11 +98,8 @@
             <br>
                 <h3><a href="/courses">COURSES&nbsp;&nbsp;<i class="fab fa-discourse"></i></a></h3> <!-- 이번 학기에 열린 강의 목록 / 링크 -->
                 <br>
-                <p>Content Start</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content End</p>
+                <p>CSE1002</p>
+                <p>CSE1003</p>
             </article>
             </div>    
         

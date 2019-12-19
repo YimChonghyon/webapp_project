@@ -13,6 +13,7 @@ function query_JSON(ajax) {
 	for(var i=0;i<data.debates.length;i++) {
 		var debate_content_container = document.createElement('div');
 		debate_content_container.className = 'debate_content_container';
+		debate_content_container.onclick = 'query_select(i)';
 		$$('.list_container')[0].appendChild(debate_content_container);
 
 		var title_tag = document.createElement('div');
@@ -80,6 +81,10 @@ function query_JSON(ajax) {
 		comment_icon_num.innerHTML = data.debates[i].replys.length;
 		$$('.comment_container')[i].appendChild(comment_icon_num);
 	}
+}
+
+function query_select(number) {
+	alert(number);
 }
 
 function ajaxFailed(ajax, exception) {

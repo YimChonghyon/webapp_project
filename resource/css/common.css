@@ -46,6 +46,7 @@ nav {
   border-bottom-right-radius: 0.7em;
   border-bottom-left-radius: 0.7em;
   z-index: 1;
+  border-bottom: 1px solid;
 }
 
 nav img{
