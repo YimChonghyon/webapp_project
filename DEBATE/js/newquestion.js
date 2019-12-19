@@ -39,7 +39,6 @@ function ajaxFailed(ajax, exception) {
 	alert(errorMessage);
 }
 
-<<<<<<< HEAD
 // function Close() {
 //     self.close();
 //   }
@@ -62,7 +61,6 @@ function showPopup() {
     window.open(url, name, option);
     
  }
-=======
 function Close() {
 	self.close();
 }
@@ -101,4 +99,3 @@ function check_debate_blank() {
 
 	return true;
 }
->>>>>>> 288bf762f6f745ae07d6887f1ab3591ba2bb35b1
