@@ -189,6 +189,7 @@ function query_select() {
 		replyform.method = 'POST';
 
 		var button = document.createElement('button');
+		button.setAttribute("onclick",'addlike(' + data.debates[this.id].replys[i].number + ');');
 		button.className = 'button';
 
 		var heart_button = document.createElement('img');
@@ -294,6 +295,15 @@ function searching() {
 function addquestions(number) {
 	alert('저도 궁금합니다!');
 	new Ajax.Request("addquestion.php",{
+		method : "get",
+		parameters : { 'IND':number }
+	});
+	location.reload();
+}
+
+function addlike(number) {
+	alert('좋아요!');
+	new Ajax.Request("addlike.php",{
 		method : "get",
 		parameters : { 'IND':number }
 	});
