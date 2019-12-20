@@ -12,8 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		echo "<script>alert('SUCCESS');";
 		echo "window.history.back();</script>";
 	} catch(PDOException $e){
-		echo "<script>alert('PROCESS failed.');";
-		echo "window.history.back();</script>";
+		echo $e->getMessage();
 	}
 	$conn = null;
 } else{
