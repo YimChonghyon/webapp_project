@@ -132,7 +132,7 @@
 								#공지
 							</div>
 							<span class="deletebox pull-right">
-								<form method="POST" action="dropdebate.php">
+								<form method="POST" action="dropdebate.php" id="debate_option_list" onsubmit="return false;">
 									<input type="hidden" name="id" value="0" id='debate_option_id' />
 									<input class="delete button" type="button" value="수정">
 									<input class="delete button" type="submit" value="삭제">

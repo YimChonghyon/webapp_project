@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		echo "window.history.back();</script>";
 	} catch(PDOException $e){
 		echo "<script>alert('PROCESS failed.');";
-		echo "window.history.back();</script>";
+		echo "window.location.replace('debate.php'); location.reload(true);</script>";
 	}
 	$conn = null;
 } else{
