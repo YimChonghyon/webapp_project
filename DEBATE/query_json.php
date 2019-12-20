@@ -18,6 +18,16 @@ foreach ($result as $key => $value) {
 	$result2 = $stmt2 -> fetchAll();
 	$stmt3 -> execute();
 	$result3 = $stmt3 -> fetchAll();
+	if(!empty($_GET['selectedTag'])){
+		$search = count($_GET['selectedTag']);
+		$os = $_GET['selectedTag'];
+		foreach ($result2 as $key => $value) {
+			if(in_array($value['Type'], $os))
+				$search = $search - 1;
+		}
+		if($search != 0)
+			continue 1;
+	}
 	if($type == 0)
 		print ",\n";
 	else

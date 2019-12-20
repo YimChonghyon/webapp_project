@@ -22,7 +22,7 @@
 				<div class="search_box  ">
 					<div class="search">
 						<form method="post" action="" >
-							<select id ="tag_selecter" class="tagselect" multiple="multiple">
+							<select id ="tag_selecter" class="tagselect" onchange="searchtag();" multiple="multiple">
 								<optgroup label="태그선택" id="TEL_tag">
 									<option>질문</option>
 									<option>토의</option>
@@ -59,7 +59,7 @@
 
 
 		
-		<div class="list_container">
+		<div class="list_container" id="query_list">
 
 			<div class="debate_content_container" id="debate_num_0">
 				<div class="title_tag">

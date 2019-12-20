@@ -33,16 +33,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 		$conn = null;
 		echo "<script>alert('Success');";
+		echo 'opener.document.location.reload();';
 		echo "self.close();</script>";
 		exit;
 	} catch (PDOException $e) {
 		echo $e->getMessage();
 		echo "<script>alert('" . $e->getMessage() . "');";
+		echo 'opener.document.location.reload();';
 		echo "self.close();</script>";
 		exit;
 	}
 } else{
 	echo "<script>alert('Wrong approach');";
+	echo 'opener.document.location.reload();';
 	echo "self.close();</script>";
 	exit;
 }
