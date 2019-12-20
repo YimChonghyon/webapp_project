@@ -17,7 +17,6 @@ window.onload = function() {
 	$('reply_id').value = 'anonymous';
 	$('anonymous_button').observe('click', checking_anonymous_button);
 }
-var TAG = new Array();
 var idmemory = "";
 function checking_anonymous_button() {
 	//익명 체크 버튼 체크 상태에 따라 ID 입력칸 비활성화
@@ -251,6 +250,7 @@ function showPopup() {
 
 function searchtag() {
 	var Selected = $('tag_selecter');
+	var TAG = new Array();
 	var j = 0;
 	for (var i = 0; i < Selected.length; i++) {
 		if(Selected[i].selected)
@@ -274,6 +274,13 @@ function dropdebate(password) {
 }
 
 function searching() {
+	var Selected = $('tag_selecter');
+	var TAG = new Array();
+	var j = 0;
+	for (var i = 0; i < Selected.length; i++) {
+		if(Selected[i].selected)
+			TAG[j++] = Selected.options[i].value;
+	}
 	var word = $('searchbox').value;
 	new Ajax.Request("query_json.php",{
 		method : "get",
