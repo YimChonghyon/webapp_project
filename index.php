@@ -13,16 +13,16 @@
     *{margin:0;padding:0;}
     ul,li{list-style:none;}
     .slide{height:500px;overflow:hidden;}
-    .slide ul{width:calc(100% * 4);display:flex;animation:slide 10s infinite;} /* slide 8초 동안 진행, 반복*/
+    .slide ul{width:calc(100% * 4);display:flex;animation:slide 10s infinite;}
     .slide li{width:calc(100% / 4);height:500px;}
     .slide li:nth-child(1){}
     .slide li:nth-child(2){}
 
     @keyframes slide {
-      0% {margin-left:0;} /* 0 ~ 10  : 정지 */
-      25% {margin-left:0;} /* 10 ~ 25 : 변이 */
-      50% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
-      75% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+      0% {margin-left:0;}
+      25% {margin-left:0;}
+      50% {margin-left:-100%;}
+      75% {margin-left:-100%;}
 
     }
 
