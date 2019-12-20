@@ -29,12 +29,12 @@
 								<option>토의</option>
 							</optgroup>
 						</select>
-						<form method="post" action="" id = "search_container">
+						<div id = "search_container">
 							<input type="text" name="" id="searchbox" size="30"/>
-							<button type="button" class="button">
+							<button type="button" class="button" onclick="searching();">
 								<image class="pull-right search_icon" src="../resource/images/search.png">
 								</button>
-							</form>
+							</div>
 
 
 
@@ -132,7 +132,7 @@
 								#공지
 							</div>
 							<span class="deletebox pull-right">
-								<form method="POST" action="dropdebate.php" id="debate_option_list" onsubmit="return false;">
+								<form method="POST" action="dropdebate.php" id="debate_option_list">
 									<input type="hidden" name="id" value="0" id='debate_option_id' />
 									<input class="delete button" type="button" value="수정">
 									<input class="delete button" type="submit" value="삭제">

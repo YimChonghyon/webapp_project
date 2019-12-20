@@ -1,7 +1,12 @@
 <?php
 include "../resource/DB_connect.php";
 $conn = connect();
-$stmt = $conn->prepare("select * from debate order by date desc");
+$sql = "select * from debate order by date desc";
+if(!empty($_GET['TT'])){
+	$find = $_GET['TT'];
+	$sql = "select * from debate where Title like '%$find%' order by date desc";
+}
+$stmt = $conn->prepare($sql);
 $stmt -> execute();
 $result = $stmt -> fetchAll();
 
@@ -18,6 +23,7 @@ foreach ($result as $key => $value) {
 	$result2 = $stmt2 -> fetchAll();
 	$stmt3 -> execute();
 	$result3 = $stmt3 -> fetchAll();
+
 	if(!empty($_GET['selectedTag'])){
 		$search = count($_GET['selectedTag']);
 		$os = $_GET['selectedTag'];

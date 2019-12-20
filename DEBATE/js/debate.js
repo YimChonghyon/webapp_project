@@ -270,3 +270,14 @@ function dropdebate(password) {
 		alert('Wrong password!');
 	return pw == password
 }
+
+function searching() {
+	var word = $('searchbox').value;
+	new Ajax.Request("query_json.php",{
+		method : "get",
+		parameters : { 'TT':word },
+		onSuccess : query_JSON,
+		onFailure : ajaxFailed,
+		onException : ajaxFailed
+	});
+}
