@@ -1,11 +1,8 @@
 <?php
 include "../resource/DB_connect.php";
 $conn = connect();
-$sql = "select * from debate order by date desc";
-if(!empty($_GET['TT'])){
-	$find = $_GET['TT'];
-	$sql = "select * from debate where Title like '%$find%' order by date desc";
-}
+$find = $_GET['TT'];
+$sql = "select * from debate where Title like '%$find%' order by date desc";
 $stmt = $conn->prepare($sql);
 $stmt -> execute();
 $result = $stmt -> fetchAll();
@@ -24,16 +21,18 @@ foreach ($result as $key => $value) {
 	$stmt3 -> execute();
 	$result3 = $stmt3 -> fetchAll();
 
-	if(!empty($_GET['selectedTag'])){
-		$search = count($_GET['selectedTag']);
-		$os = $_GET['selectedTag'];
+
+	$search = count($_GET['selectedTag']);
+	if($search != 0){
 		foreach ($result2 as $key => $value) {
-			if(in_array($value['Type'], $os))
+			if(in_array($value['Type'], $_GET['selectedTag'])){
 				$search = $search - 1;
+			}
 		}
 		if($search != 0)
-			continue 1;
+			continue;
 	}
+
 	if($type == 0)
 		print ",\n";
 	else
