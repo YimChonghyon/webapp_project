@@ -289,4 +289,5 @@ function addquestions(number) {
 		method : "get",
 		parameters : { 'IND':number }
 	});
+	location.reload();
 }
