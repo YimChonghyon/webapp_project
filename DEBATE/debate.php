@@ -21,19 +21,19 @@
 			<div class="list  scroll">
 				<div class="search_box  ">
 					<div class="search">
-							<select id ="tag_selecter" class="tagselect" onchange="searchtag();" multiple="multiple">
-								<optgroup label="태그선택" id="TEL_tag">
-									<option>질문</option>
-									<option>토의</option>
-									<option>토의</option>
-									<option>토의</option>
-								</optgroup>
-							</select>
-							<form method="post" action="" id = "search_container">
-								<input type="text" name="" id="searchbox" size="30"/>
-								<button type="button" class="button">
-									<image class="pull-right search_icon" src="../resource/images/search.png">
-									</button>
+						<select id ="tag_selecter" class="tagselect" onchange="searchtag();" multiple="multiple">
+							<optgroup label="태그선택" id="TEL_tag">
+								<option>질문</option>
+								<option>토의</option>
+								<option>토의</option>
+								<option>토의</option>
+							</optgroup>
+						</select>
+						<form method="post" action="" id = "search_container">
+							<input type="text" name="" id="searchbox" size="30"/>
+							<button type="button" class="button">
+								<image class="pull-right search_icon" src="../resource/images/search.png">
+								</button>
 							</form>
 
 
@@ -124,20 +124,21 @@
 			<!-- <div class="scroll"> -->
 				<div class="debate_content_container_maincontainer">
 					<div class="debate_content_container_main">
-						<form method="POST">
-							<div class="title_tag"> 
-								<div class="tag_number" id="main_number">
-									#1
-								</div>
-								<div class="tag_catagory" id="main_tag">
-									#공지
-								</div>
-								<span class="deletebox pull-right">
-									<input class="delete button" type="button" value="수정">
-									<input class="delete button" type="button" value="삭제">
-								</span>
+						<div class="title_tag"> 
+							<div class="tag_number" id="main_number">
+								#1
 							</div>
-						</form>
+							<div class="tag_catagory" id="main_tag">
+								#공지
+							</div>
+							<span class="deletebox pull-right">
+								<form method="POST" action="dropdebate.php">
+									<input type="hidden" name="id" value="0" id='debate_option_id' />
+									<input class="delete button" type="button" value="수정">
+									<input class="delete button" type="submit" value="삭제">
+								</form>
+							</span>
+						</div>
 
 						<div class="titlebox_main">
 							<div class="title_text_main" id="main_title">
@@ -404,37 +405,37 @@
 
 
 				</div>
-</div>
 			</div>
-
-
-
-
-
-
-
-
 		</div>
-		<div class="reply_box_container">
-			<form method="POST" action="registerreply.php" onsubmit="return check_reply_blank();">
-				<fieldset class="reply_box">
-					<!-- <legend>댓글달기</legend> -->
-					<div class="reply_infor">
-						<input type="hidden" name="debate_id" value="0" id="reply_debate_id" />
-						ID <input type="text" name= "name" size="15" id="reply_id"> 
-						Password <input type="text" name= "password" size="20" maxlength="10" id="reply_password" onKeyup="this.value=this.value.replace(/[^0-9]/g,'')"> 
-						익명 <input type = "checkbox" name="anonymous" id="anonymous_button">
-					</div>
 
-					<textarea  class=reply_text name="content" id="reply_content"></textarea>
-					<button class="button" id="reply_button">
-						<img class ="enter_button" src = "../resource/images/enter.png">
-					</button>
 
-				</fieldset>
-			</form>
-		</div>
+
+
+
+
+
+
 	</div>
+	<div class="reply_box_container">
+		<form method="POST" action="registerreply.php" onsubmit="return check_reply_blank();">
+			<fieldset class="reply_box">
+				<!-- <legend>댓글달기</legend> -->
+				<div class="reply_infor">
+					<input type="hidden" name="debate_id" value="0" id="reply_debate_id" />
+					ID <input type="text" name= "name" size="15" id="reply_id"> 
+					Password <input type="text" name= "password" size="20" maxlength="10" id="reply_password" onKeyup="this.value=this.value.replace(/[^0-9]/g,'')"> 
+					익명 <input type = "checkbox" name="anonymous" id="anonymous_button">
+				</div>
+
+				<textarea  class=reply_text name="content" id="reply_content"></textarea>
+				<button class="button" id="reply_button">
+					<img class ="enter_button" src = "../resource/images/enter.png">
+				</button>
+
+			</fieldset>
+		</form>
+	</div>
+</div>
 </div>
 </div>
 </main>

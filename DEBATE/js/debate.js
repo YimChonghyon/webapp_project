@@ -149,6 +149,7 @@ function query_select() {
 	$('main_content').innerHTML = data.debates[this.id].content;
 	$("main_question").innerHTML = data.debates[this.id].wanted;
 
+	$('debate_option_id').value = data.debates[this.id].number;
 	//댓글 초기화
 	$('reply_container').descendants().each(function(element){element.remove();});
 	for (var i = 0; i < data.debates[this.id].replys.length; i++) {
@@ -260,4 +261,8 @@ function searchtag() {
 		onFailure : ajaxFailed,
 		onException : ajaxFailed
 	});
+}
+
+function dropdebate() {
+	// body...
 }
