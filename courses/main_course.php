@@ -123,7 +123,7 @@
 							</tr>
 							<tr>
 								<td class="coursenum_active" data-href="cse326">CSE326</td>
-								<td class="course_active" data-href="cse326">Web Application Development</td>
+								<td class="course_active" data-href="cse326" onclick = "location.href='sub_course.php'">Web Application Development</td>
 							</tr>
 							<tr>
 								<td class="coursenum" data-href="cse406">CSE406</td>

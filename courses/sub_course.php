@@ -232,71 +232,71 @@
       </tr>
       <tr>
         <td class="number">0</td>
-        <td class="title"><a target="_blank" href="lecture/00-introduction.html">Introduction</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html">Introduction</a></td>
       </tr>
       <tr>
         <td class="number">1</td>
-        <td class="title"><a target="_blank" href="lecture/01-www.html">The Internet &amp; World Wide Web</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/01-www.html">The Internet &amp; World Wide Web</a></td>
       </tr>
       <tr>
         <td class="number">2</td>
-        <td class="title"><a target="_blank" href="lecture/02-html.html">Basic HTML</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/02-html.html">Basic HTML</a></td>
       </tr>
       <tr>
         <td class="number">3</td>
-        <td class="title"><a target="_blank" href="lecture/03-css.html">CSS for Styling</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/03-css.html">CSS for Styling</a></td>
       </tr>
       <tr>
         <td class="number">4</td>
-        <td class="title"><a target="_blank" href="lecture/04-layout.html">Page Layout</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/04-layout.html">Page Layout</a></td>
       </tr>
       <tr>
         <td class="number">5</td>
-        <td class="title"><a target="_blank" href="lecture/05-PHP.html">PHP</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/05-PHP.html">PHP</a></td>
       </tr>
       <tr>
         <td class="number">6</td>
-        <td class="title"><a target="_blank" href="lecture/06-forms.html">Forms</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/06-forms.html">Forms</a></td>
       </tr>
       <tr>
         <td class="number">7</td>
         <td class="title">
-          <a target="_blank" href="lecture/07-sql.html">Relational Database &amp; SQL</a>
+          <a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/07-sql.html">Relational Database &amp; SQL</a>
           [<a target="_blank" href="lecture/examples/07SQL/db.zip">DBs</a>]
         </td>
       </tr>
       <tr>
         <td class="number">8</td>
-        <td class="title"><a target="_blank" href="lecture/08-javascript.html">JavaScript</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/08-javascript.html">JavaScript</a></td>
       </tr>
       <tr>
         <td class="number">9</td>
-        <td class="title"><a target="_blank" href="lecture/09-dom.html">Document Object Model (DOM)</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/09-dom.html">Document Object Model (DOM)</a></td>
       </tr>
       <tr>
         <td class="number">10</td>
-        <td class="title"><a target="_blank" href="lecture/10-prototype.html">Prototype</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/10-prototype.html#">Prototype</a></td>
       </tr>
       <tr>
         <td class="number">11</td>
-        <td class="title"><a target="_blank" href="lecture/11-events.html">Events</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/11-events.html">Events</a></td>
       </tr>
       <tr>
         <td class="number">12</td>
-        <td class="title"><a target="_blank" href="lecture/12-ajaxXmlJson.html">Ajax, XML, JSON</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/12-ajaxXmlJson.html">Ajax, XML, JSON</a></td>
       </tr>
       <tr>
         <td class="number">13</td>
-        <td class="title"><a target="_blank" href="lecture/13-webServices.html">Web Services</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/13-webServices.html">Web Services</a></td>
       </tr>
       <tr>
         <td class="number">14</td>
-        <td class="title"><a target="_blank" href="lecture/14-scriptaculous.html">Scriptaculous</a></td>
-      </tr>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/14-scriptaculous.html">Scriptaculous</a></td>
+      </tr><!--
       <tr>
         <td class="number">15</td>
         <td class="title"><a target="_blank" href="#"></a></td>
-      </tr>
+      </tr>-->
     </table>
   </div>
 
@@ -316,48 +316,48 @@
       </tr>
       <tr>
         <td class="number">0</td>
-        <td class="title"><a target="_blank" href="./labs/lab0-introduction.html">Introduction - Week 3</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab0-introduction.html">Introduction - Week 3</a></td>
       </tr>
       <tr>
         <td class="number">1</td>
-        <td class="title"><a target="_blank" href="./labs/lab1-aboutme(HTML).html">About Me (HTML) - Week 4</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab1-aboutme(HTML).html">About Me (HTML) - Week 4</a></td>
       </tr>
       <tr>
         <td class="number">2</td>
-        <td class="title"><a target="_blank" href="./labs/lab2-aboutme(CSS).html">CSS - Week 5</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab2-aboutme(CSS).html">CSS - Week 5</a></td>
       </tr>
       <tr>
         <td class="number">3</td>
-        <td class="title"><a target="_blank" href="./labs/lab3-favorite.html">CSS Design &amp; Layout - Week 6</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab3-favorite.html">CSS Design &amp; Layout - Week 6</a></td>
       </tr>
       <tr>
         <td class="number">4</td>
-        <td class="title"><a target="_blank" href="./labs/lab4-movieReview.html">Movie Review (HTML, CSS, Layout)- Week 7</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab4-movieReview.html">Movie Review (HTML, CSS, Layout)- Week 7</a></td>
       </tr>
       <tr>
         <td class="number">5</td>
-        <td class="title"><a target="_blank" href="./labs/lab5-musicLibrary.html">Basic PHP - Week 9</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab5-musicLibrary.html">Basic PHP - Week 9</a></td>
       </tr>
       <tr>
         <td class="number">6</td>
-        <td class="title"><a target="_blank" href="./labs/lab6-gradeStore.html">Forms - Week 10</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab6-gradeStore.html">Forms - Week 10</a></td>
       </tr>
       <tr>
         <td class="number">7</td>
-        <td class="title"><a target="_blank" href="./labs/lab7-SQL.html">SQL - Week 11</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab7-SQL.html">SQL - Week 11</a></td>
       </tr>
       <tr>
         <td class="number">8</td>
-        <td class="title"><a target="_blank" href="./labs/lab8-pimpMyText.html">JavaScript - Week 12</a></td>
-      </tr><!--
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab8-pimpMyText.html">JavaScript - Week 12</a></td>
+      </tr>
       <tr>
         <td class="number">9</td>
-        <td class="title"><a target="_blank" href="./labs/lab9-maze.html">Assignment: Maze - Week 13</a></td>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab9-maze.html">Assignment: Maze - Week 13</a></td>
       </tr>
       <tr>
         <td class="number">10</td>
-        <td class="title"><a target="_blank" href="./labs/lab10-bookSearch.html">Ajax &amp; XML &amp; JSON - Week 14</a></td>
-      </tr>
+        <td class="title"><a target="_blank" href="https://selab.hanyang.ac.kr/courses/cse326/2019/labs/lab10-bookSearch.html">Ajax &amp; XML &amp; JSON - Week 14</a></td>
+      </tr><!--
       <tr>
         <td class="number">11</td>
         <td class="title"><a target="_blank" href="#"></a></td>
