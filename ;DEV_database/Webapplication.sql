@@ -102,9 +102,9 @@ CREATE TABLE Debate_Tag (
     Type varchar(30) not null,
     CONSTRAINT PK_Debate_Tag PRIMARY KEY(Debate_number,Type),
     CONSTRAINT FK_Debate_Tag_1 foreign key(Debate_number)
-    REFERENCES Debate(Debate_number) ON UPDATE CASCADE ON DELETE RESTRICT,
+    REFERENCES Debate(Debate_number) ON UPDATE CASCADE ON DELETE CASCADE,
     CONSTRAINT FK_Debate_Tag_2 foreign key(Type)
-    REFERENCES Tag(Type) ON UPDATE CASCADE
+    REFERENCES Tag(Type) ON UPDATE CASCADE on DELETE CASCADE
 );
 
 CREATE TABLE Reply (

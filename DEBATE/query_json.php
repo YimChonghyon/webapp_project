@@ -1,7 +1,9 @@
 <?php
 include "../resource/DB_connect.php";
 $conn = connect();
-$stmt = $conn->prepare("select * from debate order by date desc");
+$find = $_GET['TT'];
+$sql = "select * from debate where Title like '%$find%' order by date desc";
+$stmt = $conn->prepare($sql);
 $stmt -> execute();
 $result = $stmt -> fetchAll();
 
@@ -18,6 +20,19 @@ foreach ($result as $key => $value) {
 	$result2 = $stmt2 -> fetchAll();
 	$stmt3 -> execute();
 	$result3 = $stmt3 -> fetchAll();
+
+
+	$search = count($_GET['selectedTag']);
+	if($search != 0){
+		foreach ($result2 as $key5 => $value5) {
+			if(in_array($value5['Type'], $_GET['selectedTag'])){
+				$search = $search - 1;
+			}
+		}
+		if($search != 0)
+			continue;
+	}
+
 	if($type == 0)
 		print ",\n";
 	else
@@ -50,7 +65,7 @@ foreach ($result as $key => $value) {
 		print "\t{";
 		print "\"number\": \"" . $value['Reply_number'] . "\", ";
 		print "\"name\": \"" . $value['Name'] . "\", ";
-		print "\"date\": \"" . $value['Date'] . "\", ";
+		print "\"date\": \"" . date("m/d H:i",strtotime($value['Date'])) . "\", ";
 		print "\"content\": \"" . $value['Content'] . "\", ";
 		print "\"password\": \"" . $value['Password'] . "\",";
 		print "\"like\": \"" . $value['Likes'] . "\"";

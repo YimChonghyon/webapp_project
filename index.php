@@ -13,16 +13,16 @@
     *{margin:0;padding:0;}
     ul,li{list-style:none;}
     .slide{height:500px;overflow:hidden;}
-    .slide ul{width:calc(100% * 4);display:flex;animation:slide 10s infinite;} /* slide 8초 동안 진행, 반복*/
+    .slide ul{width:calc(100% * 4);display:flex;animation:slide 10s infinite;}
     .slide li{width:calc(100% / 4);height:500px;}
     .slide li:nth-child(1){}
     .slide li:nth-child(2){}
 
     @keyframes slide {
-      0% {margin-left:0;} /* 0 ~ 10  : 정지 */
-      25% {margin-left:0;} /* 10 ~ 25 : 변이 */
-      50% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
-      75% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+      0% {margin-left:0;}
+      25% {margin-left:0;}
+      50% {margin-left:-100%;}
+      75% {margin-left:-100%;}
 
     }
 
@@ -62,8 +62,8 @@
     <!-- INDEX MAIN IMAGE -->
                 <div class="slide">
                 <ul>
-                    <li><a href="#"><img src="resource/images/main_1.jpg" style="max-width: 100%; height: auto;"/></li>
-                    <li><a href="#"><img src="resource/images/main_2.jpg" style="max-width: 100%; height: auto;"/></li>
+                 <li><a href="#"><img src="resource/images/main_1.jpg" style="width: 100%; height: 100%; min-height: 500px;"/></li>
+                 <li><a href="#"><img src="resource/images/main_2.jpg" style="width: 100%; height: 100%; min-height: 500px;"/></li>
                 </ul>
                 </div>
 
@@ -72,30 +72,34 @@
                 <!-- NOTICE -->
             <article id="index_notice">
             <br>
-            <h3><a href="resource/notice.html">NOTICE&nbsp;&nbsp;<i class="fas fa-bell"></i></a></h3> <!-- 기본적인 notice 링크 -->
+            <h3><a href="notice/notice.php">NOTICE&nbsp;&nbsp;<i class="fas fa-bell"></i></a></h3> <!-- 기본적인 notice 링크 -->
             <br>
-                <p>Content Start</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content End</p>
             <ul>
-                <?php
-                
-                ?>
+            <?php 
+            try{
+            $sql_notice = 'select Title from notice order by Date desc limit 5';
+            $stmt_notice = $conn -> prepare($sql_notice);
+            $stmt_notice -> execute();
+            $result_notice = $stmt_notice->fetchAll();
+            } catch(PDOExceptin $e){
+                echo "데이터 베이스에 연결할 수 없습니다.";
+            }
+            foreach ($result_notice as $key => $value) { ?>
+                <p><?=$value['Title']?></p>
+            <?php } ?>
             </ul>
         </article>
 
                 <!-- COURSES -->
             <article id="index_courses">
             <br>
-                <h3><a href="/courses">COURSES&nbsp;&nbsp;<i class="fab fa-discourse"></i></a></h3> <!-- 이번 학기에 열린 강의 목록 / 링크 -->
+                <h3><a href="courses/main_course.php">COURSES&nbsp;&nbsp;<i class="fab fa-discourse"></i></a></h3> <!-- 이번 학기에 열린 강의 목록 / 링크 -->
                 <br>
-                <p>Content Start</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content End</p>
+                <p>Understand the protocols, language and systems used on the Web</p>
+                <p>Understand the functions of clients and servers on the Web</p>
+                <p>learn how to implement JavaScript and PHP</p>
+                <p>Obtain ability to design and implement an interactive web site</p>
+                <p>Learn how to use/manage database associated with web applications</p>
             </article>
             </div>    
         
@@ -103,7 +107,7 @@
                 <!-- ABOUT US -->
             <article id="index_aboutus">
             <br>
-                <h3><a href="/research">ABOUT US&nbsp;&nbsp;<i class="fas fa-address-card"></i></a></h3>
+                <h3><a href="research/research.php">ABOUT US&nbsp;&nbsp;<i class="fas fa-address-card"></i></a></h3>
                 <br>
                 <p>Web & Web security</p>
                 <p>Formal Engineering Methods</p> <!-- 사진 내용 3개 -->
@@ -114,7 +118,7 @@
 
             <article id="index_map_info">
             <br>
-                <h3><a href="/research">CONTACT&nbsp;&nbsp;<i class="fas fa-map-pin"></i></i></a></h3>
+                <h3><a href="#">CONTACT&nbsp;&nbsp;<i class="fas fa-map-pin"></i></i></a></h3>
                 <br>
                 <p>welcome to Software Engineering Laboratory within the CSE Dept</p>
                 <p> @ HYU(ERICA) led by asst. prof. Scott LEE</p> <!-- 사진 내용 3개 -->

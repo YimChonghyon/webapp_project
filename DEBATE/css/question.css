@@ -1,10 +1,11 @@
 .main{
     height: 100%;
+    overflow-y: scroll;
 }
 @media screen and (min-width:950px) {
 .question_box{
 	/* height: 300px; */
-	width: 50%;
+	width: 60%;
     border: 2px solid #f0f0f0;
 	padding: 15px 15px 1% 1%;
 	margin: 3%;
@@ -12,15 +13,20 @@
     box-shadow: 0 5px 8px rgba(0,0,0,.1);
     border-radius: 10px;
     cursor: pointer;
+<<<<<<< HEAD
     margin-top: 20%;
     margin-left: 25%;
+=======
+    margin-top: 100px;
+    margin-left: 18%;
+>>>>>>> f8d646db507f3858c61c36dca8f744a3a39023aa
     /* overflow-y: scroll; */
 }}
 
 @media screen and (max-width:950px) {
     .question_box{
         /* height: 300px; */
-        width: 90%;
+        width: 70%;
         border: 2px solid #f0f0f0;
         padding: 15px 15px 1% 1%;
         margin: 3%;
@@ -28,8 +34,13 @@
         box-shadow: 0 5px 8px rgba(0,0,0,.1);
         border-radius: 10px;
         cursor: pointer;
+<<<<<<< HEAD
         margin-top: 20%;
         /* margin-left: 25%; */
+=======
+        margin-top: 100px;
+        margin-left: 14%;
+>>>>>>> f8d646db507f3858c61c36dca8f744a3a39023aa
         /* overflow-y: scroll; */
     }
 }
@@ -47,9 +58,9 @@
 }
 
 .textarea{
-    resize: none;
+    /* resize:none; */
     border:  1px solid #9b9b9b;
-    overflow-y: scroll;
+    /* overflow-y: hidden; */
     width: 90%;
 }
 
@@ -75,6 +86,7 @@
 }
 .text{
     margin:2%;
+    /* overflow: visible; */
 }
 
 

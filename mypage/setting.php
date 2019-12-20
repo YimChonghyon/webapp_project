@@ -59,7 +59,7 @@
 				<?php 
 				if($_SESSION['privilege'] != 1)
 					echo "disabled";
-				?>>CREATE NEW COURSE</button>
+				?>>MANAGE DEBATE TAGS</button>
 			</li>
 		</ul>
 	</aside>
@@ -74,7 +74,7 @@
 		</ol>
 
 		<p><strong>
-For the category of gallery and publication, if there is data using that, it cannot be deleted. Please delete the data beforehand or move to another category.</strong></p>
+		For the category of gallery and publication, if there is data using that, it cannot be deleted. Please delete the data beforehand or move to another category.</strong></p>
 		<p>Adding new roles, linking courses' databases, and modifying personal information except profile photos are not yet implemented.</p>
 	</div>	
 
@@ -251,7 +251,38 @@ For the category of gallery and publication, if there is data using that, it can
 	</div>
 
 	<div class="VIEWPOINT" id="SETDIV8">
-		<h4>시간 관계상 COURSE 부분은 데이터베이스연결을 제외하도록 결정했습니다.</h4>
+		<?php
+		try{ ?>
+			<h2>CURRENT TAGS</h2>
+			<table>
+				<thead>
+					<thead><th>TYPE</th><th>drop</th></thead>
+				</thead>
+				<tbody>
+					<?php
+					$stmt = $conn->prepare("SELECT * FROM tag");
+					$stmt->execute();
+					foreach ($stmt->fetchAll() as $key => $value) { ?>
+						<tr><th><?=$value['Type']?></th><th><form action="droptag_type.php" method="POST">
+							<input type="hidden" name="type" value="<?=$value['Type']?>" />
+							<input type="submit" value="byby" />
+						</form></th></tr>
+					<?php } ?>
+				</tbody>
+			</table>
+			<hr/>
+			<form action="createtag_type.php" method="POST">
+				<fieldset>
+					<legend>ADD NEW TYPE</legend>
+					<input type="text" name="TYPE" placeholder="new TYPE" />
+					<input type="submit" />
+				</fieldset>
+			</form>
+			<?php
+		} catch(PDOException $e){			
+			echo "Connection failed: " . $e->getMessage();
+		}
+		?>
 	</div>
 </body>
 </html>

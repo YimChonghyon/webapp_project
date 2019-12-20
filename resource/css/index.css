@@ -18,7 +18,7 @@ body
 }
 #index_notice {
     width: 45%;
-    height: 90%;
+    height: 450px;
     background: #ECEFF1;
     margin-top: 10px;
     margin-left: 10px;
@@ -34,7 +34,7 @@ body
 
 #index_courses {
     width: 45%;
-    height: 90%;
+    height: 450px;
     background: #ECEFF1;
     margin-top: 10px;
     margin-left: auto;
@@ -60,7 +60,7 @@ body
 
 #index_aboutus {
     width: 60%;
-    height: 500px;
+    height: 300px;
     background: #ECEFF1;
     bottom: 50%;
     margin-top: 10px;
@@ -80,7 +80,7 @@ body
 
 #index_map_info {
     width: 50%;
-    height: 90%;
+    height: 550px;
     background: #ECEFF1;
     margin-top: 10px;
     margin-right: auto;
@@ -95,7 +95,7 @@ body
 
 #index_map {
     width: 50%;
-    height: 90%;
+    height: 550px;
     background: #ECEFF1;
     top: 50%;
     margin-top: 10px;
