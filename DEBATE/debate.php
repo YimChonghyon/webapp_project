@@ -165,19 +165,17 @@
 								
 							</div>
 						</div>
-						<form method="POST">
-							<div class="question_button">
-								<button type = "button" class="question">
-									<img class="question_button_icon" src="../resource/images/question.png">
+						<div class="question_button">
+							<button type = "button" class="question" id="questions">
+								<img class="question_button_icon" src="../resource/images/question.png">
 
-									<span class="question_num" id="main_question">
-										3
-									</span>
-									<p>저도궁금해요!</p>
+								<span class="question_num" id="main_question">
+									3
+								</span>
+								<p>저도궁금해요!</p>
 
-								</button>
-							</div>
-						</form>	
+							</button>
+						</div>
 					</div>
 				</div>
 

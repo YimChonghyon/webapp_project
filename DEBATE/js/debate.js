@@ -150,6 +150,7 @@ function query_select() {
 	$("main_question").innerHTML = data.debates[this.id].wanted;
 
 	$('debate_option_list').setAttribute("onsubmit",'return dropdebate(' + data.debates[this.id].password + ');');
+	$('questions').setAttribute("onclick",'addquestions(' + data.debates[this.id].number + ');');
 	$('debate_option_id').value = data.debates[this.id].number;
 	//댓글 초기화
 	$('reply_container').descendants().each(function(element){element.remove();});
@@ -279,5 +280,13 @@ function searching() {
 		onSuccess : query_JSON,
 		onFailure : ajaxFailed,
 		onException : ajaxFailed
+	});
+}
+
+function addquestions(number) {
+	alert('저도 궁금합니다!');
+	new Ajax.Request("addquestion.php",{
+		method : "get",
+		parameters : { 'IND':number }
 	});
 }
