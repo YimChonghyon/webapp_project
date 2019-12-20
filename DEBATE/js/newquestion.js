@@ -42,11 +42,10 @@ function ajaxFailed(ajax, exception) {
 function textareaAutoHeight(el) {
 	setTimeout(() => {
 		el.style.height = 'auto';
-
 		let scrollHeight = el.scrollHeight;
 		let outlineHeight = el.offsetHeight - el.clientHeight;
-
 		el.style.height = (scrollHeight + outlineHeight) + 'px';
+	
 	}, 0);
 }
 

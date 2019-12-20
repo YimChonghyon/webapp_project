@@ -1,5 +1,6 @@
 .main{
     height: 100%;
+    overflow-y: scroll;
 }
 @media screen and (min-width:950px) {
 .question_box{
@@ -11,8 +12,8 @@
     margin-bottom: 10px;
     box-shadow: 0 5px 8px rgba(0,0,0,.1);
     border-radius: 10px;
-    /* cursor: pointer; */
-    margin-top: 10%;
+    cursor: pointer;
+    margin-top: 100px;
     margin-left: 18%;
     /* overflow-y: scroll; */
 }}
@@ -27,8 +28,8 @@
         margin-bottom: 10px;
         box-shadow: 0 5px 8px rgba(0,0,0,.1);
         border-radius: 10px;
-        /* cursor: pointer; */
-        margin-top: 10%;
+        cursor: pointer;
+        margin-top: 100px;
         margin-left: 14%;
         /* overflow-y: scroll; */
     }
@@ -50,7 +51,7 @@
 .textarea{
     /* resize:none; */
     border:  1px solid #9b9b9b;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     width: 90%;
 }
 

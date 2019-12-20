@@ -21,18 +21,19 @@
 			<div class="list  scroll">
 				<div class="search_box  ">
 					<div class="search">
-						<form method="post" action="" >
 							<select id ="tag_selecter" class="tagselect" onchange="searchtag();" multiple="multiple">
 								<optgroup label="태그선택" id="TEL_tag">
 									<option>질문</option>
 									<option>토의</option>
+									<option>토의</option>
+									<option>토의</option>
 								</optgroup>
 							</select>
-
-							<input type="text" name="" id="searchbox" size="30"/>
-							<button type="button" class="button">
-								<image class="pull-right search_icon" src="../resource/images/search.png">
-								</button>
+							<form method="post" action="" id = "search_container">
+								<input type="text" name="" id="searchbox" size="30"/>
+								<button type="button" class="button">
+									<image class="pull-right search_icon" src="../resource/images/search.png">
+									</button>
 							</form>
 
 
