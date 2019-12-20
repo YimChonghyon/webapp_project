@@ -244,8 +244,8 @@
 				<!-- <legend>댓글달기</legend> -->
 				<div class="reply_infor">
 					<input type="hidden" name="debate_id" value="0" id="reply_debate_id" />
-					ID <input type="text" name= "name" size="15" id="reply_id"> 
-					Password <input type="text" name= "password" size="20" maxlength="10" id="reply_password" onKeyup="this.value=this.value.replace(/[^0-9]/g,'')"> 
+					Name <input type="text" name= "name" size="15" id="reply_id"> 
+					Password <input type="text" name= "password" size="20" maxlength="10" id="reply_password" onKeyup="this.value=this.value.replace(/[^0-9]/g,'')" autocomplete="off"> 
 					익명 <input type = "checkbox" name="anonymous" id="anonymous_button">
 				</div>
 
