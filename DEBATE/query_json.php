@@ -24,8 +24,8 @@ foreach ($result as $key => $value) {
 
 	$search = count($_GET['selectedTag']);
 	if($search != 0){
-		foreach ($result2 as $key => $value) {
-			if(in_array($value['Type'], $_GET['selectedTag'])){
+		foreach ($result2 as $key5 => $value5) {
+			if(in_array($value5['Type'], $_GET['selectedTag'])){
 				$search = $search - 1;
 			}
 		}
